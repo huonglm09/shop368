@@ -974,5 +974,43 @@ h2.price {
 .header-top-bar #search .input-lg:focus {
 	box-shadow: none;
 	-moz-box-shadow: none;
-	-webkit-box-shadow: none;s
+	-webkit-box-shadow: none;
+}
+.quick-link {
+    width: 100%;
+}
+.quick-link ul {
+    padding: 0px;
+}
+.quick-link ul li {
+    text-decoration: none;
+    list-style: none;
+}
+.quick-link ul li a {
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'roboto', sans-serif !important;
+}
+.quick-link ul .a-tz-why-choose i {
+    color: #8e8e8e;
+    background: transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding: 18px 0;
+    position: relative;
+    font-size: 20px;
+    top: 1px;
+    border: 2px solid #e6e6e6;
+}
+.quick-link {
+    margin: 30px 0px;
+}
+.bshop-cart button {
+    text-transform: uppercase;
+}
+#logo img {
+    margin: 30px 0px;
 }
