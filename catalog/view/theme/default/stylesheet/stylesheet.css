@@ -1165,38 +1165,55 @@ header {
     width: 100% !important;
 }
 
-.feature-wrapper {
+.common-home .feature-wrapper {
     background: #ffffff;
     padding: 15px;
     margin-top: 10px;
 }
 
-.feature-wrapper .owl-buttons {
-    width: 110px;
+.common-home .feature-wrapper .owl-wrapper-outer {
+    border: 0px;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
 
-.feature-wrapper .owl-buttons div {
+.common-home .feature-wrapper .button-group {
+    display: none;
+}
+
+.common-home .feature-wrapper .product-thumb {
+    border: 0px;
+}
+
+.common-home .feature-wrapper .featured-slide {
+    padding-top: 80px;
+}
+
+.common-home .feature-wrapper .owl-buttons {
+    width: 90px;
+    margin: 0 auto;
+}
+
+.common-home .feature-wrapper .owl-buttons div {
     opacity: 0.85 !important;
 }
 
-.feature-wrapper .owl-buttons i {
+.common-home .feature-wrapper .owl-buttons i {
     font-size: 22px !important;
     color: #f26522 !important;
+    margin: 0px !important;
 }
 
-.feature-wrapper .owl-buttons:hover i {
-    color: #ffffff !important;
-}
-
-.feature-wrapper .owl-prev {
+.common-home .feature-wrapper .owl-prev {
     float: left;
 }
-.feature-wrapper .owl-next  {
+
+.common-home .feature-wrapper .owl-next {
     float: right;
 }
 
-.feature-wrapper .owl-prev,
-.feature-wrapper .owl-next {
+.common-home .feature-wrapper .owl-prev, .common-home .feature-wrapper .owl-next {
     background: #fff;
     color: #fff;
     border: 2px solid #f26522;
@@ -1205,17 +1222,65 @@ header {
     position: inherit !important;
 }
 
-.feature-wrapper .owl-prev:hover,
-.feature-wrapper .owl-next:hover {
+.common-home .feature-wrapper .owl-prev:hover, .common-home .feature-wrapper .owl-next:hover {
     background: #f26522;
     opacity: 1 !important;
 }
 
-.feature-wrapper .owl-controls {
+.common-home .feature-wrapper .owl-prev:hover i, .common-home .feature-wrapper .owl-next:hover i {
+    color: #ffffff !important;
+}
+
+.common-home .feature-wrapper .owl-controls {
     position: absolute;
     top: 0px;
     text-align: center;
     width: 100%;
+}
+
+.common-home .feature-wrapper .caption h4 {
+    text-align: center;
+    overflow: hidden;
+    height: 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+.common-home .feature-wrapper .feature-des, .common-home .feature-wrapper .price-tax {
+    display: none;
+}
+
+.common-home .feature-wrapper .price {
+    color: #f26522;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+.common-home .feature-wrapper .product-thumb .caption {
+    min-height: auto;
+}
+
+.common-home .feature-wrapper .caption h4 a {
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.common-home .feature-wrapper .caption h4:hover a {
+    color: #f26522;
 }
 
 .title-head {
@@ -1231,4 +1296,13 @@ header {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+.title-head-before, .title-head-after {
+    display: inline-block;
+    height: 20px;
+    padding: 0px 200px 0px 0px;
+    margin: 0px 15px;
+    background: url('../image/icon_title.png') no-repeat;
 }

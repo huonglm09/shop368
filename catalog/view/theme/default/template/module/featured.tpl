@@ -1,5 +1,9 @@
 <div class="feature-wrapper">
-    <h3 class="title-head"><?php echo $heading_title; ?></h3>
+    <h3 class="title-head">
+        <div class="title-head-before"></div>
+        <?php echo $heading_title; ?>
+        <div class="title-head-after"></div>
+    </h3>
     <div id="feature-slide<?php echo $module; ?>" class="row featured-slide">
         <?php foreach ($products as $product) { ?>
         <div class="product-layout">
@@ -7,7 +11,7 @@
                 <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
                 <div class="caption">
                     <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-                    <p>
+                    <p class="feature-des">
                         <?php echo $product['description']; ?>
                     </p>
                     <?php if ($product['rating']) { ?>

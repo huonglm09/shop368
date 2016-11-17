@@ -1135,7 +1135,7 @@ export default StyleSheet.create({
     "slideshow-wrapper owl-wrapper item img": {
         "width": "100% !important"
     },
-    "feature-wrapper": {
+    "common-home feature-wrapper": {
         "background": "#ffffff",
         "paddingTop": 15,
         "paddingRight": 15,
@@ -1143,20 +1143,40 @@ export default StyleSheet.create({
         "paddingLeft": 15,
         "marginTop": 10
     },
-    "feature-wrapper owl-buttons": {
-        "width": 110
+    "common-home feature-wrapper owl-wrapper-outer": {
+        "border": 0,
+        "boxShadow": "none !important",
+        "MozBoxShadow": "none !important",
+        "WebkitBoxShadow": "none !important"
     },
-    "feature-wrapper owl-buttons div": {
+    "common-home feature-wrapper button-group": {
+        "display": "none"
+    },
+    "common-home feature-wrapper product-thumb": {
+        "border": 0
+    },
+    "common-home feature-wrapper featured-slide": {
+        "paddingTop": 80
+    },
+    "common-home feature-wrapper owl-buttons": {
+        "width": 90,
+        "marginTop": 0,
+        "marginRight": "auto",
+        "marginBottom": 0,
+        "marginLeft": "auto"
+    },
+    "common-home feature-wrapper owl-buttons div": {
         "opacity": "0.85 !important"
     },
-    "feature-wrapper owl-buttons i": {
+    "common-home feature-wrapper owl-buttons i": {
         "fontSize": "22px !important",
-        "color": "#f26522 !important"
+        "color": "#f26522 !important",
+        "marginTop": 0,
+        "marginRight": "!important",
+        "marginBottom": 0,
+        "marginLeft": "!important"
     },
-    "feature-wrapper owl-buttons:hover i": {
-        "color": "#ffffff !important"
-    },
-    "feature-wrapper owl-prev": {
+    "common-home feature-wrapper owl-prev": {
         "float": "left",
         "background": "#fff",
         "color": "#fff",
@@ -1168,7 +1188,7 @@ export default StyleSheet.create({
         "paddingLeft": 14,
         "position": "inherit !important"
     },
-    "feature-wrapper owl-next": {
+    "common-home feature-wrapper owl-next": {
         "float": "right",
         "background": "#fff",
         "color": "#fff",
@@ -1180,19 +1200,79 @@ export default StyleSheet.create({
         "paddingLeft": 14,
         "position": "inherit !important"
     },
-    "feature-wrapper owl-prev:hover": {
+    "common-home feature-wrapper owl-prev:hover": {
         "background": "#f26522",
         "opacity": "1 !important"
     },
-    "feature-wrapper owl-next:hover": {
+    "common-home feature-wrapper owl-next:hover": {
         "background": "#f26522",
         "opacity": "1 !important"
     },
-    "feature-wrapper owl-controls": {
+    "common-home feature-wrapper owl-prev:hover i": {
+        "color": "#ffffff !important"
+    },
+    "common-home feature-wrapper owl-next:hover i": {
+        "color": "#ffffff !important"
+    },
+    "common-home feature-wrapper owl-controls": {
         "position": "absolute",
         "top": 0,
         "textAlign": "center",
         "width": "100%"
+    },
+    "common-home feature-wrapper caption h4": {
+        "textAlign": "center",
+        "overflow": "hidden",
+        "height": 45,
+        "textOverflow": "ellipsis",
+        "whiteSpace": "nowrap",
+        "wordBreak": "break-all"
+    },
+    "common-home feature-wrapper feature-des": {
+        "display": "none"
+    },
+    "common-home feature-wrapper price-tax": {
+        "display": "none"
+    },
+    "common-home feature-wrapper price": {
+        "color": "#f26522",
+        "fontFamily": "'Roboto', sans-serif",
+        "fontSize": 15,
+        "fontWeight": "400",
+        "lineHeight": 26,
+        "marginTop": 0,
+        "marginRight": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "display": "block",
+        "textAlign": "center"
+    },
+    "common-home feature-wrapper product-thumb caption": {
+        "minHeight": "auto"
+    },
+    "common-home feature-wrapper caption h4 a": {
+        "color": "#333333",
+        "fontFamily": "'Roboto', sans-serif",
+        "fontSize": 16,
+        "fontWeight": "300",
+        "lineHeight": 24,
+        "marginTop": 0,
+        "marginRight": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "textAlign": "center",
+        "textDecoration": "none !important"
+    },
+    "common-home feature-wrapper caption h4:hover a": {
+        "color": "#f26522"
     },
     "title-head": {
         "textAlign": "center",
@@ -1209,6 +1289,33 @@ export default StyleSheet.create({
         "paddingLeft": 0,
         "position": "relative",
         "textTransform": "uppercase",
-        "letterSpacing": 0.5
+        "letterSpacing": 0.5,
+        "marginBottom": 25
+    },
+    "title-head-before": {
+        "display": "inline-block",
+        "height": 20,
+        "paddingTop": 0,
+        "paddingRight": 200,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "marginTop": 0,
+        "marginRight": 15,
+        "marginBottom": 0,
+        "marginLeft": 15,
+        "background": "url('../image/icon_title.png') no-repeat"
+    },
+    "title-head-after": {
+        "display": "inline-block",
+        "height": 20,
+        "paddingTop": 0,
+        "paddingRight": 200,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "marginTop": 0,
+        "marginRight": 15,
+        "marginBottom": 0,
+        "marginLeft": 15,
+        "background": "url('../image/icon_title.png') no-repeat"
     }
 });
