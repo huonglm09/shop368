@@ -1,22 +1,31 @@
 <?php echo $header; ?>
 
-<?php echo $slideshow; ?>
+<?php if($slideshow) { ?>
+    <?php echo $slideshow; ?>
+<?php } ?>
 
 <div class="container">
     <div class="row">
-        <?php echo $column_left; ?>
-        <?php if ($column_left && $column_right) { ?>
-        <?php $class = 'col-sm-6'; ?>
-        <?php } elseif ($column_left || $column_right) { ?>
-        <?php $class = 'col-sm-9'; ?>
-        <?php } else { ?>
-        <?php $class = 'col-sm-12'; ?>
+        <?php if($content_top) { ?>
+            <div class="col-sm-12">
+                <?php echo $content_top; ?>
+            </div>
         <?php } ?>
-        <div id="content" class="<?php echo $class; ?>">
-            <?php echo $content_top; ?>
-            <?php echo $content_bottom; ?>
+
+        <?php if($column_left) { ?>
+            <?php echo $column_left; ?>            
+        <?php } ?>
+
+        <?php if($column_right) { ?>
+            <?php echo $column_right; ?>
+        <?php } ?>
+
+        <?php if($content_bottom) { ?>
+            <div class="col-sm-12">
+                <?php echo $content_bottom; ?>
+            </div>
+        <?php } ?>
         </div>
-        <?php echo $column_right; ?>
-    </div>
 </div>
+
 <?php echo $footer; ?>

@@ -1,13 +1,20 @@
-2016-11-17 9:46:47 - PHP Notice:  Use of undefined constant layout_module - assumed 'layout_module' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 107
-2016-11-17 9:46:47 - PHP Warning:  Illegal string offset 'position' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 107
-2016-11-17 9:46:47 - PHP Notice:  Use of undefined constant layout_module - assumed 'layout_module' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 107
-2016-11-17 9:46:47 - PHP Warning:  Illegal string offset 'position' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 107
-2016-11-17 9:46:47 - PHP Notice:  Use of undefined constant layout_module - assumed 'layout_module' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 107
-2016-11-17 9:46:47 - PHP Warning:  Illegal string offset 'position' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 107
-2016-11-17 9:49:55 - PHP Notice:  Use of undefined constant layout_module - assumed 'layout_module' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 106
-2016-11-17 9:49:55 - PHP Notice:  Use of undefined constant layout_module - assumed 'layout_module' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 106
-2016-11-17 9:49:55 - PHP Notice:  Use of undefined constant layout_module - assumed 'layout_module' in D:\Programs\htdocs\shop368\admin\view\template\design\layout_form.tpl on line 106
-2016-11-17 10:40:20 - PHP Notice:  Undefined variable: module in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\module\featured.tpl on line 2
-2016-11-17 10:40:20 - PHP Notice:  Undefined variable: module in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\module\featured.tpl on line 44
-2016-11-17 10:40:31 - PHP Notice:  Undefined variable: module in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\module\featured.tpl on line 2
-2016-11-17 10:40:31 - PHP Notice:  Undefined variable: module in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\module\featured.tpl on line 44
+2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
+2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
+2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
+2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
+2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
+2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
+2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
+2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
+2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
+2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
+2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
+2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
+2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
+2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
+2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
+2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
+2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
+2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
+2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
+2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118

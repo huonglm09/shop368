@@ -28,9 +28,17 @@
                     <?php if ($product['price']) { ?>
                     <p class="price">
                         <?php if (!$product['special']) { ?>
-                        <?php echo $product['price']; ?>
+                            <?php if($product['price'] > 0) { ?>
+                                <?php echo $product['price']; ?>
+                            <?php } else { ?>
+                                <span class="price-grey">Giá liên hệ:</span> <span class="price-new">0988.888.888</span>
+                            <?php } ?>
                         <?php } else { ?>
-                        <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                            <?php if($product['special'] > 0 || $product['price'] > 0) { ?>
+                                <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                            <?php } else { ?>
+                                <span class="price-grey">Giá liên hệ:</span> <span class="price-new">0988.888.888</span>
+                            <?php } ?>
                         <?php } ?>
                         <?php if ($product['tax']) { ?>
                         <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
@@ -53,7 +61,7 @@
     <!--
     $('#feature-slide<?php echo $module; ?>').owlCarousel({
         items: 4,
-        autoPlay: 5000,
+        autoPlay: 50000,
         navigation: true,
         navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         pagination: false,
