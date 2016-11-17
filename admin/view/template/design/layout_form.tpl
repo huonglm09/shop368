@@ -104,6 +104,11 @@
                     <?php } ?>
                   </select></td>
                 <td class="text-left"><select name="layout_module[<?php echo $module_row; ?>][position]" class="form-control">
+                    <?php if ($layout_module['position'] == 'slideshow') { ?>
+                    <option value="slideshow" selected="selected"><?php echo $text_slideshow; ?></option>
+                    <?php } else { ?>
+                    <option value="slideshow"><?php echo $text_slideshow; ?></option>
+                    <?php } ?>
                     <?php if ($layout_module['position'] == 'content_top') { ?>
                     <option value="content_top" selected="selected"><?php echo $text_content_top; ?></option>
                     <?php } else { ?>
@@ -151,14 +156,14 @@ function addRoute() {
 	html += '  <option value="0"><?php echo $text_default; ?></option>';
 	<?php foreach ($stores as $store) { ?>
 	html += '<option value="<?php echo $store['store_id']; ?>"><?php echo addslashes($store['name']); ?></option>';
-	<?php } ?>   
+	<?php } ?>
 	html += '  </select></td>';
 	html += '  <td class="text-left"><input type="text" name="layout_route[' + route_row + '][route]" value="" placeholder="<?php echo $entry_route; ?>" class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#route-row' + route_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
 	html += '</tr>';
-	
+
 	$('#route tbody').append(html);
-	
+
 	route_row++;
 }
 
@@ -167,7 +172,7 @@ var module_row = <?php echo $module_row; ?>;
 function addModule() {
 	html  = '<tr id="module-row' + module_row + '">';
 	html += '  <td class="text-left"><select name="layout_module[' + module_row + '][code]" class="form-control">';
-	<?php foreach ($extensions as $extension) { ?>    
+	<?php foreach ($extensions as $extension) { ?>
 	<?php if (!$extension['module']) { ?>
 	html += '    <option value="<?php echo $extension['code']; ?>"><?php echo addslashes($extension['name']); ?></option>';
 	<?php } else { ?>
@@ -178,8 +183,9 @@ function addModule() {
 	html += '    </optgroup>';
 	<?php } ?>
 	<?php } ?>
-    html += '  </select></td>'; 
+    html += '  </select></td>';
 	html += '  <td class="text-left"><select name="layout_module[' + module_row + '][position]" class="form-control">';
+    html += '    <option value="slideshow"><?php echo $text_slideshow; ?></option>';
     html += '    <option value="content_top"><?php echo $text_content_top; ?></option>';
     html += '    <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';
     html += '    <option value="column_left"><?php echo $text_column_left; ?></option>';
@@ -188,9 +194,9 @@ function addModule() {
 	html += '  <td class="text-left"><input type="text" name="layout_module[' + module_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#module-row' + module_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
 	html += '</tr>';
-	
+
 	$('#module tbody').append(html);
-	
+
 	module_row++;
 }
 //--></script></div>

@@ -1111,7 +1111,7 @@ header {
     padding-right: 0px;
 }
 
-#slideshow0 .owl-wrapper-outer {
+.slideshow-wrapper .owl-wrapper-outer {
     border: 0px !important;
     -webkit-border-radius: 0px !important;
     -moz-border-radius: 0px !important;
@@ -1123,26 +1123,25 @@ header {
     box-shadow: none !important;
 }
 
-#slideshow0 .owl-controls.clickable {
+.slideshow-wrapper .owl-controls.clickable {
     position: absolute;
     bottom: 30px;
     left: 0px;
     right: 0px;
 }
 
-#slideshow0 .owl-controls .owl-page {
+.slideshow-wrapper .owl-controls .owl-page {
     overflow: hidden;
     background: url('../image/paginate.png') no-repeat;
     width: 45px;
     height: 45px;
 }
 
-#slideshow0 .owl-controls .owl-page.active,
-#slideshow0 .owl-controls .owl-page:hover {
+.slideshow-wrapper .owl-controls .owl-page.active, .slideshow-wrapper .owl-controls .owl-page:hover {
     background: url('../image/paginate-hover.png') no-repeat;
 }
 
-#slideshow0 .owl-controls .owl-page span {
+.slideshow-wrapper .owl-controls .owl-page span {
     margin: 0 auto;
     color: #FFF;
     background: none !important;
@@ -1160,4 +1159,76 @@ header {
     box-shadow: none !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
+}
+
+.slideshow-wrapper .owl-wrapper .item img {
+    width: 100% !important;
+}
+
+.feature-wrapper {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.feature-wrapper .owl-buttons {
+    width: 110px;
+}
+
+.feature-wrapper .owl-buttons div {
+    opacity: 0.85 !important;
+}
+
+.feature-wrapper .owl-buttons i {
+    font-size: 22px !important;
+    color: #f26522 !important;
+}
+
+.feature-wrapper .owl-buttons:hover i {
+    color: #ffffff !important;
+}
+
+.feature-wrapper .owl-prev {
+    float: left;
+}
+.feature-wrapper .owl-next  {
+    float: right;
+}
+
+.feature-wrapper .owl-prev,
+.feature-wrapper .owl-next {
+    background: #fff;
+    color: #fff;
+    border: 2px solid #f26522;
+    border-radius: 0px;
+    padding: 6px 14px;
+    position: inherit !important;
+}
+
+.feature-wrapper .owl-prev:hover,
+.feature-wrapper .owl-next:hover {
+    background: #f26522;
+    opacity: 1 !important;
+}
+
+.feature-wrapper .owl-controls {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.title-head {
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 0px;
+    color: #000;
+    display: block;
+    margin-top: 0;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 0px 7px 0px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }

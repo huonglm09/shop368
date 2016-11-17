@@ -1,4 +1,7 @@
 <?php echo $header; ?>
+
+<?php echo $slideshow; ?>
+
 <div class="container">
     <div class="row">
         <?php echo $column_left; ?>

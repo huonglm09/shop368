@@ -8,6 +8,7 @@ $_['text_list']           = 'danh sách giao diện Layout';
 $_['text_add']            = 'Thêm giao diện Layout';
 $_['text_edit']           = 'Chỉnh sửa Layout';
 $_['text_default']      = 'Mặc định';
+$_['text_slideshow']    = 'Slideshow';
 $_['text_content_top']    = 'Đỉnh nội dung';
 $_['text_content_bottom'] = 'Đáy nội dung';
 $_['text_column_left']    = 'Cột trái';

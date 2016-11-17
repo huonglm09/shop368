@@ -8,6 +8,7 @@ $_['text_list']           = 'Layout List';
 $_['text_add']            = 'Add Layout';
 $_['text_edit']           = 'Edit Layout';
 $_['text_default']        = 'Default';
+$_['text_slideshow']      = 'Slideshow';
 $_['text_content_top']    = 'Content Top';
 $_['text_content_bottom'] = 'Content Bottom';
 $_['text_column_left']    = 'Column Left';

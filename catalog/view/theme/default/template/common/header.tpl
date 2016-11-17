@@ -131,8 +131,8 @@
                         </li>
                         <?php foreach ($categories as $category) { ?>
                         <?php if ($category['children']) { ?>
-                        <li class="dropdown">
-                            <a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">
+                        <li>
+                            <a href="<?php echo $category['href']; ?>">
                                 <?php echo $category['name']; ?>
                             </a>
                             <!-- <div class="dropdown-menu">
