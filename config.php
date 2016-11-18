@@ -25,4 +25,4 @@ define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_DATABASE', 'shop368');
 define('DB_PORT', '3306');
-define('DB_PREFIX', 'demo_');
+define('DB_PREFIX', 'bshop_');
