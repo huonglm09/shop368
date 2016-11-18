@@ -1,12 +1,12 @@
-<div class="feature-wrapper">
+<div class="category-products">
     <h3 class="title-head">
-        <div class="title-head-before"></div>
-        <?php echo $heading_title; ?>
-        <div class="title-head-after"></div>
+        <strong>
+            <?php echo $heading_title; ?>
+        </strong>
     </h3>
-    <div id="feature-slide<?php echo $module; ?>" class="row featured-slide">
+    <div class="row">
         <?php foreach ($products as $product) { ?>
-        <div class="product-layout">
+        <div class="product-layout col-lg-4 col-md-4 col-sm-6 col-xs-12">
             <div class="product-thumb transition">
                 <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
                 <div class="caption">
@@ -55,17 +55,8 @@
         </div>
         <?php } ?>
     </div>
-</div>
 
-<script type="text/javascript">
-    <!--
-    $('#feature-slide<?php echo $module; ?>').owlCarousel({
-        items: 4,
-        autoPlay: 50000,
-        navigation: true,
-        navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-        pagination: false,
-        responsive: true
-    });
-    -->
-</script>
+    <div class="text-center read-more-pro-padding">
+		<a class="read-more-pro" href="<?php echo $category_href; ?>" style=""><i class="fa fa-plus"></i> Xem tất cả <?php echo ($total_product > 0) ? $total_product . ' ' : ''; ?>sản phẩm</a>
+	</div>
+</div>

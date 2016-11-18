@@ -1,20 +1,55 @@
-2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
-2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
-2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
-2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
-2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
-2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
-2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
-2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
-2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
-2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
-2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
-2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
-2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
-2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
-2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
-2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
-2016-11-17 15:48:38 - PHP Warning:  imagecreatetruecolor() expects parameter 2 to be long, string given in C:\xampp\htdocs\shop368\system\library\image.php on line 105
-2016-11-17 15:48:38 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 113
-2016-11-17 15:48:38 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 116
-2016-11-17 15:48:38 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in C:\xampp\htdocs\shop368\system\library\image.php on line 118
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 37
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 37
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 37
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 37
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 37
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 37
+2016-11-18 12:53:48 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:53:48 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 45
+2016-11-18 12:55:13 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:13 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:16 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined index: category_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 12:55:17 - PHP Notice:  Undefined variable: child_id in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 56
+2016-11-18 13:01:44 - PHP Notice:  Use of undefined constant categories - assumed 'categories' in D:\Programs\htdocs\shop368\catalog\view\theme\default\template\common\footer.tpl on line 35

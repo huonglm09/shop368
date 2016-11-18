@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-11-18 00:17:42
+Date: 2016-11-18 19:02:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -291,14 +291,15 @@ CREATE TABLE `bshop_banner` (
   `name` varchar(64) NOT NULL,
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`banner_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_banner
 -- ----------------------------
 INSERT INTO `bshop_banner` VALUES ('6', 'HP Products', '1');
 INSERT INTO `bshop_banner` VALUES ('7', 'Slideshow - Trang chủ', '1');
-INSERT INTO `bshop_banner` VALUES ('8', 'Manufacturers', '1');
+INSERT INTO `bshop_banner` VALUES ('8', 'Thương hiệu', '1');
+INSERT INTO `bshop_banner` VALUES ('9', 'Quảng cáo bên trái - Trang chủ', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_banner_image`
@@ -311,28 +312,22 @@ CREATE TABLE `bshop_banner_image` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`banner_image_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=109 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=114 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_banner_image
 -- ----------------------------
 INSERT INTO `bshop_banner_image` VALUES ('107', '7', '', 'catalog/home slide/phong-khach-tan-co-dien-bang-go-dep-duc-tinh-1349x492resize_and_crop.jpg', '0');
 INSERT INTO `bshop_banner_image` VALUES ('87', '6', 'index.php?route=product/manufacturer/info&amp;manufacturer_id=7', 'catalog/demo/compaq_presario.jpg', '0');
-INSERT INTO `bshop_banner_image` VALUES ('94', '8', '', 'catalog/demo/manufacturer/nfl.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('95', '8', '', 'catalog/demo/manufacturer/redbull.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('96', '8', '', 'catalog/demo/manufacturer/sony.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('91', '8', '', 'catalog/demo/manufacturer/cocacola.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('92', '8', '', 'catalog/demo/manufacturer/burgerking.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('93', '8', '', 'catalog/demo/manufacturer/canon.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('88', '8', '', 'catalog/demo/manufacturer/harley.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('89', '8', '', 'catalog/demo/manufacturer/dell.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('90', '8', '', 'catalog/demo/manufacturer/disney.png', '0');
+INSERT INTO `bshop_banner_image` VALUES ('113', '8', '', 'catalog/thuonghieu/unisys smarthome logo-230x100resize_and_crop.png', '0');
+INSERT INTO `bshop_banner_image` VALUES ('112', '8', '', 'catalog/thuonghieu/logo_blum-230x100resize_and_crop.png', '0');
+INSERT INTO `bshop_banner_image` VALUES ('111', '8', '', 'catalog/thuonghieu/logo vinhomes-230x100resize_and_crop.png', '0');
 INSERT INTO `bshop_banner_image` VALUES ('108', '7', '', 'catalog/home slide/phong-ngu-hien-dai-noi-that-duc-tinh-1349x492resize_and_crop.jpg', '0');
-INSERT INTO `bshop_banner_image` VALUES ('97', '8', '', 'catalog/demo/manufacturer/starbucks.png', '0');
-INSERT INTO `bshop_banner_image` VALUES ('98', '8', '', 'catalog/demo/manufacturer/nintendo.png', '0');
+INSERT INTO `bshop_banner_image` VALUES ('110', '8', '', 'catalog/thuonghieu/an-cuong-230x100resize_and_crop.png', '0');
 INSERT INTO `bshop_banner_image` VALUES ('106', '7', '', 'catalog/home slide/phong-bep-quay-bar-hien-dai-duc-tinh-1349x492resize_and_crop.jpg', '0');
 INSERT INTO `bshop_banner_image` VALUES ('105', '7', '', 'catalog/home slide/ban-an-dep-tu-ruou-tu-bep-1349x492resize_and_crop.jpg', '0');
 INSERT INTO `bshop_banner_image` VALUES ('104', '7', '', 'catalog/home slide/noi-that-phong-khach-go-re-dep-duc-tinh-1349x492resize_and_crop.jpg', '0');
+INSERT INTO `bshop_banner_image` VALUES ('109', '9', '', 'catalog/banner/banner khuyen mai (2)-270x630resize_and_crop.jpg', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_banner_image_description`
@@ -354,18 +349,12 @@ INSERT INTO `bshop_banner_image_description` VALUES ('107', '2', '7', 'Ảnh 4')
 INSERT INTO `bshop_banner_image_description` VALUES ('106', '2', '7', 'Ảnh 3');
 INSERT INTO `bshop_banner_image_description` VALUES ('105', '2', '7', 'Ảnh 1');
 INSERT INTO `bshop_banner_image_description` VALUES ('87', '2', '6', 'HP Banner');
-INSERT INTO `bshop_banner_image_description` VALUES ('93', '2', '8', 'Canon');
-INSERT INTO `bshop_banner_image_description` VALUES ('92', '2', '8', 'Burger King');
-INSERT INTO `bshop_banner_image_description` VALUES ('91', '2', '8', 'Coca Cola');
-INSERT INTO `bshop_banner_image_description` VALUES ('90', '2', '8', 'Disney');
-INSERT INTO `bshop_banner_image_description` VALUES ('89', '2', '8', 'Dell');
+INSERT INTO `bshop_banner_image_description` VALUES ('113', '2', '8', 'Thương hiệu 4');
 INSERT INTO `bshop_banner_image_description` VALUES ('104', '2', '7', 'Ảnh 2');
-INSERT INTO `bshop_banner_image_description` VALUES ('88', '2', '8', 'Harley Davidson');
-INSERT INTO `bshop_banner_image_description` VALUES ('94', '2', '8', 'NFL');
-INSERT INTO `bshop_banner_image_description` VALUES ('95', '2', '8', 'RedBull');
-INSERT INTO `bshop_banner_image_description` VALUES ('96', '2', '8', 'Sony');
-INSERT INTO `bshop_banner_image_description` VALUES ('97', '2', '8', 'Starbucks');
-INSERT INTO `bshop_banner_image_description` VALUES ('98', '2', '8', 'Nintendo');
+INSERT INTO `bshop_banner_image_description` VALUES ('112', '2', '8', 'Thương hiệu 3');
+INSERT INTO `bshop_banner_image_description` VALUES ('111', '2', '8', 'Thương hiệu 2');
+INSERT INTO `bshop_banner_image_description` VALUES ('110', '2', '8', 'Thương hiệu 1');
+INSERT INTO `bshop_banner_image_description` VALUES ('109', '2', '9', 'Quảng cáo 1');
 
 -- ----------------------------
 -- Table structure for `bshop_cart`
@@ -911,7 +900,7 @@ CREATE TABLE `bshop_currency` (
 -- ----------------------------
 -- Records of bshop_currency
 -- ----------------------------
-INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-17 15:13:01');
+INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-18 09:30:57');
 
 -- ----------------------------
 -- Table structure for `bshop_customer`
@@ -1256,7 +1245,7 @@ CREATE TABLE `bshop_extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_extension
@@ -1281,6 +1270,7 @@ INSERT INTO `bshop_extension` VALUES ('17', 'payment', 'free_checkout');
 INSERT INTO `bshop_extension` VALUES ('18', 'module', 'featured');
 INSERT INTO `bshop_extension` VALUES ('19', 'module', 'slideshow');
 INSERT INTO `bshop_extension` VALUES ('20', 'theme', 'theme_default');
+INSERT INTO `bshop_extension` VALUES ('23', 'module', 'categoryproducts');
 
 -- ----------------------------
 -- Table structure for `bshop_filter`
@@ -1497,7 +1487,7 @@ CREATE TABLE `bshop_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=139 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=174 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_module
@@ -1508,11 +1498,14 @@ INSERT INTO `bshop_layout_module` VALUES ('20', '5', '0', 'column_left', '2');
 INSERT INTO `bshop_layout_module` VALUES ('69', '10', 'affiliate', 'column_right', '1');
 INSERT INTO `bshop_layout_module` VALUES ('68', '6', 'account', 'column_right', '1');
 INSERT INTO `bshop_layout_module` VALUES ('72', '3', 'category', 'column_left', '1');
-INSERT INTO `bshop_layout_module` VALUES ('73', '3', 'banner.30', 'column_left', '2');
-INSERT INTO `bshop_layout_module` VALUES ('137', '1', 'slideshow.27', 'slideshow', '1');
-INSERT INTO `bshop_layout_module` VALUES ('136', '1', 'featured.28', 'content_top', '2');
-INSERT INTO `bshop_layout_module` VALUES ('135', '1', 'category', 'column_left', '1');
-INSERT INTO `bshop_layout_module` VALUES ('138', '1', 'featured.28', 'column_right', '0');
+INSERT INTO `bshop_layout_module` VALUES ('173', '1', 'carousel.37', 'content_bottom', '1');
+INSERT INTO `bshop_layout_module` VALUES ('172', '1', 'slideshow.27', 'slideshow', '1');
+INSERT INTO `bshop_layout_module` VALUES ('171', '1', 'featured.28', 'content_top', '2');
+INSERT INTO `bshop_layout_module` VALUES ('169', '1', 'categoryproducts.35', 'column_right', '2');
+INSERT INTO `bshop_layout_module` VALUES ('170', '1', 'categoryproducts.36', 'column_right', '3');
+INSERT INTO `bshop_layout_module` VALUES ('168', '1', 'categoryproducts.34', 'column_right', '1');
+INSERT INTO `bshop_layout_module` VALUES ('167', '1', 'banner.31', 'column_left', '2');
+INSERT INTO `bshop_layout_module` VALUES ('166', '1', 'category', 'column_left', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_layout_route`
@@ -1524,7 +1517,7 @@ CREATE TABLE `bshop_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_route
@@ -1532,7 +1525,7 @@ CREATE TABLE `bshop_layout_route` (
 INSERT INTO `bshop_layout_route` VALUES ('38', '6', '0', 'account/%');
 INSERT INTO `bshop_layout_route` VALUES ('17', '10', '0', 'affiliate/%');
 INSERT INTO `bshop_layout_route` VALUES ('44', '3', '0', 'product/category');
-INSERT INTO `bshop_layout_route` VALUES ('75', '1', '0', 'common/home');
+INSERT INTO `bshop_layout_route` VALUES ('81', '1', '0', 'common/home');
 INSERT INTO `bshop_layout_route` VALUES ('20', '2', '0', 'product/product');
 INSERT INTO `bshop_layout_route` VALUES ('24', '11', '0', 'information/information');
 INSERT INTO `bshop_layout_route` VALUES ('23', '7', '0', 'checkout/%');
@@ -1692,16 +1685,18 @@ CREATE TABLE `bshop_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_module
 -- ----------------------------
-INSERT INTO `bshop_module` VALUES ('30', 'Category', 'banner', '{\"name\":\"Category\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('29', 'Home Page', 'carousel', '{\"name\":\"Home Page\",\"banner_id\":\"8\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('37', 'Thương hiệu', 'carousel', '{\"name\":\"Th\\u01b0\\u01a1ng hi\\u1ec7u\",\"banner_id\":\"8\",\"width\":\"230\",\"height\":\"100\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('28', 'Sản phẩm nổi bật - Trang chủ', 'featured', '{\"name\":\"S\\u1ea3n ph\\u1ea9m n\\u1ed5i b\\u1eadt - Trang ch\\u1ee7\",\"product_name\":\"\",\"product\":[\"43\",\"40\",\"42\",\"41\",\"30\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('27', 'Slideshow - Trang chủ', 'slideshow', '{\"name\":\"Slideshow - Trang ch\\u1ee7\",\"banner_id\":\"7\",\"width\":\"1903\",\"height\":\"694\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('31', 'Banner 1', 'banner', '{\"name\":\"Banner 1\",\"banner_id\":\"6\",\"width\":\"182\",\"height\":\"182\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('31', 'Quảng cáo bên trái - Trang chủ', 'banner', '{\"name\":\"Qu\\u1ea3ng c\\u00e1o b\\u00ean tr\\u00e1i - Trang ch\\u1ee7\",\"banner_id\":\"9\",\"width\":\"270\",\"height\":\"630\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('34', 'Nội thất phòng khách', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng kh\\u00e1ch\",\"product\":[\"25\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('35', 'Nội thất phòng ngủ', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng ng\\u1ee7\",\"product\":[\"25\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('36', 'Nội thất phòng bếp', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng b\\u1ebfp\",\"product\":[\"25\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 
 -- ----------------------------
 -- Table structure for `bshop_option`
@@ -2133,23 +2128,23 @@ CREATE TABLE `bshop_product` (
 -- Records of bshop_product
 -- ----------------------------
 INSERT INTO `bshop_product` VALUES ('28', 'Product 1', '', '', '', '', '', '', '', '939', '7', 'catalog/product/1.jpg', '5', '1', '0.0000', '200', '9', '2009-02-03', '146.40000000', '2', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:06:50', '2016-11-17 21:59:05');
-INSERT INTO `bshop_product` VALUES ('29', 'Product 2', '', '', '', '', '', '', '', '999', '6', 'catalog/product/1.jpg', '6', '1', '279.9900', '0', '9', '2009-02-03', '133.00000000', '2', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 16:42:17', '2016-11-17 21:55:27');
+INSERT INTO `bshop_product` VALUES ('29', 'Product 2', '', '', '', '', '', '', '', '999', '6', 'catalog/product/1.jpg', '6', '1', '279.9900', '0', '9', '2009-02-03', '133.00000000', '2', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 16:42:17', '2016-11-18 14:21:51');
 INSERT INTO `bshop_product` VALUES ('30', 'Product 3', '', '', '', '', '', '', '', '7', '6', 'catalog/product/1.jpg', '9', '1', '100.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:59:00', '2016-11-17 21:54:04');
 INSERT INTO `bshop_product` VALUES ('31', 'Product 4', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '0', '1', '80.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 17:00:10', '2016-11-17 21:55:23');
 INSERT INTO `bshop_product` VALUES ('32', 'Product 5', '', '', '', '', '', '', '', '999', '6', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 17:07:26', '2016-11-17 21:55:03');
-INSERT INTO `bshop_product` VALUES ('33', 'Product 6', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '0', '1', '200.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 17:08:31', '2016-11-17 21:55:40');
+INSERT INTO `bshop_product` VALUES ('33', 'Product 6', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '0', '1', '200.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 17:08:31', '2016-11-18 15:32:05');
 INSERT INTO `bshop_product` VALUES ('34', 'Product 7', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:07:54', '2016-11-17 21:54:59');
 INSERT INTO `bshop_product` VALUES ('35', 'Product 8', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '0', '0', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 18:08:31', '2016-11-17 21:55:32');
 INSERT INTO `bshop_product` VALUES ('36', 'Product 9', '', '', '', '', '', '', '', '994', '6', 'catalog/product/1.jpg', '8', '0', '100.0000', '100', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:09:19', '2016-11-17 21:54:27');
 INSERT INTO `bshop_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '970', '5', 'catalog/product/1.jpg', '8', '1', '0.0000', '0', '9', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '4', '2009-02-03 21:07:12', '2016-11-17 21:59:49');
 INSERT INTO `bshop_product` VALUES ('41', 'Product 14', '', '', '', '', '', '', '', '977', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:26', '2016-11-17 21:54:19');
-INSERT INTO `bshop_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '990', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '400', '9', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '3', '2009-02-03 21:07:37', '2016-11-17 21:53:55');
+INSERT INTO `bshop_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '990', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '400', '9', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '8', '2009-02-03 21:07:37', '2016-11-18 15:31:53');
 INSERT INTO `bshop_product` VALUES ('43', 'Product 16', '', '', '', '', '', '', '', '929', '5', 'catalog/product/1.jpg', '8', '0', '500.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '4', '2009-02-03 21:07:49', '2016-11-17 21:55:12');
 INSERT INTO `bshop_product` VALUES ('44', 'Product 17', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '8', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:00', '2016-11-17 21:55:15');
 INSERT INTO `bshop_product` VALUES ('45', 'Product 18', '', '', '', '', '', '', '', '998', '5', 'catalog/product/1.jpg', '8', '1', '2000.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:17', '2016-11-17 21:55:19');
-INSERT INTO `bshop_product` VALUES ('46', 'Product 19', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '10', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:29', '2016-11-17 21:55:44');
+INSERT INTO `bshop_product` VALUES ('46', 'Product 19', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '10', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:29', '2016-11-18 14:21:28');
 INSERT INTO `bshop_product` VALUES ('47', 'Product 21', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '7', '1', '100.0000', '400', '9', '2009-02-03', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '0', '1', '0', '1', '0', '2009-02-03 21:08:40', '2016-11-17 21:54:08');
-INSERT INTO `bshop_product` VALUES ('48', 'product 20', 'test 1', '', '', '', '', '', 'test 2', '995', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-08', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-08 17:21:51', '2016-11-17 21:54:55');
+INSERT INTO `bshop_product` VALUES ('48', 'product 20', 'test 1', '', '', '', '', '', 'test 2', '995', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-08', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-08 17:21:51', '2016-11-18 14:09:27');
 INSERT INTO `bshop_product` VALUES ('49', 'SAM1', '', '', '', '', '', '', '', '0', '8', 'catalog/product/1.jpg', '0', '1', '199.9900', '0', '9', '2011-04-25', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2011-04-26 08:57:34', '2016-11-17 21:55:36');
 
 -- ----------------------------
@@ -2228,14 +2223,14 @@ CREATE TABLE `bshop_product_discount` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_discount_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=447 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=450 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_product_discount
 -- ----------------------------
-INSERT INTO `bshop_product_discount` VALUES ('446', '42', '1', '30', '1', '66.0000', '0000-00-00', '0000-00-00');
-INSERT INTO `bshop_product_discount` VALUES ('445', '42', '1', '20', '1', '77.0000', '0000-00-00', '0000-00-00');
-INSERT INTO `bshop_product_discount` VALUES ('444', '42', '1', '10', '1', '88.0000', '0000-00-00', '0000-00-00');
+INSERT INTO `bshop_product_discount` VALUES ('449', '42', '1', '30', '1', '66.0000', '0000-00-00', '0000-00-00');
+INSERT INTO `bshop_product_discount` VALUES ('448', '42', '1', '20', '1', '77.0000', '0000-00-00', '0000-00-00');
+INSERT INTO `bshop_product_discount` VALUES ('447', '42', '1', '10', '1', '88.0000', '0000-00-00', '0000-00-00');
 
 -- ----------------------------
 -- Table structure for `bshop_product_filter`
@@ -2262,7 +2257,7 @@ CREATE TABLE `bshop_product_image` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2477 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2489 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_product_image
@@ -2287,11 +2282,11 @@ INSERT INTO `bshop_product_image` VALUES ('2453', '45', 'catalog/demo/macbook_pr
 INSERT INTO `bshop_product_image` VALUES ('2452', '45', 'catalog/demo/macbook_pro_3.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2457', '31', 'catalog/demo/nikon_d300_3.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2456', '31', 'catalog/demo/nikon_d300_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2459', '29', 'catalog/demo/palm_treo_pro_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2469', '46', 'catalog/demo/sony_vaio_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2468', '46', 'catalog/demo/sony_vaio_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2433', '48', 'catalog/demo/ipod_classic_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2432', '48', 'catalog/demo/ipod_classic_3.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2485', '29', 'catalog/demo/palm_treo_pro_2.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2483', '46', 'catalog/demo/sony_vaio_2.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2482', '46', 'catalog/demo/sony_vaio_3.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2479', '48', 'catalog/demo/ipod_classic_2.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2478', '48', 'catalog/demo/ipod_classic_3.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2475', '40', 'catalog/demo/iphone_3.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2474', '40', 'catalog/demo/iphone_5.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2414', '30', 'catalog/demo/canon_eos_5d_3.jpg', '0');
@@ -2300,7 +2295,7 @@ INSERT INTO `bshop_product_image` VALUES ('2470', '28', 'catalog/demo/htc_touch_
 INSERT INTO `bshop_product_image` VALUES ('2420', '41', 'catalog/demo/imac_2.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2473', '40', 'catalog/demo/iphone_2.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2472', '40', 'catalog/demo/iphone_6.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2431', '48', 'catalog/demo/ipod_classic_2.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2477', '48', 'catalog/demo/ipod_classic_4.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2428', '36', 'catalog/demo/ipod_nano_2.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2427', '36', 'catalog/demo/ipod_nano_3.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2435', '34', 'catalog/demo/ipod_shuffle_2.jpg', '0');
@@ -2314,18 +2309,18 @@ INSERT INTO `bshop_product_image` VALUES ('2448', '44', 'catalog/demo/macbook_ai
 INSERT INTO `bshop_product_image` VALUES ('2451', '45', 'catalog/demo/macbook_pro_4.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2455', '31', 'catalog/demo/nikon_d300_4.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2454', '31', 'catalog/demo/nikon_d300_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2458', '29', 'catalog/demo/palm_treo_pro_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2466', '46', 'catalog/demo/sony_vaio_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2467', '46', 'catalog/demo/sony_vaio_2.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2484', '29', 'catalog/demo/palm_treo_pro_3.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2481', '46', 'catalog/demo/sony_vaio_4.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2480', '46', 'catalog/demo/sony_vaio_5.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2465', '49', 'catalog/demo/samsung_tab_7.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2464', '49', 'catalog/demo/samsung_tab_6.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2463', '49', 'catalog/demo/samsung_tab_5.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2462', '49', 'catalog/demo/samsung_tab_4.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2460', '49', 'catalog/demo/samsung_tab_2.jpg', '0');
 INSERT INTO `bshop_product_image` VALUES ('2461', '49', 'catalog/demo/samsung_tab_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2413', '42', 'catalog/product/1.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2412', '42', 'catalog/product/1.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2411', '42', 'catalog/product/1.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2488', '42', 'catalog/product/1.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2487', '42', 'catalog/product/1.jpg', '0');
+INSERT INTO `bshop_product_image` VALUES ('2486', '42', 'catalog/product/1.jpg', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_product_option`
@@ -2345,14 +2340,14 @@ CREATE TABLE `bshop_product_option` (
 -- ----------------------------
 INSERT INTO `bshop_product_option` VALUES ('224', '35', '11', '', '1');
 INSERT INTO `bshop_product_option` VALUES ('225', '47', '12', '2011-04-22', '1');
-INSERT INTO `bshop_product_option` VALUES ('221', '42', '9', '22:25', '1');
-INSERT INTO `bshop_product_option` VALUES ('223', '42', '2', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('217', '42', '5', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('209', '42', '6', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('218', '42', '1', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('208', '42', '4', 'test', '1');
-INSERT INTO `bshop_product_option` VALUES ('226', '30', '5', '', '1');
 INSERT INTO `bshop_product_option` VALUES ('219', '42', '8', '2011-02-20', '1');
+INSERT INTO `bshop_product_option` VALUES ('208', '42', '4', 'test', '1');
+INSERT INTO `bshop_product_option` VALUES ('218', '42', '1', '', '1');
+INSERT INTO `bshop_product_option` VALUES ('209', '42', '6', '', '1');
+INSERT INTO `bshop_product_option` VALUES ('226', '30', '5', '', '1');
+INSERT INTO `bshop_product_option` VALUES ('217', '42', '5', '', '1');
+INSERT INTO `bshop_product_option` VALUES ('223', '42', '2', '', '1');
+INSERT INTO `bshop_product_option` VALUES ('221', '42', '9', '22:25', '1');
 INSERT INTO `bshop_product_option` VALUES ('222', '42', '7', '', '1');
 INSERT INTO `bshop_product_option` VALUES ('220', '42', '10', '2011-02-20 22:25', '1');
 
@@ -2380,22 +2375,22 @@ CREATE TABLE `bshop_product_option_value` (
 -- ----------------------------
 -- Records of bshop_product_option_value
 -- ----------------------------
-INSERT INTO `bshop_product_option_value` VALUES ('1', '217', '42', '5', '41', '100', '0', '1.0000', '+', '0', '+', '1.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('4', '217', '42', '5', '39', '92', '1', '4.0000', '+', '0', '+', '4.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('2', '217', '42', '5', '42', '200', '1', '2.0000', '+', '0', '+', '2.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('3', '217', '42', '5', '40', '300', '0', '3.0000', '+', '0', '+', '3.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('6', '218', '42', '1', '31', '146', '1', '20.0000', '+', '2', '-', '20.00000000', '+');
 INSERT INTO `bshop_product_option_value` VALUES ('7', '218', '42', '1', '43', '300', '1', '30.0000', '+', '3', '+', '30.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('5', '218', '42', '1', '32', '96', '1', '10.0000', '+', '1', '+', '10.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('6', '218', '42', '1', '31', '146', '1', '20.0000', '+', '2', '-', '20.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('3', '217', '42', '5', '40', '300', '0', '3.0000', '+', '0', '+', '3.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('2', '217', '42', '5', '42', '200', '1', '2.0000', '+', '0', '+', '2.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('4', '217', '42', '5', '39', '92', '1', '4.0000', '+', '0', '+', '4.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('1', '217', '42', '5', '41', '100', '0', '1.0000', '+', '0', '+', '1.00000000', '+');
 INSERT INTO `bshop_product_option_value` VALUES ('13', '224', '35', '11', '47', '10', '1', '10.0000', '+', '0', '+', '0.00000000', '+');
 INSERT INTO `bshop_product_option_value` VALUES ('14', '224', '35', '11', '48', '15', '1', '15.0000', '+', '0', '+', '0.00000000', '+');
 INSERT INTO `bshop_product_option_value` VALUES ('16', '226', '30', '5', '40', '5', '1', '0.0000', '+', '0', '+', '0.00000000', '+');
 INSERT INTO `bshop_product_option_value` VALUES ('15', '226', '30', '5', '39', '2', '1', '0.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('11', '223', '42', '2', '45', '3998', '1', '40.0000', '+', '0', '+', '40.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('12', '224', '35', '11', '46', '0', '1', '5.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('9', '223', '42', '2', '24', '194', '1', '20.0000', '+', '0', '+', '20.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('10', '223', '42', '2', '44', '2696', '1', '30.0000', '+', '0', '+', '30.00000000', '+');
 INSERT INTO `bshop_product_option_value` VALUES ('8', '223', '42', '2', '23', '48', '1', '10.0000', '+', '0', '+', '10.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('12', '224', '35', '11', '46', '0', '1', '5.0000', '+', '0', '+', '0.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('10', '223', '42', '2', '44', '2696', '1', '30.0000', '+', '0', '+', '30.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('9', '223', '42', '2', '24', '194', '1', '20.0000', '+', '0', '+', '20.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('11', '223', '42', '2', '45', '3998', '1', '40.0000', '+', '0', '+', '40.00000000', '+');
+INSERT INTO `bshop_product_option_value` VALUES ('5', '218', '42', '1', '32', '96', '1', '10.0000', '+', '1', '+', '10.00000000', '+');
 
 -- ----------------------------
 -- Table structure for `bshop_product_recurring`
@@ -2440,12 +2435,12 @@ CREATE TABLE `bshop_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=563 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=564 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_product_reward
 -- ----------------------------
-INSERT INTO `bshop_product_reward` VALUES ('554', '42', '1', '100');
+INSERT INTO `bshop_product_reward` VALUES ('563', '42', '1', '100');
 INSERT INTO `bshop_product_reward` VALUES ('556', '47', '1', '300');
 INSERT INTO `bshop_product_reward` VALUES ('562', '28', '1', '400');
 INSERT INTO `bshop_product_reward` VALUES ('558', '43', '1', '600');
@@ -2468,12 +2463,12 @@ CREATE TABLE `bshop_product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=446 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=447 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_product_special
 -- ----------------------------
-INSERT INTO `bshop_product_special` VALUES ('443', '42', '1', '1', '90.0000', '0000-00-00', '0000-00-00');
+INSERT INTO `bshop_product_special` VALUES ('446', '42', '1', '1', '90.0000', '0000-00-00', '0000-00-00');
 INSERT INTO `bshop_product_special` VALUES ('445', '30', '1', '2', '90.0000', '0000-00-00', '0000-00-00');
 INSERT INTO `bshop_product_special` VALUES ('444', '30', '1', '1', '80.0000', '0000-00-00', '0000-00-00');
 
@@ -2491,10 +2486,14 @@ CREATE TABLE `bshop_product_to_category` (
 -- ----------------------------
 -- Records of bshop_product_to_category
 -- ----------------------------
+INSERT INTO `bshop_product_to_category` VALUES ('29', '25');
 INSERT INTO `bshop_product_to_category` VALUES ('30', '33');
 INSERT INTO `bshop_product_to_category` VALUES ('31', '33');
+INSERT INTO `bshop_product_to_category` VALUES ('33', '25');
 INSERT INTO `bshop_product_to_category` VALUES ('33', '28');
 INSERT INTO `bshop_product_to_category` VALUES ('42', '28');
+INSERT INTO `bshop_product_to_category` VALUES ('46', '25');
+INSERT INTO `bshop_product_to_category` VALUES ('48', '25');
 INSERT INTO `bshop_product_to_category` VALUES ('49', '57');
 
 -- ----------------------------
@@ -3051,15 +3050,15 @@ CREATE TABLE `bshop_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=885 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=890 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_url_alias
 -- ----------------------------
-INSERT INTO `bshop_url_alias` VALUES ('870', 'product_id=48', 'ipod-classic');
+INSERT INTO `bshop_url_alias` VALUES ('885', 'product_id=48', 'ipod-classic');
 INSERT INTO `bshop_url_alias` VALUES ('730', 'manufacturer_id=8', 'apple');
 INSERT INTO `bshop_url_alias` VALUES ('772', 'information_id=4', 'about_us');
-INSERT INTO `bshop_url_alias` VALUES ('863', 'product_id=42', 'test');
+INSERT INTO `bshop_url_alias` VALUES ('888', 'product_id=42', 'test');
 INSERT INTO `bshop_url_alias` VALUES ('781', 'category_id=36', 'test2');
 INSERT INTO `bshop_url_alias` VALUES ('777', 'category_id=25', 'component');
 INSERT INTO `bshop_url_alias` VALUES ('778', 'category_id=29', 'mouse');
@@ -3077,11 +3076,11 @@ INSERT INTO `bshop_url_alias` VALUES ('873', 'product_id=43', 'macbook');
 INSERT INTO `bshop_url_alias` VALUES ('874', 'product_id=44', 'macbook-air');
 INSERT INTO `bshop_url_alias` VALUES ('875', 'product_id=45', 'macbook-pro');
 INSERT INTO `bshop_url_alias` VALUES ('876', 'product_id=31', 'nikon-d300');
-INSERT INTO `bshop_url_alias` VALUES ('877', 'product_id=29', 'palm-treo-pro');
+INSERT INTO `bshop_url_alias` VALUES ('887', 'product_id=29', 'palm-treo-pro');
 INSERT INTO `bshop_url_alias` VALUES ('878', 'product_id=35', 'product-8');
 INSERT INTO `bshop_url_alias` VALUES ('879', 'product_id=49', 'samsung-galaxy-tab-10-1');
-INSERT INTO `bshop_url_alias` VALUES ('880', 'product_id=33', 'samsung-syncmaster-941bw');
-INSERT INTO `bshop_url_alias` VALUES ('881', 'product_id=46', 'sony-vaio');
+INSERT INTO `bshop_url_alias` VALUES ('889', 'product_id=33', 'samsung-syncmaster-941bw');
+INSERT INTO `bshop_url_alias` VALUES ('886', 'product_id=46', 'sony-vaio');
 INSERT INTO `bshop_url_alias` VALUES ('867', 'product_id=41', 'imac');
 INSERT INTO `bshop_url_alias` VALUES ('883', 'product_id=40', 'iphone');
 INSERT INTO `bshop_url_alias` VALUES ('869', 'product_id=36', 'ipod-nano');
@@ -3137,7 +3136,7 @@ CREATE TABLE `bshop_user_group` (
 -- ----------------------------
 -- Records of bshop_user_group
 -- ----------------------------
-INSERT INTO `bshop_user_group` VALUES ('1', 'Administrator', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/language\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/setting\",\"theme\\/theme_default\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/bestseller\",\"module\\/special\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/language\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/setting\",\"theme\\/theme_default\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/bestseller\",\"module\\/special\"]}');
+INSERT INTO `bshop_user_group` VALUES ('1', 'Administrator', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/language\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/setting\",\"theme\\/theme_default\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/bestseller\",\"module\\/special\",\"module\\/categoryproducts\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/language\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/setting\",\"theme\\/theme_default\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/bestseller\",\"module\\/special\",\"module\\/categoryproducts\"]}');
 INSERT INTO `bshop_user_group` VALUES ('10', 'Demonstration', '');
 
 -- ----------------------------
