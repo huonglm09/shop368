@@ -108,3 +108,65 @@ FILE: system/library/template/basic.php
 REGEX: ~(require|include)(_once)?\(([^)]+)~
 LINE: 18
 ----------------------------------------------------------------
+2016-11-19 11:56:12 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+2016-11-21 17:06:12 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: TLT Blog for Opencart 2.2.x
+FILE: admin/controller/common/menu.php
+CODE: $data['text_information'] = $this->language->get('text_information');
+LINE: 42
+CODE: $data['information'] = $this->url->link('catalog/information', 'token=' . $this->session->data['token'], true);
+LINE: 143
+FILE: admin/language/en-gb/common/menu.php
+CODE: $_['text_information']                 = 'Information';
+LINE: 32
+FILE: admin/view/template/common/menu.tpl
+CODE: <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
+LINE: 25
+----------------------------------------------------------------
+MOD: TLT Blog SEO Url modification
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->request->get['route'] = 'error/not_found';
+LINE: 47
+----------------------------------------------------------------

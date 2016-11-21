@@ -88,24 +88,28 @@ class ControllerCommonFooter extends Controller {
 				$children = $this->model_catalog_category->getCategories($category['category_id']);
 
 				foreach ($children as $child) {
-					$filter_data = array(
-						'filter_category_id'  => $child['category_id'],
-						'filter_sub_category' => true
-					);
+					// Level 3
+					$children_data_2 = array();
 
-					$children_data[] = array(
-						'name'  => $child['name'],
-						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+					$children_2 = $this->model_catalog_category->getCategories($child['category_id']);
+
+					if(!empty($children_2)) {
+						foreach ($children_2 as $child_2) {
+							$children_data_2[] = array(
+								'name'  => $child_2['name'],
+								'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id']. '_' . $child['category_id'])
+							);
+						}
+					}
+
+					// Level 1
+					$data['categories'][] = array(
+						'name'     => $child['name'],
+						'children' => $children_data_2,
+						'column'   => $child['column'] ? $child['column'] : 1,
+						'href'     => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}
-
-				// Level 1
-				$data['categories'][] = array(
-					'name'     => $category['name'],
-					'children' => $children_data,
-					'column'   => $category['column'] ? $category['column'] : 1,
-					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
-				);
 			}
 		}
 

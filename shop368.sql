@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-11-18 19:02:20
+Date: 2016-11-22 00:25:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -207,17 +207,6 @@ CREATE TABLE `bshop_attribute` (
 -- ----------------------------
 -- Records of bshop_attribute
 -- ----------------------------
-INSERT INTO `bshop_attribute` VALUES ('1', '6', '1');
-INSERT INTO `bshop_attribute` VALUES ('2', '6', '5');
-INSERT INTO `bshop_attribute` VALUES ('3', '6', '3');
-INSERT INTO `bshop_attribute` VALUES ('4', '3', '1');
-INSERT INTO `bshop_attribute` VALUES ('5', '3', '2');
-INSERT INTO `bshop_attribute` VALUES ('6', '3', '3');
-INSERT INTO `bshop_attribute` VALUES ('7', '3', '4');
-INSERT INTO `bshop_attribute` VALUES ('8', '3', '5');
-INSERT INTO `bshop_attribute` VALUES ('9', '3', '6');
-INSERT INTO `bshop_attribute` VALUES ('10', '3', '7');
-INSERT INTO `bshop_attribute` VALUES ('11', '3', '8');
 
 -- ----------------------------
 -- Table structure for `bshop_attribute_description`
@@ -233,17 +222,6 @@ CREATE TABLE `bshop_attribute_description` (
 -- ----------------------------
 -- Records of bshop_attribute_description
 -- ----------------------------
-INSERT INTO `bshop_attribute_description` VALUES ('1', '2', 'Description');
-INSERT INTO `bshop_attribute_description` VALUES ('2', '2', 'No. of Cores');
-INSERT INTO `bshop_attribute_description` VALUES ('4', '2', 'test 1');
-INSERT INTO `bshop_attribute_description` VALUES ('5', '2', 'test 2');
-INSERT INTO `bshop_attribute_description` VALUES ('6', '2', 'test 3');
-INSERT INTO `bshop_attribute_description` VALUES ('7', '2', 'test 4');
-INSERT INTO `bshop_attribute_description` VALUES ('8', '2', 'test 5');
-INSERT INTO `bshop_attribute_description` VALUES ('9', '2', 'test 6');
-INSERT INTO `bshop_attribute_description` VALUES ('10', '2', 'test 7');
-INSERT INTO `bshop_attribute_description` VALUES ('11', '2', 'test 8');
-INSERT INTO `bshop_attribute_description` VALUES ('3', '2', 'Clockspeed');
 
 -- ----------------------------
 -- Table structure for `bshop_attribute_group`
@@ -258,10 +236,6 @@ CREATE TABLE `bshop_attribute_group` (
 -- ----------------------------
 -- Records of bshop_attribute_group
 -- ----------------------------
-INSERT INTO `bshop_attribute_group` VALUES ('3', '2');
-INSERT INTO `bshop_attribute_group` VALUES ('4', '1');
-INSERT INTO `bshop_attribute_group` VALUES ('5', '3');
-INSERT INTO `bshop_attribute_group` VALUES ('6', '4');
 
 -- ----------------------------
 -- Table structure for `bshop_attribute_group_description`
@@ -277,10 +251,6 @@ CREATE TABLE `bshop_attribute_group_description` (
 -- ----------------------------
 -- Records of bshop_attribute_group_description
 -- ----------------------------
-INSERT INTO `bshop_attribute_group_description` VALUES ('3', '2', 'Memory');
-INSERT INTO `bshop_attribute_group_description` VALUES ('4', '2', 'Technical');
-INSERT INTO `bshop_attribute_group_description` VALUES ('5', '2', 'Motherboard');
-INSERT INTO `bshop_attribute_group_description` VALUES ('6', '2', 'Processor');
 
 -- ----------------------------
 -- Table structure for `bshop_banner`
@@ -371,7 +341,7 @@ CREATE TABLE `bshop_cart` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `cart_id` (`customer_id`,`session_id`,`product_id`,`recurring_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_cart
@@ -393,22 +363,19 @@ CREATE TABLE `bshop_category` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`category_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_category
 -- ----------------------------
-INSERT INTO `bshop_category` VALUES ('25', '', '0', '1', '1', '3', '1', '2009-01-31 01:04:25', '2011-05-30 12:14:55');
-INSERT INTO `bshop_category` VALUES ('28', '', '25', '0', '0', '1', '1', '2009-02-02 13:11:12', '2010-08-22 06:32:46');
-INSERT INTO `bshop_category` VALUES ('29', '', '25', '0', '0', '1', '1', '2009-02-02 13:11:37', '2010-08-22 06:32:39');
-INSERT INTO `bshop_category` VALUES ('30', '', '25', '0', '0', '1', '1', '2009-02-02 13:11:59', '2010-08-22 06:33:00');
-INSERT INTO `bshop_category` VALUES ('31', '', '25', '0', '0', '1', '1', '2009-02-03 14:17:24', '2010-08-22 06:33:06');
-INSERT INTO `bshop_category` VALUES ('32', '', '25', '0', '0', '1', '1', '2009-02-03 14:17:34', '2010-08-22 06:33:12');
-INSERT INTO `bshop_category` VALUES ('33', '', '0', '1', '1', '6', '1', '2009-02-03 14:17:55', '2011-05-30 12:15:25');
-INSERT INTO `bshop_category` VALUES ('35', '', '28', '0', '0', '0', '1', '2010-09-17 10:06:48', '2010-09-18 14:02:42');
-INSERT INTO `bshop_category` VALUES ('36', '', '28', '0', '0', '0', '1', '2010-09-17 10:07:13', '2010-09-18 14:02:55');
-INSERT INTO `bshop_category` VALUES ('57', '', '0', '1', '1', '3', '1', '2011-04-26 08:53:16', '2011-05-30 12:15:05');
-INSERT INTO `bshop_category` VALUES ('59', '', '33', '0', '1', '0', '1', '2016-11-17 23:23:54', '2016-11-17 23:23:54');
+INSERT INTO `bshop_category` VALUES ('62', '', '60', '0', '1', '0', '1', '2016-11-19 18:26:10', '2016-11-19 18:26:10');
+INSERT INTO `bshop_category` VALUES ('66', '', '60', '0', '1', '0', '1', '2016-11-19 18:29:20', '2016-11-19 18:29:20');
+INSERT INTO `bshop_category` VALUES ('65', '', '60', '0', '1', '0', '1', '2016-11-19 18:27:44', '2016-11-19 18:27:44');
+INSERT INTO `bshop_category` VALUES ('64', '', '60', '0', '1', '0', '1', '2016-11-19 18:27:14', '2016-11-19 18:27:14');
+INSERT INTO `bshop_category` VALUES ('63', '', '60', '0', '1', '0', '1', '2016-11-19 18:26:45', '2016-11-19 18:26:45');
+INSERT INTO `bshop_category` VALUES ('67', '', '61', '0', '1', '0', '1', '2016-11-19 18:31:14', '2016-11-19 18:31:14');
+INSERT INTO `bshop_category` VALUES ('60', '', '0', '1', '1', '0', '1', '2016-11-19 18:25:06', '2016-11-19 18:25:06');
+INSERT INTO `bshop_category` VALUES ('61', '', '60', '0', '1', '0', '1', '2016-11-19 18:25:45', '2016-11-19 18:25:45');
 
 -- ----------------------------
 -- Table structure for `bshop_category_description`
@@ -429,17 +396,14 @@ CREATE TABLE `bshop_category_description` (
 -- ----------------------------
 -- Records of bshop_category_description
 -- ----------------------------
-INSERT INTO `bshop_category_description` VALUES ('28', '2', 'Monitors', '', 'Monitors', '', '');
-INSERT INTO `bshop_category_description` VALUES ('33', '2', 'Cameras', '', 'Cameras', '', '');
-INSERT INTO `bshop_category_description` VALUES ('32', '2', 'Web Cameras', '', 'Web Cameras', '', '');
-INSERT INTO `bshop_category_description` VALUES ('31', '2', 'Scanners', '', 'Scanners', '', '');
-INSERT INTO `bshop_category_description` VALUES ('30', '2', 'Printers', '', 'Printers', '', '');
-INSERT INTO `bshop_category_description` VALUES ('29', '2', 'Mice and Trackballs', '', 'Mice and Trackballs', '', '');
-INSERT INTO `bshop_category_description` VALUES ('25', '2', 'Components', '', 'Components', '', '');
-INSERT INTO `bshop_category_description` VALUES ('35', '2', 'test 1', '', 'test 1', '', '');
-INSERT INTO `bshop_category_description` VALUES ('36', '2', 'test 2', '', 'test 2', '', '');
-INSERT INTO `bshop_category_description` VALUES ('57', '2', 'Tablets', '', 'Tablets', '', '');
-INSERT INTO `bshop_category_description` VALUES ('59', '2', 'acb', '', 'acd', '', '');
+INSERT INTO `bshop_category_description` VALUES ('61', '2', 'Nội thất phòng khách', '&lt;p&gt;Nội thất phòng khách&lt;br&gt;&lt;/p&gt;', 'Nội thất phòng khách', 'Nội thất phòng khách', 'Nội thất phòng khách');
+INSERT INTO `bshop_category_description` VALUES ('62', '2', 'Nội thất phòng ngủ', '&lt;p&gt;Nội thất phòng ngủ&lt;br&gt;&lt;/p&gt;', 'Nội thất phòng ngủ', 'Nội thất phòng ngủ', 'Nội thất phòng ngủ');
+INSERT INTO `bshop_category_description` VALUES ('60', '2', 'Sản phẩm', '&lt;p&gt;Danh mục sản phẩm&lt;br&gt;&lt;/p&gt;', 'Tất cả sản phẩm', 'Tất cả sản phẩm', 'Tất cả sản phẩm');
+INSERT INTO `bshop_category_description` VALUES ('63', '2', 'Nội thất phòng bếp', '&lt;p&gt;Nội thất phòng bếp&lt;br&gt;&lt;/p&gt;', 'Nội thất phòng bếp', 'Nội thất phòng bếp', 'Nội thất phòng bếp');
+INSERT INTO `bshop_category_description` VALUES ('64', '2', 'Nội thất văn phòng', '&lt;p&gt;Nội thất văn phòng&lt;br&gt;&lt;/p&gt;', 'Nội thất văn phòng', 'Nội thất văn phòng', 'Nội thất văn phòng');
+INSERT INTO `bshop_category_description` VALUES ('65', '2', 'Thi công trần', '&lt;p&gt;Thi công trần&lt;br&gt;&lt;/p&gt;', 'Thi công trần', 'Thi công trần', 'Thi công trần');
+INSERT INTO `bshop_category_description` VALUES ('66', '2', 'Giấy dán tường', '&lt;p&gt;Giấy dán tường&lt;br&gt;&lt;/p&gt;', 'Giấy dán tường', 'Giấy dán tường', 'Giấy dán tường');
+INSERT INTO `bshop_category_description` VALUES ('67', '2', 'Bàn ghế phòng khách', '&lt;p&gt;Bàn ghế phòng khách&lt;br&gt;&lt;/p&gt;', 'Bàn ghế phòng khách', 'Bàn ghế phòng khách', 'Bàn ghế phòng khách');
 
 -- ----------------------------
 -- Table structure for `bshop_category_filter`
@@ -469,27 +433,22 @@ CREATE TABLE `bshop_category_path` (
 -- ----------------------------
 -- Records of bshop_category_path
 -- ----------------------------
-INSERT INTO `bshop_category_path` VALUES ('25', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('28', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('28', '28', '1');
-INSERT INTO `bshop_category_path` VALUES ('35', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('35', '28', '1');
-INSERT INTO `bshop_category_path` VALUES ('35', '35', '2');
-INSERT INTO `bshop_category_path` VALUES ('36', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('36', '28', '1');
-INSERT INTO `bshop_category_path` VALUES ('36', '36', '2');
-INSERT INTO `bshop_category_path` VALUES ('29', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('29', '29', '1');
-INSERT INTO `bshop_category_path` VALUES ('30', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('30', '30', '1');
-INSERT INTO `bshop_category_path` VALUES ('31', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('31', '31', '1');
-INSERT INTO `bshop_category_path` VALUES ('32', '25', '0');
-INSERT INTO `bshop_category_path` VALUES ('32', '32', '1');
-INSERT INTO `bshop_category_path` VALUES ('33', '33', '0');
-INSERT INTO `bshop_category_path` VALUES ('57', '57', '0');
-INSERT INTO `bshop_category_path` VALUES ('59', '33', '0');
-INSERT INTO `bshop_category_path` VALUES ('59', '59', '1');
+INSERT INTO `bshop_category_path` VALUES ('67', '67', '2');
+INSERT INTO `bshop_category_path` VALUES ('67', '61', '1');
+INSERT INTO `bshop_category_path` VALUES ('67', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('66', '66', '1');
+INSERT INTO `bshop_category_path` VALUES ('66', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('65', '65', '1');
+INSERT INTO `bshop_category_path` VALUES ('65', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('64', '64', '1');
+INSERT INTO `bshop_category_path` VALUES ('64', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('63', '63', '1');
+INSERT INTO `bshop_category_path` VALUES ('63', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('62', '62', '1');
+INSERT INTO `bshop_category_path` VALUES ('62', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('61', '61', '1');
+INSERT INTO `bshop_category_path` VALUES ('61', '60', '0');
+INSERT INTO `bshop_category_path` VALUES ('60', '60', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_category_to_layout`
@@ -505,7 +464,14 @@ CREATE TABLE `bshop_category_to_layout` (
 -- ----------------------------
 -- Records of bshop_category_to_layout
 -- ----------------------------
-INSERT INTO `bshop_category_to_layout` VALUES ('59', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('61', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('60', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('62', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('63', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('64', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('65', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('66', '0', '0');
+INSERT INTO `bshop_category_to_layout` VALUES ('67', '0', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_category_to_store`
@@ -520,17 +486,14 @@ CREATE TABLE `bshop_category_to_store` (
 -- ----------------------------
 -- Records of bshop_category_to_store
 -- ----------------------------
-INSERT INTO `bshop_category_to_store` VALUES ('25', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('28', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('29', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('30', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('31', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('32', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('33', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('35', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('36', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('57', '0');
-INSERT INTO `bshop_category_to_store` VALUES ('59', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('60', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('61', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('62', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('63', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('64', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('65', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('66', '0');
+INSERT INTO `bshop_category_to_store` VALUES ('67', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_country`
@@ -900,7 +863,7 @@ CREATE TABLE `bshop_currency` (
 -- ----------------------------
 -- Records of bshop_currency
 -- ----------------------------
-INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-18 09:30:57');
+INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-21 17:05:48');
 
 -- ----------------------------
 -- Table structure for `bshop_customer`
@@ -1245,7 +1208,7 @@ CREATE TABLE `bshop_extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_extension
@@ -1271,6 +1234,9 @@ INSERT INTO `bshop_extension` VALUES ('18', 'module', 'featured');
 INSERT INTO `bshop_extension` VALUES ('19', 'module', 'slideshow');
 INSERT INTO `bshop_extension` VALUES ('20', 'theme', 'theme_default');
 INSERT INTO `bshop_extension` VALUES ('23', 'module', 'categoryproducts');
+INSERT INTO `bshop_extension` VALUES ('24', 'module', 'information');
+INSERT INTO `bshop_extension` VALUES ('29', 'module', 'tltblog_settings');
+INSERT INTO `bshop_extension` VALUES ('28', 'module', 'tltblog');
 
 -- ----------------------------
 -- Table structure for `bshop_filter`
@@ -1457,7 +1423,7 @@ CREATE TABLE `bshop_layout` (
   `layout_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout
@@ -1475,6 +1441,7 @@ INSERT INTO `bshop_layout` VALUES ('10', 'Affiliate');
 INSERT INTO `bshop_layout` VALUES ('11', 'Information');
 INSERT INTO `bshop_layout` VALUES ('12', 'Compare');
 INSERT INTO `bshop_layout` VALUES ('13', 'Search');
+INSERT INTO `bshop_layout` VALUES ('15', 'Tin tức');
 
 -- ----------------------------
 -- Table structure for `bshop_layout_module`
@@ -1487,7 +1454,7 @@ CREATE TABLE `bshop_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=174 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=197 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_module
@@ -1498,14 +1465,14 @@ INSERT INTO `bshop_layout_module` VALUES ('20', '5', '0', 'column_left', '2');
 INSERT INTO `bshop_layout_module` VALUES ('69', '10', 'affiliate', 'column_right', '1');
 INSERT INTO `bshop_layout_module` VALUES ('68', '6', 'account', 'column_right', '1');
 INSERT INTO `bshop_layout_module` VALUES ('72', '3', 'category', 'column_left', '1');
-INSERT INTO `bshop_layout_module` VALUES ('173', '1', 'carousel.37', 'content_bottom', '1');
-INSERT INTO `bshop_layout_module` VALUES ('172', '1', 'slideshow.27', 'slideshow', '1');
-INSERT INTO `bshop_layout_module` VALUES ('171', '1', 'featured.28', 'content_top', '2');
-INSERT INTO `bshop_layout_module` VALUES ('169', '1', 'categoryproducts.35', 'column_right', '2');
-INSERT INTO `bshop_layout_module` VALUES ('170', '1', 'categoryproducts.36', 'column_right', '3');
-INSERT INTO `bshop_layout_module` VALUES ('168', '1', 'categoryproducts.34', 'column_right', '1');
-INSERT INTO `bshop_layout_module` VALUES ('167', '1', 'banner.31', 'column_left', '2');
-INSERT INTO `bshop_layout_module` VALUES ('166', '1', 'category', 'column_left', '1');
+INSERT INTO `bshop_layout_module` VALUES ('191', '1', 'slideshow.27', 'slideshow', '1');
+INSERT INTO `bshop_layout_module` VALUES ('190', '1', 'featured.28', 'content_top', '2');
+INSERT INTO `bshop_layout_module` VALUES ('189', '1', 'carousel.37', 'content_bottom', '1');
+INSERT INTO `bshop_layout_module` VALUES ('188', '1', 'categoryproducts.36', 'column_right', '3');
+INSERT INTO `bshop_layout_module` VALUES ('187', '1', 'categoryproducts.35', 'column_right', '2');
+INSERT INTO `bshop_layout_module` VALUES ('186', '1', 'categoryproducts.34', 'column_right', '1');
+INSERT INTO `bshop_layout_module` VALUES ('185', '1', 'banner.31', 'column_left', '2');
+INSERT INTO `bshop_layout_module` VALUES ('184', '1', 'category', 'column_left', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_layout_route`
@@ -1517,7 +1484,7 @@ CREATE TABLE `bshop_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_route
@@ -1525,9 +1492,9 @@ CREATE TABLE `bshop_layout_route` (
 INSERT INTO `bshop_layout_route` VALUES ('38', '6', '0', 'account/%');
 INSERT INTO `bshop_layout_route` VALUES ('17', '10', '0', 'affiliate/%');
 INSERT INTO `bshop_layout_route` VALUES ('44', '3', '0', 'product/category');
-INSERT INTO `bshop_layout_route` VALUES ('81', '1', '0', 'common/home');
+INSERT INTO `bshop_layout_route` VALUES ('85', '1', '0', 'common/home');
 INSERT INTO `bshop_layout_route` VALUES ('20', '2', '0', 'product/product');
-INSERT INTO `bshop_layout_route` VALUES ('24', '11', '0', 'information/information');
+INSERT INTO `bshop_layout_route` VALUES ('83', '11', '0', 'information/information');
 INSERT INTO `bshop_layout_route` VALUES ('23', '7', '0', 'checkout/%');
 INSERT INTO `bshop_layout_route` VALUES ('31', '8', '0', 'information/contact');
 INSERT INTO `bshop_layout_route` VALUES ('32', '9', '0', 'information/sitemap');
@@ -1535,6 +1502,7 @@ INSERT INTO `bshop_layout_route` VALUES ('34', '4', '0', '');
 INSERT INTO `bshop_layout_route` VALUES ('45', '5', '0', 'product/manufacturer');
 INSERT INTO `bshop_layout_route` VALUES ('52', '12', '0', 'product/compare');
 INSERT INTO `bshop_layout_route` VALUES ('53', '13', '0', 'product/search');
+INSERT INTO `bshop_layout_route` VALUES ('97', '15', '0', 'tltblog/tlttag');
 
 -- ----------------------------
 -- Table structure for `bshop_length_class`
@@ -1609,12 +1577,6 @@ CREATE TABLE `bshop_manufacturer` (
 -- ----------------------------
 -- Records of bshop_manufacturer
 -- ----------------------------
-INSERT INTO `bshop_manufacturer` VALUES ('5', 'HTC', 'catalog/demo/htc_logo.jpg', '0');
-INSERT INTO `bshop_manufacturer` VALUES ('6', 'Palm', 'catalog/demo/palm_logo.jpg', '0');
-INSERT INTO `bshop_manufacturer` VALUES ('7', 'Hewlett-Packard', 'catalog/demo/hp_logo.jpg', '0');
-INSERT INTO `bshop_manufacturer` VALUES ('8', 'Apple', 'catalog/demo/apple_logo.jpg', '0');
-INSERT INTO `bshop_manufacturer` VALUES ('9', 'Canon', 'catalog/demo/canon_logo.jpg', '0');
-INSERT INTO `bshop_manufacturer` VALUES ('10', 'Sony', 'catalog/demo/sony_logo.jpg', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_manufacturer_to_store`
@@ -1629,12 +1591,6 @@ CREATE TABLE `bshop_manufacturer_to_store` (
 -- ----------------------------
 -- Records of bshop_manufacturer_to_store
 -- ----------------------------
-INSERT INTO `bshop_manufacturer_to_store` VALUES ('5', '0');
-INSERT INTO `bshop_manufacturer_to_store` VALUES ('6', '0');
-INSERT INTO `bshop_manufacturer_to_store` VALUES ('7', '0');
-INSERT INTO `bshop_manufacturer_to_store` VALUES ('8', '0');
-INSERT INTO `bshop_manufacturer_to_store` VALUES ('9', '0');
-INSERT INTO `bshop_manufacturer_to_store` VALUES ('10', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_marketing`
@@ -1669,11 +1625,13 @@ CREATE TABLE `bshop_modification` (
   `status` tinyint(1) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`modification_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_modification
 -- ----------------------------
+INSERT INTO `bshop_modification` VALUES ('1', 'TLT Blog for Opencart 2.2.x', 'tltblog-4.0', 'Taiwanleaftea.com', '4.0', 'http://taiwanleaftea.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modification>\n    <code>tltblog-4.0</code>\n    <name>TLT Blog for Opencart 2.2.x</name>\n    <version>4.0</version>\n    <author>Taiwanleaftea.com</author>\n    <link>http://taiwanleaftea.com</link>\n    <file path=\"admin/controller/common/menu.php\">\n        <operation>\n            <search trim=\"true\" index=\"0\"><![CDATA[\n		$data[\'text_information\'] = $this->language->get(\'text_information\');\n            ]]></search>\n            <add position=\"after\" trim=\"false\" offset=\"0\"><![CDATA[\n		$data[\'text_tltblog_parent\'] = $this->language->get(\'text_tltblog_parent\');\n		$data[\'text_tltblog\'] = $this->language->get(\'text_tltblog\');\n		$data[\'text_tlttag\'] = $this->language->get(\'text_tlttag\');\n            ]]></add>\n        </operation>\n        <operation>\n            <search trim=\"true\" index=\"0\"><![CDATA[\n		$data[\'information\'] = $this->url->link(\'catalog/information\', \'token=\' . $this->session->data[\'token\'], true);\n            ]]></search>\n            <add position=\"after\" trim=\"false\" offset=\"0\"><![CDATA[\n		$data[\'tltblog\'] = $this->url->link(\'tltblog/tltblog\', \'token=\' . $this->session->data[\'token\'], true);\n		$data[\'tlttag\'] = $this->url->link(\'tltblog/tlttag\', \'token=\' . $this->session->data[\'token\'], true);\n            ]]></add>\n        </operation>\n    </file>  \n    <file path=\"admin/language/en-gb/common/menu.php\">\n        <operation>\n            <search trim=\"true\" index=\"0\"><![CDATA[\n$_[\'text_information\']                 = \'Information\';\n			]]></search>\n            <add position=\"after\" trim=\"false\" offset=\"0\"><![CDATA[\n$_[\'text_tltblog_parent\']              = \'TLT Blog\';\n$_[\'text_tltblog\']                     = \'Articles\';\n$_[\'text_tlttag\']                      = \'Tags\';\n			]]></add>\n        </operation>\n    </file>  \n    <file path=\"admin/view/template/common/menu.tpl\">\n        <operation>\n            <search trim=\"true\" index=\"0\"><![CDATA[\n      <li><a href=\"<?php echo $information; ?>\"><?php echo $text_information; ?></a></li>\n            ]]></search>\n            <add position=\"after\" trim=\"false\" offset=\"0\"><![CDATA[\n      <li><a class=\"parent\"><?php echo $text_tltblog_parent; ?></a>\n	  <ul>\n        <li><a href=\"<?php echo $tltblog; ?>\"><?php echo $text_tltblog; ?></a></li>\n        <li><a href=\"<?php echo $tlttag; ?>\"><?php echo $text_tlttag; ?></a></li>\n	  </ul>\n            ]]></add>\n        </operation>\n    </file>  \n</modification>\n', '1', '2016-11-21 23:06:05');
+INSERT INTO `bshop_modification` VALUES ('2', 'TLT Blog SEO Url modification', 'tltblog-seo-4', 'Taiwanleaftea.com', '4.0', 'http://taiwanleaftea.com', '<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modification>\n    <code>tltblog-seo-4</code>\n    <name>TLT Blog SEO Url modification</name>\n    <version>4.0</version>\n    <author>Taiwanleaftea.com</author>\n    <link>http://taiwanleaftea.com</link>\n    <file path=\"catalog/controller/startup/seo_url.php\">\n        <operation>\n            <search trim=\"true\" index=\"0\"><![CDATA[$this->request->get[\'route\'] = \'error/not_found\';]]></search>\n            <add position=\"replace\" trim=\"false\" offset=\"0\"><![CDATA[$this->request->get[\'route\'] = \'tltblog/tltblog_seo\';]]></add>\n        </operation>\n    </file>  \n</modification>\n', '1', '2016-11-21 23:06:08');
 
 -- ----------------------------
 -- Table structure for `bshop_module`
@@ -1685,18 +1643,18 @@ CREATE TABLE `bshop_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_module
 -- ----------------------------
 INSERT INTO `bshop_module` VALUES ('37', 'Thương hiệu', 'carousel', '{\"name\":\"Th\\u01b0\\u01a1ng hi\\u1ec7u\",\"banner_id\":\"8\",\"width\":\"230\",\"height\":\"100\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('28', 'Sản phẩm nổi bật - Trang chủ', 'featured', '{\"name\":\"S\\u1ea3n ph\\u1ea9m n\\u1ed5i b\\u1eadt - Trang ch\\u1ee7\",\"product_name\":\"\",\"product\":[\"43\",\"40\",\"42\",\"41\",\"30\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('28', 'Sản phẩm nổi bật - Trang chủ', 'featured', '{\"name\":\"S\\u1ea3n ph\\u1ea9m n\\u1ed5i b\\u1eadt - Trang ch\\u1ee7\",\"product_name\":\"\",\"product\":[\"53\",\"50\",\"52\",\"51\",\"55\",\"54\"],\"limit\":\"5\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('27', 'Slideshow - Trang chủ', 'slideshow', '{\"name\":\"Slideshow - Trang ch\\u1ee7\",\"banner_id\":\"7\",\"width\":\"1903\",\"height\":\"694\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('31', 'Quảng cáo bên trái - Trang chủ', 'banner', '{\"name\":\"Qu\\u1ea3ng c\\u00e1o b\\u00ean tr\\u00e1i - Trang ch\\u1ee7\",\"banner_id\":\"9\",\"width\":\"270\",\"height\":\"630\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('34', 'Nội thất phòng khách', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng kh\\u00e1ch\",\"product\":[\"25\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('35', 'Nội thất phòng ngủ', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng ng\\u1ee7\",\"product\":[\"25\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('36', 'Nội thất phòng bếp', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng b\\u1ebfp\",\"product\":[\"25\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('34', 'Nội thất phòng khách', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng kh\\u00e1ch\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('35', 'Nội thất phòng ngủ', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng ng\\u1ee7\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('36', 'Nội thất phòng bếp', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng b\\u1ebfp\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 
 -- ----------------------------
 -- Table structure for `bshop_option`
@@ -2122,30 +2080,17 @@ CREATE TABLE `bshop_product` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_product
 -- ----------------------------
-INSERT INTO `bshop_product` VALUES ('28', 'Product 1', '', '', '', '', '', '', '', '939', '7', 'catalog/product/1.jpg', '5', '1', '0.0000', '200', '9', '2009-02-03', '146.40000000', '2', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:06:50', '2016-11-17 21:59:05');
-INSERT INTO `bshop_product` VALUES ('29', 'Product 2', '', '', '', '', '', '', '', '999', '6', 'catalog/product/1.jpg', '6', '1', '279.9900', '0', '9', '2009-02-03', '133.00000000', '2', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 16:42:17', '2016-11-18 14:21:51');
-INSERT INTO `bshop_product` VALUES ('30', 'Product 3', '', '', '', '', '', '', '', '7', '6', 'catalog/product/1.jpg', '9', '1', '100.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:59:00', '2016-11-17 21:54:04');
-INSERT INTO `bshop_product` VALUES ('31', 'Product 4', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '0', '1', '80.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 17:00:10', '2016-11-17 21:55:23');
-INSERT INTO `bshop_product` VALUES ('32', 'Product 5', '', '', '', '', '', '', '', '999', '6', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 17:07:26', '2016-11-17 21:55:03');
-INSERT INTO `bshop_product` VALUES ('33', 'Product 6', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '0', '1', '200.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 17:08:31', '2016-11-18 15:32:05');
-INSERT INTO `bshop_product` VALUES ('34', 'Product 7', '', '', '', '', '', '', '', '1000', '6', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:07:54', '2016-11-17 21:54:59');
-INSERT INTO `bshop_product` VALUES ('35', 'Product 8', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '0', '0', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 18:08:31', '2016-11-17 21:55:32');
-INSERT INTO `bshop_product` VALUES ('36', 'Product 9', '', '', '', '', '', '', '', '994', '6', 'catalog/product/1.jpg', '8', '0', '100.0000', '100', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:09:19', '2016-11-17 21:54:27');
-INSERT INTO `bshop_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '970', '5', 'catalog/product/1.jpg', '8', '1', '0.0000', '0', '9', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '4', '2009-02-03 21:07:12', '2016-11-17 21:59:49');
-INSERT INTO `bshop_product` VALUES ('41', 'Product 14', '', '', '', '', '', '', '', '977', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:26', '2016-11-17 21:54:19');
-INSERT INTO `bshop_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '990', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '400', '9', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '8', '2009-02-03 21:07:37', '2016-11-18 15:31:53');
-INSERT INTO `bshop_product` VALUES ('43', 'Product 16', '', '', '', '', '', '', '', '929', '5', 'catalog/product/1.jpg', '8', '0', '500.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '4', '2009-02-03 21:07:49', '2016-11-17 21:55:12');
-INSERT INTO `bshop_product` VALUES ('44', 'Product 17', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '8', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:00', '2016-11-17 21:55:15');
-INSERT INTO `bshop_product` VALUES ('45', 'Product 18', '', '', '', '', '', '', '', '998', '5', 'catalog/product/1.jpg', '8', '1', '2000.0000', '0', '0', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:17', '2016-11-17 21:55:19');
-INSERT INTO `bshop_product` VALUES ('46', 'Product 19', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '10', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:29', '2016-11-18 14:21:28');
-INSERT INTO `bshop_product` VALUES ('47', 'Product 21', '', '', '', '', '', '', '', '1000', '5', 'catalog/product/1.jpg', '7', '1', '100.0000', '400', '9', '2009-02-03', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '0', '1', '0', '1', '0', '2009-02-03 21:08:40', '2016-11-17 21:54:08');
-INSERT INTO `bshop_product` VALUES ('48', 'product 20', 'test 1', '', '', '', '', '', 'test 2', '995', '5', 'catalog/product/1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-08', '1.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-08 17:21:51', '2016-11-18 14:09:27');
-INSERT INTO `bshop_product` VALUES ('49', 'SAM1', '', '', '', '', '', '', '', '0', '8', 'catalog/product/1.jpg', '0', '1', '199.9900', '0', '9', '2011-04-25', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2011-04-26 08:57:34', '2016-11-17 21:55:36');
+INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:50:04', '2016-11-19 19:06:06');
+INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:50:04', '2016-11-19 19:05:25');
+INSERT INTO `bshop_product` VALUES ('53', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '17', '2016-11-19 18:48:44', '2016-11-19 19:05:33');
+INSERT INTO `bshop_product` VALUES ('52', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:44', '2016-11-19 19:05:41');
+INSERT INTO `bshop_product` VALUES ('51', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:38', '2016-11-19 19:05:49');
+INSERT INTO `bshop_product` VALUES ('50', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:46:09', '2016-11-19 19:05:56');
 
 -- ----------------------------
 -- Table structure for `bshop_product_attribute`
@@ -2162,11 +2107,6 @@ CREATE TABLE `bshop_product_attribute` (
 -- ----------------------------
 -- Records of bshop_product_attribute
 -- ----------------------------
-INSERT INTO `bshop_product_attribute` VALUES ('43', '4', '2', '8gb');
-INSERT INTO `bshop_product_attribute` VALUES ('42', '3', '2', '100mhz');
-INSERT INTO `bshop_product_attribute` VALUES ('47', '4', '2', '16GB');
-INSERT INTO `bshop_product_attribute` VALUES ('47', '2', '2', '4');
-INSERT INTO `bshop_product_attribute` VALUES ('43', '2', '2', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_product_description`
@@ -2188,25 +2128,12 @@ CREATE TABLE `bshop_product_description` (
 -- ----------------------------
 -- Records of bshop_product_description
 -- ----------------------------
-INSERT INTO `bshop_product_description` VALUES ('35', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', 'Product 8', '', '');
-INSERT INTO `bshop_product_description` VALUES ('48', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', '');
-INSERT INTO `bshop_product_description` VALUES ('44', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', 'MacBook Air', '', '');
-INSERT INTO `bshop_product_description` VALUES ('45', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'MacBook Pro', '', '');
-INSERT INTO `bshop_product_description` VALUES ('29', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you&amp;rsquo;re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Qualcomm&amp;reg; MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;\r\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Tri-band UMTS &amp;mdash; 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM &amp;mdash; 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;\r\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;\r\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;\r\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'Palm Treo Pro', '', '');
-INSERT INTO `bshop_product_description` VALUES ('36', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 'iPod Nano', '', '');
-INSERT INTO `bshop_product_description` VALUES ('46', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'Sony VAIO', '', '');
-INSERT INTO `bshop_product_description` VALUES ('47', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you&amp;#39;re at the office&lt;/p&gt;\r\n', '', 'HP LP3065', '', '');
-INSERT INTO `bshop_product_description` VALUES ('32', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '	 iPod Touch', '', '');
-INSERT INTO `bshop_product_description` VALUES ('41', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	Just when you thought iMac had everything, now there´s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ´08, and it´s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', 'iMac', '', '');
-INSERT INTO `bshop_product_description` VALUES ('33', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	Imagine the advantages of going big without slowing down. The big 19&amp;quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it&amp;#39;s not hard to imagine.&lt;/div&gt;\r\n', '', 'Samsung SyncMaster 941BW', '', '');
-INSERT INTO `bshop_product_description` VALUES ('34', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 'iPod Shuffle', '', '');
-INSERT INTO `bshop_product_description` VALUES ('43', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', 'MacBook', '', '');
-INSERT INTO `bshop_product_description` VALUES ('31', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'Nikon D300', '', '');
-INSERT INTO `bshop_product_description` VALUES ('49', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world&amp;rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &amp;ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &amp;ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&amp;rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &amp;ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&amp;auml;&amp;ouml;&lt;/p&gt;\r\n', '', 'Samsung Galaxy Tab 10.1', '', '');
-INSERT INTO `bshop_product_description` VALUES ('42', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there\'s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it\'s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple\'s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO \'03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'Apple Cinema 30', '', '');
-INSERT INTO `bshop_product_description` VALUES ('30', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	Canon\'s press material for the EOS 5D states that it \'defines (a) new D-SLR category\', while we\'re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably \'chunkier\'). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR\'s, an important difference when compared to the latter is that the EOS 5D doesn\'t have any environmental seals. While Canon don\'t specifically refer to the EOS 5D as a \'professional\' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they\'ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', 'sdf', '', '');
-INSERT INTO `bshop_product_description` VALUES ('28', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&amp;quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm&amp;reg; MSM 7201A&amp;trade; 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO&amp;trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth&amp;reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi&amp;reg;: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB&amp;trade; (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD&amp;trade; memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '	 HTC Touch HD', '', '');
-INSERT INTO `bshop_product_description` VALUES ('40', '2', '​Những mẫu bàn ghế tiện dụng cho không gian phòng khách nhỏ', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', 'iPhone', '', '');
+INSERT INTO `bshop_product_description` VALUES ('50', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('51', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('52', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('53', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('54', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('55', '2', 'Bàn ghế gỗ phòng khách BG36 1', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
 
 -- ----------------------------
 -- Table structure for `bshop_product_discount`
@@ -2228,9 +2155,6 @@ CREATE TABLE `bshop_product_discount` (
 -- ----------------------------
 -- Records of bshop_product_discount
 -- ----------------------------
-INSERT INTO `bshop_product_discount` VALUES ('449', '42', '1', '30', '1', '66.0000', '0000-00-00', '0000-00-00');
-INSERT INTO `bshop_product_discount` VALUES ('448', '42', '1', '20', '1', '77.0000', '0000-00-00', '0000-00-00');
-INSERT INTO `bshop_product_discount` VALUES ('447', '42', '1', '10', '1', '88.0000', '0000-00-00', '0000-00-00');
 
 -- ----------------------------
 -- Table structure for `bshop_product_filter`
@@ -2262,65 +2186,6 @@ CREATE TABLE `bshop_product_image` (
 -- ----------------------------
 -- Records of bshop_product_image
 -- ----------------------------
-INSERT INTO `bshop_product_image` VALUES ('2415', '30', 'catalog/demo/canon_eos_5d_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2417', '47', 'catalog/demo/hp_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2471', '28', 'catalog/demo/htc_touch_hd_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2421', '41', 'catalog/demo/imac_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2476', '40', 'catalog/demo/iphone_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2430', '36', 'catalog/demo/ipod_nano_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2429', '36', 'catalog/demo/ipod_nano_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2437', '34', 'catalog/demo/ipod_shuffle_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2436', '34', 'catalog/demo/ipod_shuffle_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2443', '32', 'catalog/demo/ipod_touch_7.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2442', '32', 'catalog/demo/ipod_touch_6.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2441', '32', 'catalog/demo/ipod_touch_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2447', '43', 'catalog/demo/macbook_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2446', '43', 'catalog/demo/macbook_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2450', '44', 'catalog/demo/macbook_air_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2449', '44', 'catalog/demo/macbook_air_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2453', '45', 'catalog/demo/macbook_pro_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2452', '45', 'catalog/demo/macbook_pro_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2457', '31', 'catalog/demo/nikon_d300_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2456', '31', 'catalog/demo/nikon_d300_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2485', '29', 'catalog/demo/palm_treo_pro_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2483', '46', 'catalog/demo/sony_vaio_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2482', '46', 'catalog/demo/sony_vaio_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2479', '48', 'catalog/demo/ipod_classic_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2478', '48', 'catalog/demo/ipod_classic_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2475', '40', 'catalog/demo/iphone_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2474', '40', 'catalog/demo/iphone_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2414', '30', 'catalog/demo/canon_eos_5d_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2416', '47', 'catalog/demo/hp_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2470', '28', 'catalog/demo/htc_touch_hd_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2420', '41', 'catalog/demo/imac_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2473', '40', 'catalog/demo/iphone_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2472', '40', 'catalog/demo/iphone_6.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2477', '48', 'catalog/demo/ipod_classic_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2428', '36', 'catalog/demo/ipod_nano_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2427', '36', 'catalog/demo/ipod_nano_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2435', '34', 'catalog/demo/ipod_shuffle_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2434', '34', 'catalog/demo/ipod_shuffle_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2440', '32', 'catalog/demo/ipod_touch_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2439', '32', 'catalog/demo/ipod_touch_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2438', '32', 'catalog/demo/ipod_touch_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2445', '43', 'catalog/demo/macbook_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2444', '43', 'catalog/demo/macbook_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2448', '44', 'catalog/demo/macbook_air_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2451', '45', 'catalog/demo/macbook_pro_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2455', '31', 'catalog/demo/nikon_d300_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2454', '31', 'catalog/demo/nikon_d300_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2484', '29', 'catalog/demo/palm_treo_pro_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2481', '46', 'catalog/demo/sony_vaio_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2480', '46', 'catalog/demo/sony_vaio_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2465', '49', 'catalog/demo/samsung_tab_7.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2464', '49', 'catalog/demo/samsung_tab_6.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2463', '49', 'catalog/demo/samsung_tab_5.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2462', '49', 'catalog/demo/samsung_tab_4.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2460', '49', 'catalog/demo/samsung_tab_2.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2461', '49', 'catalog/demo/samsung_tab_3.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2488', '42', 'catalog/product/1.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2487', '42', 'catalog/product/1.jpg', '0');
-INSERT INTO `bshop_product_image` VALUES ('2486', '42', 'catalog/product/1.jpg', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_product_option`
@@ -2338,18 +2203,6 @@ CREATE TABLE `bshop_product_option` (
 -- ----------------------------
 -- Records of bshop_product_option
 -- ----------------------------
-INSERT INTO `bshop_product_option` VALUES ('224', '35', '11', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('225', '47', '12', '2011-04-22', '1');
-INSERT INTO `bshop_product_option` VALUES ('219', '42', '8', '2011-02-20', '1');
-INSERT INTO `bshop_product_option` VALUES ('208', '42', '4', 'test', '1');
-INSERT INTO `bshop_product_option` VALUES ('218', '42', '1', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('209', '42', '6', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('226', '30', '5', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('217', '42', '5', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('223', '42', '2', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('221', '42', '9', '22:25', '1');
-INSERT INTO `bshop_product_option` VALUES ('222', '42', '7', '', '1');
-INSERT INTO `bshop_product_option` VALUES ('220', '42', '10', '2011-02-20 22:25', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_product_option_value`
@@ -2375,22 +2228,6 @@ CREATE TABLE `bshop_product_option_value` (
 -- ----------------------------
 -- Records of bshop_product_option_value
 -- ----------------------------
-INSERT INTO `bshop_product_option_value` VALUES ('7', '218', '42', '1', '43', '300', '1', '30.0000', '+', '3', '+', '30.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('6', '218', '42', '1', '31', '146', '1', '20.0000', '+', '2', '-', '20.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('3', '217', '42', '5', '40', '300', '0', '3.0000', '+', '0', '+', '3.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('2', '217', '42', '5', '42', '200', '1', '2.0000', '+', '0', '+', '2.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('4', '217', '42', '5', '39', '92', '1', '4.0000', '+', '0', '+', '4.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('1', '217', '42', '5', '41', '100', '0', '1.0000', '+', '0', '+', '1.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('13', '224', '35', '11', '47', '10', '1', '10.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('14', '224', '35', '11', '48', '15', '1', '15.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('16', '226', '30', '5', '40', '5', '1', '0.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('15', '226', '30', '5', '39', '2', '1', '0.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('8', '223', '42', '2', '23', '48', '1', '10.0000', '+', '0', '+', '10.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('12', '224', '35', '11', '46', '0', '1', '5.0000', '+', '0', '+', '0.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('10', '223', '42', '2', '44', '2696', '1', '30.0000', '+', '0', '+', '30.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('9', '223', '42', '2', '24', '194', '1', '20.0000', '+', '0', '+', '20.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('11', '223', '42', '2', '45', '3998', '1', '40.0000', '+', '0', '+', '40.00000000', '+');
-INSERT INTO `bshop_product_option_value` VALUES ('5', '218', '42', '1', '32', '96', '1', '10.0000', '+', '1', '+', '10.00000000', '+');
 
 -- ----------------------------
 -- Table structure for `bshop_product_recurring`
@@ -2420,10 +2257,6 @@ CREATE TABLE `bshop_product_related` (
 -- ----------------------------
 -- Records of bshop_product_related
 -- ----------------------------
-INSERT INTO `bshop_product_related` VALUES ('40', '42');
-INSERT INTO `bshop_product_related` VALUES ('41', '42');
-INSERT INTO `bshop_product_related` VALUES ('42', '40');
-INSERT INTO `bshop_product_related` VALUES ('42', '41');
 
 -- ----------------------------
 -- Table structure for `bshop_product_reward`
@@ -2440,14 +2273,6 @@ CREATE TABLE `bshop_product_reward` (
 -- ----------------------------
 -- Records of bshop_product_reward
 -- ----------------------------
-INSERT INTO `bshop_product_reward` VALUES ('563', '42', '1', '100');
-INSERT INTO `bshop_product_reward` VALUES ('556', '47', '1', '300');
-INSERT INTO `bshop_product_reward` VALUES ('562', '28', '1', '400');
-INSERT INTO `bshop_product_reward` VALUES ('558', '43', '1', '600');
-INSERT INTO `bshop_product_reward` VALUES ('555', '30', '1', '200');
-INSERT INTO `bshop_product_reward` VALUES ('559', '44', '1', '700');
-INSERT INTO `bshop_product_reward` VALUES ('560', '45', '1', '800');
-INSERT INTO `bshop_product_reward` VALUES ('561', '49', '1', '1000');
 
 -- ----------------------------
 -- Table structure for `bshop_product_special`
@@ -2468,9 +2293,6 @@ CREATE TABLE `bshop_product_special` (
 -- ----------------------------
 -- Records of bshop_product_special
 -- ----------------------------
-INSERT INTO `bshop_product_special` VALUES ('446', '42', '1', '1', '90.0000', '0000-00-00', '0000-00-00');
-INSERT INTO `bshop_product_special` VALUES ('445', '30', '1', '2', '90.0000', '0000-00-00', '0000-00-00');
-INSERT INTO `bshop_product_special` VALUES ('444', '30', '1', '1', '80.0000', '0000-00-00', '0000-00-00');
 
 -- ----------------------------
 -- Table structure for `bshop_product_to_category`
@@ -2486,15 +2308,18 @@ CREATE TABLE `bshop_product_to_category` (
 -- ----------------------------
 -- Records of bshop_product_to_category
 -- ----------------------------
-INSERT INTO `bshop_product_to_category` VALUES ('29', '25');
-INSERT INTO `bshop_product_to_category` VALUES ('30', '33');
-INSERT INTO `bshop_product_to_category` VALUES ('31', '33');
-INSERT INTO `bshop_product_to_category` VALUES ('33', '25');
-INSERT INTO `bshop_product_to_category` VALUES ('33', '28');
-INSERT INTO `bshop_product_to_category` VALUES ('42', '28');
-INSERT INTO `bshop_product_to_category` VALUES ('46', '25');
-INSERT INTO `bshop_product_to_category` VALUES ('48', '25');
-INSERT INTO `bshop_product_to_category` VALUES ('49', '57');
+INSERT INTO `bshop_product_to_category` VALUES ('50', '61');
+INSERT INTO `bshop_product_to_category` VALUES ('50', '67');
+INSERT INTO `bshop_product_to_category` VALUES ('51', '61');
+INSERT INTO `bshop_product_to_category` VALUES ('51', '67');
+INSERT INTO `bshop_product_to_category` VALUES ('52', '61');
+INSERT INTO `bshop_product_to_category` VALUES ('52', '67');
+INSERT INTO `bshop_product_to_category` VALUES ('53', '61');
+INSERT INTO `bshop_product_to_category` VALUES ('53', '67');
+INSERT INTO `bshop_product_to_category` VALUES ('54', '61');
+INSERT INTO `bshop_product_to_category` VALUES ('54', '67');
+INSERT INTO `bshop_product_to_category` VALUES ('55', '61');
+INSERT INTO `bshop_product_to_category` VALUES ('55', '67');
 
 -- ----------------------------
 -- Table structure for `bshop_product_to_download`
@@ -2524,25 +2349,12 @@ CREATE TABLE `bshop_product_to_layout` (
 -- ----------------------------
 -- Records of bshop_product_to_layout
 -- ----------------------------
-INSERT INTO `bshop_product_to_layout` VALUES ('42', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('30', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('47', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('28', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('41', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('40', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('48', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('46', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('36', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('34', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('32', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('43', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('44', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('45', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('31', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('29', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('35', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('49', '0', '0');
-INSERT INTO `bshop_product_to_layout` VALUES ('33', '0', '0');
+INSERT INTO `bshop_product_to_layout` VALUES ('52', '0', '0');
+INSERT INTO `bshop_product_to_layout` VALUES ('51', '0', '0');
+INSERT INTO `bshop_product_to_layout` VALUES ('53', '0', '0');
+INSERT INTO `bshop_product_to_layout` VALUES ('55', '0', '0');
+INSERT INTO `bshop_product_to_layout` VALUES ('54', '0', '0');
+INSERT INTO `bshop_product_to_layout` VALUES ('50', '0', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_product_to_store`
@@ -2557,25 +2369,12 @@ CREATE TABLE `bshop_product_to_store` (
 -- ----------------------------
 -- Records of bshop_product_to_store
 -- ----------------------------
-INSERT INTO `bshop_product_to_store` VALUES ('28', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('29', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('30', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('31', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('32', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('33', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('34', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('35', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('36', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('40', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('41', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('42', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('43', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('44', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('45', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('46', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('47', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('48', '0');
-INSERT INTO `bshop_product_to_store` VALUES ('49', '0');
+INSERT INTO `bshop_product_to_store` VALUES ('50', '0');
+INSERT INTO `bshop_product_to_store` VALUES ('51', '0');
+INSERT INTO `bshop_product_to_store` VALUES ('52', '0');
+INSERT INTO `bshop_product_to_store` VALUES ('53', '0');
+INSERT INTO `bshop_product_to_store` VALUES ('54', '0');
+INSERT INTO `bshop_product_to_store` VALUES ('55', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_recurring`
@@ -2755,7 +2554,7 @@ CREATE TABLE `bshop_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=642 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=699 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_setting
@@ -2909,6 +2708,16 @@ INSERT INTO `bshop_setting` VALUES ('618', '0', 'theme_default', 'theme_default_
 INSERT INTO `bshop_setting` VALUES ('639', '0', 'theme_default', 'theme_default_image_cart_height', '47', '0');
 INSERT INTO `bshop_setting` VALUES ('640', '0', 'theme_default', 'theme_default_image_location_width', '268', '0');
 INSERT INTO `bshop_setting` VALUES ('641', '0', 'theme_default', 'theme_default_image_location_height', '50', '0');
+INSERT INTO `bshop_setting` VALUES ('642', '0', 'information', 'information_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('689', '0', 'tltblog', 'tltblog_path', 'blogs', '0');
+INSERT INTO `bshop_setting` VALUES ('696', '0', 'tltblog', 'tltblog_seo', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('695', '0', 'tltblog', 'tltblog_height', '200', '0');
+INSERT INTO `bshop_setting` VALUES ('694', '0', 'tltblog', 'tltblog_width', '200', '0');
+INSERT INTO `bshop_setting` VALUES ('693', '0', 'tltblog', 'tltblog_show_image', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('692', '0', 'tltblog', 'tltblog_num_columns', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('691', '0', 'tltblog', 'tltblog_path_title', '{\"2\":{\"path_title\":\"Tin t\\u1ee9c\"}}', '1');
+INSERT INTO `bshop_setting` VALUES ('690', '0', 'tltblog', 'tltblog_show_path', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('697', '0', 'tltblog', 'tltblog_status', '1', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_stock_status`
@@ -3023,6 +2832,186 @@ INSERT INTO `bshop_tax_rule` VALUES ('128', '9', '86', 'shipping', '1');
 INSERT INTO `bshop_tax_rule` VALUES ('127', '9', '87', 'shipping', '2');
 
 -- ----------------------------
+-- Table structure for `bshop_tltblog`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog`;
+CREATE TABLE `bshop_tltblog` (
+  `tltblog_id` int(11) NOT NULL AUTO_INCREMENT,
+  `image` varchar(255) DEFAULT NULL,
+  `bottom` tinyint(1) NOT NULL DEFAULT '0',
+  `sort_order` int(11) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `show_description` tinyint(1) NOT NULL DEFAULT '0',
+  `show_title` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tltblog_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog
+-- ----------------------------
+INSERT INTO `bshop_tltblog` VALUES ('3', 'catalog/product/ban-ghe-go-phong-khach1-bg36.jpg', '1', '0', '1', '1', '1');
+INSERT INTO `bshop_tltblog` VALUES ('4', 'catalog/product/ban-ghe-go-phong-khach1-bg36.jpg', '0', '0', '1', '1', '1');
+
+-- ----------------------------
+-- Table structure for `bshop_tltblog_description`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog_description`;
+CREATE TABLE `bshop_tltblog_description` (
+  `tltblog_id` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `intro` text NOT NULL,
+  `description` text NOT NULL,
+  `meta_title` varchar(255) NOT NULL,
+  `meta_description` varchar(255) NOT NULL,
+  `meta_keyword` varchar(255) NOT NULL,
+  PRIMARY KEY (`tltblog_id`,`language_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog_description
+-- ----------------------------
+INSERT INTO `bshop_tltblog_description` VALUES ('3', '2', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_description` VALUES ('4', '2', 'Copy of Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+
+-- ----------------------------
+-- Table structure for `bshop_tltblog_related`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog_related`;
+CREATE TABLE `bshop_tltblog_related` (
+  `tltblog_id` int(11) NOT NULL,
+  `related_id` int(11) NOT NULL,
+  PRIMARY KEY (`tltblog_id`,`related_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog_related
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `bshop_tltblog_to_layout`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog_to_layout`;
+CREATE TABLE `bshop_tltblog_to_layout` (
+  `tltblog_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL,
+  `layout_id` int(11) NOT NULL,
+  PRIMARY KEY (`tltblog_id`,`store_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog_to_layout
+-- ----------------------------
+INSERT INTO `bshop_tltblog_to_layout` VALUES ('3', '0', '0');
+INSERT INTO `bshop_tltblog_to_layout` VALUES ('4', '0', '15');
+
+-- ----------------------------
+-- Table structure for `bshop_tltblog_to_store`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog_to_store`;
+CREATE TABLE `bshop_tltblog_to_store` (
+  `tltblog_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tltblog_id`,`store_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog_to_store
+-- ----------------------------
+INSERT INTO `bshop_tltblog_to_store` VALUES ('3', '0');
+INSERT INTO `bshop_tltblog_to_store` VALUES ('4', '0');
+
+-- ----------------------------
+-- Table structure for `bshop_tltblog_to_tag`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog_to_tag`;
+CREATE TABLE `bshop_tltblog_to_tag` (
+  `tltblog_id` int(11) NOT NULL,
+  `tlttag_id` int(11) NOT NULL,
+  PRIMARY KEY (`tltblog_id`,`tlttag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog_to_tag
+-- ----------------------------
+INSERT INTO `bshop_tltblog_to_tag` VALUES ('3', '2');
+INSERT INTO `bshop_tltblog_to_tag` VALUES ('4', '3');
+
+-- ----------------------------
+-- Table structure for `bshop_tltblog_url_alias`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tltblog_url_alias`;
+CREATE TABLE `bshop_tltblog_url_alias` (
+  `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,
+  `query` varchar(255) NOT NULL,
+  `keyword` varchar(255) NOT NULL,
+  PRIMARY KEY (`url_alias_id`),
+  KEY `query` (`query`),
+  KEY `keyword` (`keyword`)
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tltblog_url_alias
+-- ----------------------------
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('19', 'tlttag_id=3', '');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('11', 'tlttag_id=2', 'Tin tức');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('12', 'tltblog_id=3', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('18', 'tltpath=blogs', 'blogs');
+
+-- ----------------------------
+-- Table structure for `bshop_tlttag`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tlttag`;
+CREATE TABLE `bshop_tlttag` (
+  `tlttag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `sort_order` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`tlttag_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tlttag
+-- ----------------------------
+INSERT INTO `bshop_tlttag` VALUES ('2', '0', '1');
+INSERT INTO `bshop_tlttag` VALUES ('3', '0', '1');
+
+-- ----------------------------
+-- Table structure for `bshop_tlttag_description`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tlttag_description`;
+CREATE TABLE `bshop_tlttag_description` (
+  `tlttag_id` int(11) NOT NULL,
+  `language_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `meta_title` varchar(255) NOT NULL,
+  `meta_description` varchar(255) NOT NULL,
+  `meta_keyword` varchar(255) NOT NULL,
+  PRIMARY KEY (`tlttag_id`,`language_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tlttag_description
+-- ----------------------------
+INSERT INTO `bshop_tlttag_description` VALUES ('2', '2', 'Tin tức', 'Tin tức', 'Tin tức', 'Tin tức');
+INSERT INTO `bshop_tlttag_description` VALUES ('3', '2', 'Demo', 'Demo', 'Demo', 'Demo');
+
+-- ----------------------------
+-- Table structure for `bshop_tlttag_to_store`
+-- ----------------------------
+DROP TABLE IF EXISTS `bshop_tlttag_to_store`;
+CREATE TABLE `bshop_tlttag_to_store` (
+  `tlttag_id` int(11) NOT NULL,
+  `store_id` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`tlttag_id`,`store_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bshop_tlttag_to_store
+-- ----------------------------
+INSERT INTO `bshop_tlttag_to_store` VALUES ('2', '0');
+INSERT INTO `bshop_tlttag_to_store` VALUES ('3', '0');
+
+-- ----------------------------
 -- Table structure for `bshop_upload`
 -- ----------------------------
 DROP TABLE IF EXISTS `bshop_upload`;
@@ -3050,51 +3039,23 @@ CREATE TABLE `bshop_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=890 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=906 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_url_alias
 -- ----------------------------
-INSERT INTO `bshop_url_alias` VALUES ('885', 'product_id=48', 'ipod-classic');
-INSERT INTO `bshop_url_alias` VALUES ('730', 'manufacturer_id=8', 'apple');
+INSERT INTO `bshop_url_alias` VALUES ('897', 'category_id=65', '');
 INSERT INTO `bshop_url_alias` VALUES ('772', 'information_id=4', 'about_us');
-INSERT INTO `bshop_url_alias` VALUES ('888', 'product_id=42', 'test');
-INSERT INTO `bshop_url_alias` VALUES ('781', 'category_id=36', 'test2');
-INSERT INTO `bshop_url_alias` VALUES ('777', 'category_id=25', 'component');
-INSERT INTO `bshop_url_alias` VALUES ('778', 'category_id=29', 'mouse');
-INSERT INTO `bshop_url_alias` VALUES ('779', 'category_id=28', 'monitor');
-INSERT INTO `bshop_url_alias` VALUES ('780', 'category_id=35', 'test1');
-INSERT INTO `bshop_url_alias` VALUES ('782', 'category_id=30', 'printer');
-INSERT INTO `bshop_url_alias` VALUES ('783', 'category_id=31', 'scanner');
-INSERT INTO `bshop_url_alias` VALUES ('784', 'category_id=32', 'web-camera');
-INSERT INTO `bshop_url_alias` VALUES ('785', 'category_id=57', 'tablet');
-INSERT INTO `bshop_url_alias` VALUES ('788', 'category_id=33', 'camera');
-INSERT INTO `bshop_url_alias` VALUES ('864', 'product_id=30', 'canon-eos-5d');
-INSERT INTO `bshop_url_alias` VALUES ('865', 'product_id=47', 'hp-lp3065');
-INSERT INTO `bshop_url_alias` VALUES ('882', 'product_id=28', 'htc-touch-hd');
-INSERT INTO `bshop_url_alias` VALUES ('873', 'product_id=43', 'macbook');
-INSERT INTO `bshop_url_alias` VALUES ('874', 'product_id=44', 'macbook-air');
-INSERT INTO `bshop_url_alias` VALUES ('875', 'product_id=45', 'macbook-pro');
-INSERT INTO `bshop_url_alias` VALUES ('876', 'product_id=31', 'nikon-d300');
-INSERT INTO `bshop_url_alias` VALUES ('887', 'product_id=29', 'palm-treo-pro');
-INSERT INTO `bshop_url_alias` VALUES ('878', 'product_id=35', 'product-8');
-INSERT INTO `bshop_url_alias` VALUES ('879', 'product_id=49', 'samsung-galaxy-tab-10-1');
-INSERT INTO `bshop_url_alias` VALUES ('889', 'product_id=33', 'samsung-syncmaster-941bw');
-INSERT INTO `bshop_url_alias` VALUES ('886', 'product_id=46', 'sony-vaio');
-INSERT INTO `bshop_url_alias` VALUES ('867', 'product_id=41', 'imac');
-INSERT INTO `bshop_url_alias` VALUES ('883', 'product_id=40', 'iphone');
-INSERT INTO `bshop_url_alias` VALUES ('869', 'product_id=36', 'ipod-nano');
-INSERT INTO `bshop_url_alias` VALUES ('871', 'product_id=34', 'ipod-shuffle');
-INSERT INTO `bshop_url_alias` VALUES ('872', 'product_id=32', 'ipod-touch');
-INSERT INTO `bshop_url_alias` VALUES ('828', 'manufacturer_id=9', 'canon');
-INSERT INTO `bshop_url_alias` VALUES ('829', 'manufacturer_id=5', 'htc');
-INSERT INTO `bshop_url_alias` VALUES ('830', 'manufacturer_id=7', 'hewlett-packard');
-INSERT INTO `bshop_url_alias` VALUES ('831', 'manufacturer_id=6', 'palm');
-INSERT INTO `bshop_url_alias` VALUES ('832', 'manufacturer_id=10', 'sony');
+INSERT INTO `bshop_url_alias` VALUES ('898', 'category_id=66', '');
+INSERT INTO `bshop_url_alias` VALUES ('899', 'category_id=67', '');
+INSERT INTO `bshop_url_alias` VALUES ('896', 'category_id=64', '');
+INSERT INTO `bshop_url_alias` VALUES ('894', 'category_id=62', '');
+INSERT INTO `bshop_url_alias` VALUES ('895', 'category_id=63', '');
+INSERT INTO `bshop_url_alias` VALUES ('893', 'category_id=61', '');
+INSERT INTO `bshop_url_alias` VALUES ('892', 'category_id=60', '');
 INSERT INTO `bshop_url_alias` VALUES ('841', 'information_id=6', 'delivery');
 INSERT INTO `bshop_url_alias` VALUES ('842', 'information_id=3', 'privacy');
 INSERT INTO `bshop_url_alias` VALUES ('843', 'information_id=5', 'terms');
-INSERT INTO `bshop_url_alias` VALUES ('884', 'category_id=59', '');
 
 -- ----------------------------
 -- Table structure for `bshop_user`
@@ -3136,7 +3097,7 @@ CREATE TABLE `bshop_user_group` (
 -- ----------------------------
 -- Records of bshop_user_group
 -- ----------------------------
-INSERT INTO `bshop_user_group` VALUES ('1', 'Administrator', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/language\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/setting\",\"theme\\/theme_default\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/bestseller\",\"module\\/special\",\"module\\/categoryproducts\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/language\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/setting\",\"theme\\/theme_default\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/bestseller\",\"module\\/special\",\"module\\/categoryproducts\"]}');
+INSERT INTO `bshop_user_group` VALUES ('1', 'Quản trị viên', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"event\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"feed\\/tltblog_sitemap\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/categoryproducts\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/laybuy_layout\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tltblog\",\"module\\/tltblog_settings\",\"module\\/tltblog_sitemap_module\",\"module\\/tlttag\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"openbay\\/fba\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cardinity\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/laybuy\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"theme\\/theme_default\",\"tltblog\\/tltblog\",\"tltblog\\/tlttag\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tltblog_settings\",\"module\\/tlttag\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"event\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"feed\\/tltblog_sitemap\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/categoryproducts\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/laybuy_layout\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tltblog\",\"module\\/tltblog_settings\",\"module\\/tltblog_sitemap_module\",\"module\\/tlttag\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"openbay\\/fba\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cardinity\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/laybuy\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"theme\\/theme_default\",\"tltblog\\/tltblog\",\"tltblog\\/tlttag\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tltblog_settings\",\"module\\/tlttag\"]}');
 INSERT INTO `bshop_user_group` VALUES ('10', 'Demonstration', '');
 
 -- ----------------------------

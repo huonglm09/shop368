@@ -1,56 +1,49 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=1009181549137512";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <footer>
     <div class="container">
         <div class="row">
             <?php if ($informations) { ?>
             <div class="col-sm-3">
                 <h5><span>Facebook</span></h5>
-                <ul class="list-unstyled">
-                    <?php foreach ($informations as $information) { ?>
-                    <li>
-                        <a href="<?php echo $information['href']; ?>">
-                            <?php echo $information['title']; ?>
-                        </a>
-                    </li>
-                    <?php } ?>
-                    <li>
-                        <a href="<?php echo $contact; ?>">
-                            <?php echo $text_contact; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $return; ?>">
-                            <?php echo $text_return; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $sitemap; ?>">
-                            <?php echo $text_sitemap; ?>
-                        </a>
-                    </li>
-                </ul>
+                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="265" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
             </div>
             <?php } ?>
             <div class="col-sm-3">
-                <h5><span>Danh mục</span></h5>
-                <?php if(!empty($categories)) { ?>
+                <div class="footer-mid-menu">
+                    <h5><span>Danh mục</span></h5>
+                    <?php if(!empty($categories)) { ?>
                     <ul class="cat-pro-footer">
                         <?php foreach ($categories as $category) { ?>
-                            <li>
-                                <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+                        <li>
+                            <a href="<?php echo $category['href']; ?>">
+                                <?php echo $category['name']; ?>
+                            </a>
+                        </li>
+                        <?php if ($category['children']) { ?>
+                        <ul class="children">
+                            <?php $cls = 'left'; ?>
+                            <?php foreach ($category['children'] as $child) { ?>
+                            <li class="<?php echo $cls; ?>">
+                                <a href="<?php echo $child['href']; ?>">
+                                    <?php echo $child['name']; ?>
+                                </a>
                             </li>
-                            <?php if ($category['children']) { ?>
-                                <ul class="children">
-                                    <?php $cls = 'left'; ?>
-                                    <?php foreach ($category['children'] as $child) { ?>
-                                        <li class="<?php echo $cls; ?>"><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
-                                        <?php $cls = ($cls == 'left') ? 'right' : 'left'; ?>
-                                    <?php } ?>
-                                    <div class="clearfix"></div>
-                                </ul>
+                            <?php $cls = ($cls == 'left') ? 'right' : 'left'; ?>
                             <?php } ?>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <?php } ?>
                         <?php } ?>
                     </ul>
-                <?php } ?>
+                    <?php } ?>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
                 <div class="footer-mid-menu">
@@ -73,7 +66,6 @@
                                 <span style="color:rgb(242, 101, 34)"><em>Click vào đây</em></span> &nbsp;
                                 <em>để được chỉ đường.</em>
                             </a>
-                            <br>
                             <br>
                             <span style="color:rgb(242, 101, 34)"><strong>Xưởng SX:</strong></span>&nbsp;Bình Phú - Thạch Thất<br> &nbsp;
                             <br>
@@ -115,6 +107,28 @@
                             <?php echo $text_newsletter; ?>
                         </a>
                     </li>
+                    <?php foreach ($informations as $information) { ?>
+                    <li>
+                        <a href="<?php echo $information['href']; ?>">
+                            <?php echo $information['title']; ?>
+                        </a>
+                    </li>
+                    <?php } ?>
+                    <li>
+                        <a href="<?php echo $contact; ?>">
+                            <?php echo $text_contact; ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $return; ?>">
+                            <?php echo $text_return; ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $sitemap; ?>">
+                            <?php echo $text_sitemap; ?>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -126,12 +140,20 @@
                     Copyright © 2016 <a href="http://fb.me/ducnvhd">Nội Thất Đức Tính</a>
                 </div>
                 <div class="col-xs-12 col-md-6  text-left">
-                    Design by <a href="http://fb.me/ducnvhd">Lê Minh Hưởng</a> </div>
+                    Design by <a target="_blank" href="https://www.facebook.com/minh.huong.334">Lê Minh Hưởng</a> </div>
             </div>
             <div>
 
             </div>
         </div>
+    </div>
+    <div class="hotline-fix-bottom">
+        <div class="hotline-inner">
+            <a href="tel:0965.94.6161"><span class="text">Hotline: </span><span class="phone">0965.94.6161</span></a>
+        </div>
+    </div>
+    <div id="footer-abso" style="display: block;">
+        <span id="gototop" class="fancybox.iframe" title="Về đầu trang"><i class="fa fa-chevron-up"></i></span>
     </div>
 </footer>
 <script>

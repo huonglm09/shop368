@@ -141,7 +141,11 @@
                                 </a>
                             </li>
                         <?php } ?>
+                        <li><a href="<?php echo $href_blogs; ?>">Tin tức</a></li>
                         <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+                        <li>
+                            <a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -170,8 +174,12 @@
                                 </a>
                             </li>
                         <?php } ?>
+                        <li><a href="<?php echo $href_blogs; ?>">Tin tức</a></li>
                         <li>
                             <a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a>
                         </li>
                         <li>
                             <?php echo $search; ?>

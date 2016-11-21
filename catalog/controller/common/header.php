@@ -70,6 +70,7 @@ class ControllerCommonHeader extends Controller {
 		$data['text_category'] = $this->language->get('text_category');
 		$data['text_all'] = $this->language->get('text_all');
 		$data['text_contact'] = $this->language->get('text_contact');
+		$data['text_sitemap'] = $this->language->get('text_sitemap');
 
 		$data['home'] = $this->url->link('common/home');
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
@@ -85,6 +86,7 @@ class ControllerCommonHeader extends Controller {
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
+		$data['sitemap'] = $this->url->link('information/sitemap');
 
 		// Menu
 		$this->load->model('catalog/category');
@@ -147,6 +149,17 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
+
+		$this->load->model('tltblog/tltblog');
+		$this->load->model('setting/setting');
+
+		if ($this->config->has('tltblog_path')) {
+			$tltpath = $this->config->get('tltblog_path');
+		} else {
+			$tltpath = 'blogs';
+		}
+
+		$data['href_blogs'] = $this->url->link('tltblog/tlttag');
 
 		return $this->load->view('common/header', $data);
 	}
