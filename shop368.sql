@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-11-22 00:25:01
+Date: 2016-11-22 16:41:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -863,7 +863,7 @@ CREATE TABLE `bshop_currency` (
 -- ----------------------------
 -- Records of bshop_currency
 -- ----------------------------
-INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-21 17:05:48');
+INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-22 05:21:33');
 
 -- ----------------------------
 -- Table structure for `bshop_customer`
@@ -1454,7 +1454,7 @@ CREATE TABLE `bshop_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=197 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=201 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_module
@@ -1473,6 +1473,7 @@ INSERT INTO `bshop_layout_module` VALUES ('187', '1', 'categoryproducts.35', 'co
 INSERT INTO `bshop_layout_module` VALUES ('186', '1', 'categoryproducts.34', 'column_right', '1');
 INSERT INTO `bshop_layout_module` VALUES ('185', '1', 'banner.31', 'column_left', '2');
 INSERT INTO `bshop_layout_module` VALUES ('184', '1', 'category', 'column_left', '1');
+INSERT INTO `bshop_layout_module` VALUES ('200', '15', 'category', 'column_left', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_layout_route`
@@ -1484,7 +1485,7 @@ CREATE TABLE `bshop_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_route
@@ -1502,7 +1503,7 @@ INSERT INTO `bshop_layout_route` VALUES ('34', '4', '0', '');
 INSERT INTO `bshop_layout_route` VALUES ('45', '5', '0', 'product/manufacturer');
 INSERT INTO `bshop_layout_route` VALUES ('52', '12', '0', 'product/compare');
 INSERT INTO `bshop_layout_route` VALUES ('53', '13', '0', 'product/search');
-INSERT INTO `bshop_layout_route` VALUES ('97', '15', '0', 'tltblog/tlttag');
+INSERT INTO `bshop_layout_route` VALUES ('102', '15', '0', 'tltblog/%');
 
 -- ----------------------------
 -- Table structure for `bshop_length_class`
@@ -2085,12 +2086,12 @@ CREATE TABLE `bshop_product` (
 -- ----------------------------
 -- Records of bshop_product
 -- ----------------------------
-INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:50:04', '2016-11-19 19:06:06');
-INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:50:04', '2016-11-19 19:05:25');
-INSERT INTO `bshop_product` VALUES ('53', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '17', '2016-11-19 18:48:44', '2016-11-19 19:05:33');
-INSERT INTO `bshop_product` VALUES ('52', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:44', '2016-11-19 19:05:41');
-INSERT INTO `bshop_product` VALUES ('51', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:38', '2016-11-19 19:05:49');
-INSERT INTO `bshop_product` VALUES ('50', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:46:09', '2016-11-19 19:05:56');
+INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:50:04', '2016-11-22 15:46:42');
+INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:50:04', '2016-11-22 15:43:52');
+INSERT INTO `bshop_product` VALUES ('53', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '17', '2016-11-19 18:48:44', '2016-11-22 15:46:19');
+INSERT INTO `bshop_product` VALUES ('52', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:44', '2016-11-22 15:46:08');
+INSERT INTO `bshop_product` VALUES ('51', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:38', '2016-11-22 15:46:27');
+INSERT INTO `bshop_product` VALUES ('50', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '20', '2016-11-19 18:46:09', '2016-11-22 15:46:34');
 
 -- ----------------------------
 -- Table structure for `bshop_product_attribute`
@@ -2128,12 +2129,12 @@ CREATE TABLE `bshop_product_description` (
 -- ----------------------------
 -- Records of bshop_product_description
 -- ----------------------------
-INSERT INTO `bshop_product_description` VALUES ('50', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('51', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('52', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('53', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('54', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('55', '2', 'Bàn ghế gỗ phòng khách BG36 1', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('50', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('51', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('52', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('53', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('54', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('55', '2', 'Bàn ghế gỗ phòng khách BG36 1', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
 
 -- ----------------------------
 -- Table structure for `bshop_product_discount`
@@ -2536,11 +2537,12 @@ CREATE TABLE `bshop_review` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`review_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_review
 -- ----------------------------
+INSERT INTO `bshop_review` VALUES ('1', '50', '0', 'Admin', 'Không có đánh giá cho sản phẩm này.', '3', '0', '2016-11-22 15:36:30', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for `bshop_setting`
@@ -2554,7 +2556,7 @@ CREATE TABLE `bshop_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=699 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=717 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_setting
@@ -2709,15 +2711,15 @@ INSERT INTO `bshop_setting` VALUES ('639', '0', 'theme_default', 'theme_default_
 INSERT INTO `bshop_setting` VALUES ('640', '0', 'theme_default', 'theme_default_image_location_width', '268', '0');
 INSERT INTO `bshop_setting` VALUES ('641', '0', 'theme_default', 'theme_default_image_location_height', '50', '0');
 INSERT INTO `bshop_setting` VALUES ('642', '0', 'information', 'information_status', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('689', '0', 'tltblog', 'tltblog_path', 'blogs', '0');
-INSERT INTO `bshop_setting` VALUES ('696', '0', 'tltblog', 'tltblog_seo', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('695', '0', 'tltblog', 'tltblog_height', '200', '0');
-INSERT INTO `bshop_setting` VALUES ('694', '0', 'tltblog', 'tltblog_width', '200', '0');
-INSERT INTO `bshop_setting` VALUES ('693', '0', 'tltblog', 'tltblog_show_image', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('692', '0', 'tltblog', 'tltblog_num_columns', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('691', '0', 'tltblog', 'tltblog_path_title', '{\"2\":{\"path_title\":\"Tin t\\u1ee9c\"}}', '1');
-INSERT INTO `bshop_setting` VALUES ('690', '0', 'tltblog', 'tltblog_show_path', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('697', '0', 'tltblog', 'tltblog_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('716', '0', 'tltblog', 'tltblog_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('715', '0', 'tltblog', 'tltblog_seo', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('714', '0', 'tltblog', 'tltblog_height', '274', '0');
+INSERT INTO `bshop_setting` VALUES ('713', '0', 'tltblog', 'tltblog_width', '480', '0');
+INSERT INTO `bshop_setting` VALUES ('712', '0', 'tltblog', 'tltblog_show_image', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('711', '0', 'tltblog', 'tltblog_num_columns', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('710', '0', 'tltblog', 'tltblog_path_title', '{\"2\":{\"path_title\":\"Tin t\\u1ee9c\"}}', '1');
+INSERT INTO `bshop_setting` VALUES ('709', '0', 'tltblog', 'tltblog_show_path', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('708', '0', 'tltblog', 'tltblog_path', 'blogs', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_stock_status`
@@ -2849,8 +2851,8 @@ CREATE TABLE `bshop_tltblog` (
 -- ----------------------------
 -- Records of bshop_tltblog
 -- ----------------------------
-INSERT INTO `bshop_tltblog` VALUES ('3', 'catalog/product/ban-ghe-go-phong-khach1-bg36.jpg', '1', '0', '1', '1', '1');
-INSERT INTO `bshop_tltblog` VALUES ('4', 'catalog/product/ban-ghe-go-phong-khach1-bg36.jpg', '0', '0', '1', '1', '1');
+INSERT INTO `bshop_tltblog` VALUES ('3', 'catalog/product/giuong-ngu-dep-1(4).jpg', '1', '0', '1', '1', '1');
+INSERT INTO `bshop_tltblog` VALUES ('4', 'catalog/product/giuong-ngu-dep-1(4).jpg', '0', '0', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_tltblog_description`
@@ -2871,8 +2873,8 @@ CREATE TABLE `bshop_tltblog_description` (
 -- ----------------------------
 -- Records of bshop_tltblog_description
 -- ----------------------------
-INSERT INTO `bshop_tltblog_description` VALUES ('3', '2', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
-INSERT INTO `bshop_tltblog_description` VALUES ('4', '2', 'Copy of Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_description` VALUES ('3', '2', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc &lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_description` VALUES ('4', '2', 'Copy of Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
 
 -- ----------------------------
 -- Table structure for `bshop_tltblog_related`
@@ -2903,7 +2905,7 @@ CREATE TABLE `bshop_tltblog_to_layout` (
 -- Records of bshop_tltblog_to_layout
 -- ----------------------------
 INSERT INTO `bshop_tltblog_to_layout` VALUES ('3', '0', '0');
-INSERT INTO `bshop_tltblog_to_layout` VALUES ('4', '0', '15');
+INSERT INTO `bshop_tltblog_to_layout` VALUES ('4', '0', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_tltblog_to_store`
@@ -2948,15 +2950,15 @@ CREATE TABLE `bshop_tltblog_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_tltblog_url_alias
 -- ----------------------------
 INSERT INTO `bshop_tltblog_url_alias` VALUES ('19', 'tlttag_id=3', '');
 INSERT INTO `bshop_tltblog_url_alias` VALUES ('11', 'tlttag_id=2', 'Tin tức');
-INSERT INTO `bshop_tltblog_url_alias` VALUES ('12', 'tltblog_id=3', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
-INSERT INTO `bshop_tltblog_url_alias` VALUES ('18', 'tltpath=blogs', 'blogs');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('23', 'tltblog_id=3', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('22', 'tltpath=blogs', 'blogs');
 
 -- ----------------------------
 -- Table structure for `bshop_tlttag`

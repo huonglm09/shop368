@@ -20,11 +20,11 @@
                 <?php } ?>
             </ul>
             <?php echo $content_top; ?>
-            <div class="row">
+            <div class="row-fluid prod-main-content">
                 <?php if ($column_left || $column_right) { ?>
                 <?php $class = 'col-sm-6'; ?>
                 <?php } else { ?>
-                <?php $class = 'col-sm-8'; ?>
+                <?php $class = 'col-sm-7'; ?>
                 <?php } ?>
                 <div class="<?php echo $class; ?>">
                     <?php if ($thumb || $images) { ?>
@@ -139,7 +139,7 @@
                 <?php if ($column_left || $column_right) { ?>
                 <?php $class = 'col-sm-6'; ?>
                 <?php } else { ?>
-                <?php $class = 'col-sm-4'; ?>
+                <?php $class = 'col-sm-5'; ?>
                 <?php } ?>
                 <div class="<?php echo $class; ?>">
                     <!-- <div class="btn-group">
@@ -147,7 +147,7 @@
                         <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>
                     </div> -->
                     <h1><?php echo $heading_title; ?></h1>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled info-1">
                         <?php if ($manufacturer) { ?>
                         <li>
                             <?php echo $text_manufacturer; ?>
@@ -209,6 +209,17 @@
                         <?php } ?>
                     </ul>
                     <?php } ?>
+                    <div class="detailcall clearfix">
+                        <div class="callphoneicon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <a href="tel:0913.655.165">
+                            <span class="call-now">GỌI NGAY<br><small>Nhấn để gọi ngay</small></span>
+                            <div class="tlphone">
+                                <span class="tlp1">0913.655.165 </span><br><span class="tlp2">0965.94.6161 </span>
+                            </div>
+                        </a>
+                    </div>
                     <div id="product">
                         <?php if ($options) { ?>
                         <hr>
