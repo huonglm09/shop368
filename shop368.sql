@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-11-23 22:46:04
+Date: 2016-11-24 00:24:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -863,7 +863,7 @@ CREATE TABLE `bshop_currency` (
 -- ----------------------------
 -- Records of bshop_currency
 -- ----------------------------
-INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-23 14:55:02');
+INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-23 17:32:52');
 
 -- ----------------------------
 -- Table structure for `bshop_customer`
@@ -1663,7 +1663,7 @@ INSERT INTO `bshop_module` VALUES ('31', 'Quảng cáo bên trái - Trang chủ'
 INSERT INTO `bshop_module` VALUES ('34', 'Nội thất phòng khách', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng kh\\u00e1ch\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('35', 'Nội thất phòng ngủ', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng ng\\u1ee7\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('36', 'Nội thất phòng bếp', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng b\\u1ebfp\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
-INSERT INTO `bshop_module` VALUES ('41', 'Bản đồ liên hệ', 'html', '{\"name\":\"B\\u1ea3n \\u0111\\u1ed3 li\\u00ean h\\u1ec7\",\"module_description\":{\"2\":{\"title\":\"Li\\u00ean h\\u1ec7 v\\u1edbi ch\\u00fang t\\u00f4i\",\"description\":\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d29793.996973529014!2d105.8194541122167!3d21.022695754095036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lpLCBIb8OgbiBLaeG6v20sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1479896217281&quot; width=&quot;100%&quot; height=&quot;450&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen=&quot;&quot;&gt;&lt;\\/iframe&gt;\"}},\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('41', 'Bản đồ liên hệ', 'html', '{\"name\":\"B\\u1ea3n \\u0111\\u1ed3 li\\u00ean h\\u1ec7\",\"module_description\":{\"2\":{\"title\":\"\",\"description\":\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d29793.996973529014!2d105.8194541122167!3d21.022695754095036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lpLCBIb8OgbiBLaeG6v20sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1479896217281&quot; width=&quot;100%&quot; height=&quot;450&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen=&quot;&quot;&gt;&lt;\\/iframe&gt;\"}},\"status\":\"1\"}');
 
 -- ----------------------------
 -- Table structure for `bshop_option`
@@ -2094,8 +2094,8 @@ CREATE TABLE `bshop_product` (
 -- ----------------------------
 -- Records of bshop_product
 -- ----------------------------
-INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '3', '2016-11-19 18:50:04', '2016-11-22 15:46:42');
-INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:50:04', '2016-11-22 15:43:52');
+INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '4', '2016-11-19 18:50:04', '2016-11-22 15:46:42');
+INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '9', '2016-11-19 18:50:04', '2016-11-22 15:43:52');
 INSERT INTO `bshop_product` VALUES ('53', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '20', '2016-11-19 18:48:44', '2016-11-22 15:46:19');
 INSERT INTO `bshop_product` VALUES ('52', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:44', '2016-11-22 15:46:08');
 INSERT INTO `bshop_product` VALUES ('51', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '1', '2016-11-19 18:48:38', '2016-11-22 15:46:27');
