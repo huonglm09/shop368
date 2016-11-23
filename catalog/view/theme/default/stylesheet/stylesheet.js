@@ -1464,7 +1464,7 @@ export default StyleSheet.create({
     "slideshow-wrapper owl-wrapper item img": {
         "width": "100% !important"
     },
-    "common-home feature-wrapper": {
+    "feature-wrapper": {
         "background": "#ffffff",
         "paddingTop": 15,
         "paddingRight": 15,
@@ -1483,7 +1483,7 @@ export default StyleSheet.create({
         "marginBottom": 30,
         "border": "1px solid #EBEBEB"
     },
-    "common-home feature-wrapper owl-wrapper-outer": {
+    "feature-wrapper owl-wrapper-outer": {
         "border": 0,
         "boxShadow": "none !important",
         "MozBoxShadow": "none !important",
@@ -1492,23 +1492,29 @@ export default StyleSheet.create({
     "common-home button-group": {
         "display": "none"
     },
+    "feature-wrapper button-group": {
+        "display": "none"
+    },
     "common-home product-thumb": {
         "border": 0
     },
-    "common-home feature-wrapper featured-slide": {
+    "feature-wrapper product-thumb": {
+        "border": 0
+    },
+    "feature-wrapper featured-slide": {
         "paddingTop": 80
     },
-    "common-home feature-wrapper owl-buttons": {
+    "feature-wrapper owl-buttons": {
         "width": 90,
         "marginTop": 0,
         "marginRight": "auto",
         "marginBottom": 0,
         "marginLeft": "auto"
     },
-    "common-home feature-wrapper owl-buttons div": {
+    "feature-wrapper owl-buttons div": {
         "opacity": "0.5 !important"
     },
-    "common-home feature-wrapper owl-buttons i": {
+    "feature-wrapper owl-buttons i": {
         "fontSize": "22px !important",
         "color": "#f26522 !important",
         "marginTop": 0,
@@ -1516,7 +1522,7 @@ export default StyleSheet.create({
         "marginBottom": 0,
         "marginLeft": "!important"
     },
-    "common-home feature-wrapper owl-prev": {
+    "feature-wrapper owl-prev": {
         "float": "left",
         "background": "#fff",
         "color": "#fff",
@@ -1528,7 +1534,7 @@ export default StyleSheet.create({
         "paddingLeft": 14,
         "position": "inherit !important"
     },
-    "common-home feature-wrapper owl-next": {
+    "feature-wrapper owl-next": {
         "float": "right",
         "background": "#fff",
         "color": "#fff",
@@ -1540,27 +1546,27 @@ export default StyleSheet.create({
         "paddingLeft": 14,
         "position": "inherit !important"
     },
-    "common-home feature-wrapper owl-prev:hover": {
+    "feature-wrapper owl-prev:hover": {
         "background": "#f26522",
         "opacity": "1 !important"
     },
-    "common-home feature-wrapper owl-next:hover": {
+    "feature-wrapper owl-next:hover": {
         "background": "#f26522",
         "opacity": "1 !important"
     },
-    "common-home feature-wrapper owl-prev:hover i": {
+    "feature-wrapper owl-prev:hover i": {
         "color": "#ffffff !important"
     },
-    "common-home feature-wrapper owl-next:hover i": {
+    "feature-wrapper owl-next:hover i": {
         "color": "#ffffff !important"
     },
-    "common-home feature-wrapper owl-controls": {
+    "feature-wrapper owl-controls": {
         "position": "absolute",
         "top": 0,
         "textAlign": "center",
         "width": "100%"
     },
-    "common-home feature-wrapper caption h4": {
+    "feature-wrapper caption h4": {
         "textAlign": "center",
         "overflow": "hidden",
         "height": 25,
@@ -1584,10 +1590,10 @@ export default StyleSheet.create({
         "paddingBottom": 0,
         "paddingLeft": 20
     },
-    "common-home feature-wrapper feature-des": {
+    "feature-wrapper feature-des": {
         "display": "none"
     },
-    "common-home feature-wrapper price-tax": {
+    "feature-wrapper price-tax": {
         "display": "none"
     },
     "common-home category-products feature-des": {
@@ -1595,6 +1601,23 @@ export default StyleSheet.create({
     },
     "common-home category-products price-tax": {
         "display": "none"
+    },
+    "feature-wrapper price": {
+        "color": "#f26522",
+        "fontFamily": "'Roboto', sans-serif",
+        "fontSize": 15,
+        "fontWeight": "400",
+        "lineHeight": 26,
+        "marginTop": 0,
+        "marginRight": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "display": "block",
+        "textAlign": "center"
     },
     "common-home price": {
         "color": "#f26522",
@@ -1613,13 +1636,13 @@ export default StyleSheet.create({
         "display": "block",
         "textAlign": "center"
     },
-    "common-home feature-wrapper product-thumb caption": {
+    "feature-wrapper product-thumb caption": {
         "minHeight": "auto"
     },
     "common-home category-products product-thumb caption": {
         "minHeight": "auto"
     },
-    "common-home feature-wrapper caption h4 a": {
+    "feature-wrapper caption h4 a": {
         "color": "#333333",
         "fontFamily": "'Roboto', sans-serif",
         "fontSize": 16,
@@ -1653,7 +1676,7 @@ export default StyleSheet.create({
         "textAlign": "center",
         "textDecoration": "none !important"
     },
-    "common-home feature-wrapper caption h4:hover a": {
+    "feature-wrapper caption h4:hover a": {
         "color": "#f26522"
     },
     "common-home category-products caption h4:hover a": {

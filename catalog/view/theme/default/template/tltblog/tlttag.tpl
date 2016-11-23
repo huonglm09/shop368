@@ -78,10 +78,10 @@
 					</div>
 				</div>
 			</div>
-			<?php echo $content_bottom; ?>
 		</div>
 	</div>
 	<?php echo $column_right; ?>
+	<?php echo $content_bottom; ?>
 </div>
 </div>
 <?php echo $footer; ?>
