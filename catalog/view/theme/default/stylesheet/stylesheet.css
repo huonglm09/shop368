@@ -10,6 +10,22 @@ body {
     background: #f5f5f5;
 }
 
+.sitemap .blog-main {
+    padding-bottom: 20px;
+}
+
+.sitemap .blog-main h1 {
+    margin-bottom: 20px;
+}
+
+.sitemap li {
+    line-height: 25px;
+}
+
+.main-contact {
+    overflow: hidden;
+}
+
 .blogs {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     color: #333 !important;
@@ -18,14 +34,14 @@ body {
     line-height: 20px !important;
 }
 
-.blog-main, .blog-detail-main {
+.blog-main, .blog-detail-main, .main-contact {
     border: 1px solid #EBEBEB;
     background: #fff;
     margin-bottom: 20px;
     padding: 0 15px;
 }
 
-.blog-main h1, .blog-detail-main h1 {
+.blog-main h1, .blog-detail-main h1, .main-contact h1 {
     border-bottom: 2px solid #ebebeb;
     padding-bottom: 0;
     display: block;
@@ -40,7 +56,7 @@ body {
     margin-bottom: 0px;
 }
 
-.blog-main h1 strong, .blog-detail-main h1 strong {
+.blog-main h1 strong, .blog-detail-main h1 strong, .main-contact h1 strong {
     border-bottom: 5px solid #f26522;
     position: relative;
     bottom: 0;
@@ -48,6 +64,77 @@ body {
     font-size: 22px;
     color: #444;
     font-weight: bold;
+}
+
+.main-contact h1 {
+    margin-bottom: 20px;
+}
+
+.main-contact .panel {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+
+.main-contact .panel-default {
+    margin-top: 15px;
+}
+
+.main-contact .img-thumbnail {
+    border: 0px;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.info-1 li {
+    margin: 10px 0px;
+}
+
+.info-2 h2 {
+    color: #df5c39;
+}
+
+.main-contact .row .col-sm-6:last-child .row-fluid {
+    line-height: 30px;
+}
+
+.main-contact .row .col-sm-6:last-child address {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    line-height: 30px;
+}
+
+.main-contact .row .col-sm-6:last-child .head {
+    font-size: 18px;
+    color: #F26522;
+}
+
+.main-contact .buttons {
+    margin: 0px;
+}
+
+.main-contact .btn-primary {
+    padding: 7.5px 25px;
+    background: #F26522;
+    border: 1px solid #F26522 !important;
+    border: none;
+}
+
+.main-contact .btn-primary:hover {
+    color: #F26522;
+    background: #ffffff;
+    padding: 7.5px 25px;
+}
+
+.main-contact form legend {
+    border-bottom: 1px solid #F26522 !important;
+}
+
+.main-contact .btn-info {
+    margin: 10px 0px 20px 0px;
 }
 
 .blog-main .img-thumbnail {
