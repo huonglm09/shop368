@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-11-22 00:25:01
+Date: 2016-11-23 22:46:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -863,7 +863,7 @@ CREATE TABLE `bshop_currency` (
 -- ----------------------------
 -- Records of bshop_currency
 -- ----------------------------
-INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-21 17:05:48');
+INSERT INTO `bshop_currency` VALUES ('4', 'VNĐ', 'VND', '', 'VNĐ', '', '1.00000000', '1', '2016-11-23 14:55:02');
 
 -- ----------------------------
 -- Table structure for `bshop_customer`
@@ -1208,7 +1208,7 @@ CREATE TABLE `bshop_extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_extension
@@ -1237,6 +1237,7 @@ INSERT INTO `bshop_extension` VALUES ('23', 'module', 'categoryproducts');
 INSERT INTO `bshop_extension` VALUES ('24', 'module', 'information');
 INSERT INTO `bshop_extension` VALUES ('29', 'module', 'tltblog_settings');
 INSERT INTO `bshop_extension` VALUES ('28', 'module', 'tltblog');
+INSERT INTO `bshop_extension` VALUES ('31', 'module', 'html');
 
 -- ----------------------------
 -- Table structure for `bshop_filter`
@@ -1429,18 +1430,18 @@ CREATE TABLE `bshop_layout` (
 -- Records of bshop_layout
 -- ----------------------------
 INSERT INTO `bshop_layout` VALUES ('1', 'Trang chủ');
-INSERT INTO `bshop_layout` VALUES ('2', 'Product');
-INSERT INTO `bshop_layout` VALUES ('3', 'Category');
-INSERT INTO `bshop_layout` VALUES ('4', 'Default');
-INSERT INTO `bshop_layout` VALUES ('5', 'Manufacturer');
-INSERT INTO `bshop_layout` VALUES ('6', 'Account');
-INSERT INTO `bshop_layout` VALUES ('7', 'Checkout');
-INSERT INTO `bshop_layout` VALUES ('8', 'Contact');
-INSERT INTO `bshop_layout` VALUES ('9', 'Sitemap');
-INSERT INTO `bshop_layout` VALUES ('10', 'Affiliate');
-INSERT INTO `bshop_layout` VALUES ('11', 'Information');
-INSERT INTO `bshop_layout` VALUES ('12', 'Compare');
-INSERT INTO `bshop_layout` VALUES ('13', 'Search');
+INSERT INTO `bshop_layout` VALUES ('2', 'Sản phẩm chi tiết');
+INSERT INTO `bshop_layout` VALUES ('3', 'Danh sách sản phẩm');
+INSERT INTO `bshop_layout` VALUES ('4', 'Mặc định');
+INSERT INTO `bshop_layout` VALUES ('5', 'Nhà sản xuất');
+INSERT INTO `bshop_layout` VALUES ('6', 'Tài khoản');
+INSERT INTO `bshop_layout` VALUES ('7', 'Thanh toán');
+INSERT INTO `bshop_layout` VALUES ('8', 'Liên hệ');
+INSERT INTO `bshop_layout` VALUES ('9', 'Sơ đồ trang');
+INSERT INTO `bshop_layout` VALUES ('10', 'Liên kết');
+INSERT INTO `bshop_layout` VALUES ('11', 'Chính sách');
+INSERT INTO `bshop_layout` VALUES ('12', 'So sánh');
+INSERT INTO `bshop_layout` VALUES ('13', 'Tìm kiếm');
 INSERT INTO `bshop_layout` VALUES ('15', 'Tin tức');
 
 -- ----------------------------
@@ -1454,17 +1455,16 @@ CREATE TABLE `bshop_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=197 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=247 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_module
 -- ----------------------------
-INSERT INTO `bshop_layout_module` VALUES ('2', '4', '0', 'content_top', '0');
-INSERT INTO `bshop_layout_module` VALUES ('3', '4', '0', 'content_top', '1');
-INSERT INTO `bshop_layout_module` VALUES ('20', '5', '0', 'column_left', '2');
-INSERT INTO `bshop_layout_module` VALUES ('69', '10', 'affiliate', 'column_right', '1');
-INSERT INTO `bshop_layout_module` VALUES ('68', '6', 'account', 'column_right', '1');
-INSERT INTO `bshop_layout_module` VALUES ('72', '3', 'category', 'column_left', '1');
+INSERT INTO `bshop_layout_module` VALUES ('216', '15', 'banner.31', 'column_left', '2');
+INSERT INTO `bshop_layout_module` VALUES ('241', '5', 'account', 'column_left', '2');
+INSERT INTO `bshop_layout_module` VALUES ('243', '10', 'account', 'column_right', '1');
+INSERT INTO `bshop_layout_module` VALUES ('242', '6', 'account', 'column_right', '1');
+INSERT INTO `bshop_layout_module` VALUES ('239', '3', 'categoryproducts.34', 'content_top', '2');
 INSERT INTO `bshop_layout_module` VALUES ('191', '1', 'slideshow.27', 'slideshow', '1');
 INSERT INTO `bshop_layout_module` VALUES ('190', '1', 'featured.28', 'content_top', '2');
 INSERT INTO `bshop_layout_module` VALUES ('189', '1', 'carousel.37', 'content_bottom', '1');
@@ -1473,6 +1473,14 @@ INSERT INTO `bshop_layout_module` VALUES ('187', '1', 'categoryproducts.35', 'co
 INSERT INTO `bshop_layout_module` VALUES ('186', '1', 'categoryproducts.34', 'column_right', '1');
 INSERT INTO `bshop_layout_module` VALUES ('185', '1', 'banner.31', 'column_left', '2');
 INSERT INTO `bshop_layout_module` VALUES ('184', '1', 'category', 'column_left', '1');
+INSERT INTO `bshop_layout_module` VALUES ('214', '15', 'category', 'column_left', '1');
+INSERT INTO `bshop_layout_module` VALUES ('215', '15', 'featured.28', 'content_bottom', '1');
+INSERT INTO `bshop_layout_module` VALUES ('245', '4', 'account', 'content_top', '1');
+INSERT INTO `bshop_layout_module` VALUES ('244', '4', 'account', 'content_top', '0');
+INSERT INTO `bshop_layout_module` VALUES ('240', '3', 'categoryproducts.35', 'content_top', '3');
+INSERT INTO `bshop_layout_module` VALUES ('238', '3', 'categoryproducts.36', 'content_top', '1');
+INSERT INTO `bshop_layout_module` VALUES ('237', '3', 'category', 'column_left', '1');
+INSERT INTO `bshop_layout_module` VALUES ('246', '8', 'html.41', 'content_top', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_layout_route`
@@ -1484,25 +1492,25 @@ CREATE TABLE `bshop_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_layout_route
 -- ----------------------------
-INSERT INTO `bshop_layout_route` VALUES ('38', '6', '0', 'account/%');
-INSERT INTO `bshop_layout_route` VALUES ('17', '10', '0', 'affiliate/%');
-INSERT INTO `bshop_layout_route` VALUES ('44', '3', '0', 'product/category');
+INSERT INTO `bshop_layout_route` VALUES ('121', '6', '0', 'account/%');
+INSERT INTO `bshop_layout_route` VALUES ('123', '10', '0', 'affiliate/%');
+INSERT INTO `bshop_layout_route` VALUES ('115', '3', '0', 'product/category');
 INSERT INTO `bshop_layout_route` VALUES ('85', '1', '0', 'common/home');
-INSERT INTO `bshop_layout_route` VALUES ('20', '2', '0', 'product/product');
-INSERT INTO `bshop_layout_route` VALUES ('83', '11', '0', 'information/information');
-INSERT INTO `bshop_layout_route` VALUES ('23', '7', '0', 'checkout/%');
-INSERT INTO `bshop_layout_route` VALUES ('31', '8', '0', 'information/contact');
-INSERT INTO `bshop_layout_route` VALUES ('32', '9', '0', 'information/sitemap');
-INSERT INTO `bshop_layout_route` VALUES ('34', '4', '0', '');
-INSERT INTO `bshop_layout_route` VALUES ('45', '5', '0', 'product/manufacturer');
-INSERT INTO `bshop_layout_route` VALUES ('52', '12', '0', 'product/compare');
-INSERT INTO `bshop_layout_route` VALUES ('53', '13', '0', 'product/search');
-INSERT INTO `bshop_layout_route` VALUES ('97', '15', '0', 'tltblog/tlttag');
+INSERT INTO `bshop_layout_route` VALUES ('116', '2', '0', 'product/product');
+INSERT INTO `bshop_layout_route` VALUES ('120', '11', '0', 'information/information');
+INSERT INTO `bshop_layout_route` VALUES ('122', '7', '0', 'checkout/%');
+INSERT INTO `bshop_layout_route` VALUES ('127', '8', '0', 'information/contact');
+INSERT INTO `bshop_layout_route` VALUES ('118', '9', '0', 'information/sitemap');
+INSERT INTO `bshop_layout_route` VALUES ('125', '4', '0', '');
+INSERT INTO `bshop_layout_route` VALUES ('119', '5', '0', 'product/manufacturer');
+INSERT INTO `bshop_layout_route` VALUES ('124', '12', '0', 'product/compare');
+INSERT INTO `bshop_layout_route` VALUES ('117', '13', '0', 'product/search');
+INSERT INTO `bshop_layout_route` VALUES ('109', '15', '0', 'tltblog/%');
 
 -- ----------------------------
 -- Table structure for `bshop_length_class`
@@ -1643,7 +1651,7 @@ CREATE TABLE `bshop_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_module
@@ -1655,6 +1663,7 @@ INSERT INTO `bshop_module` VALUES ('31', 'Quảng cáo bên trái - Trang chủ'
 INSERT INTO `bshop_module` VALUES ('34', 'Nội thất phòng khách', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng kh\\u00e1ch\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('35', 'Nội thất phòng ngủ', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng ng\\u1ee7\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
 INSERT INTO `bshop_module` VALUES ('36', 'Nội thất phòng bếp', 'categoryproducts', '{\"name\":\"N\\u1ed9i th\\u1ea5t ph\\u00f2ng b\\u1ebfp\",\"product\":[\"61\"],\"limit\":\"3\",\"width\":\"270\",\"height\":\"187\",\"status\":\"1\"}');
+INSERT INTO `bshop_module` VALUES ('41', 'Bản đồ liên hệ', 'html', '{\"name\":\"B\\u1ea3n \\u0111\\u1ed3 li\\u00ean h\\u1ec7\",\"module_description\":{\"2\":{\"title\":\"Li\\u00ean h\\u1ec7 v\\u1edbi ch\\u00fang t\\u00f4i\",\"description\":\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d29793.996973529014!2d105.8194541122167!3d21.022695754095036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lpLCBIb8OgbiBLaeG6v20sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1479896217281&quot; width=&quot;100%&quot; height=&quot;450&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen=&quot;&quot;&gt;&lt;\\/iframe&gt;\"}},\"status\":\"1\"}');
 
 -- ----------------------------
 -- Table structure for `bshop_option`
@@ -2085,12 +2094,12 @@ CREATE TABLE `bshop_product` (
 -- ----------------------------
 -- Records of bshop_product
 -- ----------------------------
-INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:50:04', '2016-11-19 19:06:06');
-INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:50:04', '2016-11-19 19:05:25');
-INSERT INTO `bshop_product` VALUES ('53', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '17', '2016-11-19 18:48:44', '2016-11-19 19:05:33');
-INSERT INTO `bshop_product` VALUES ('52', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:44', '2016-11-19 19:05:41');
-INSERT INTO `bshop_product` VALUES ('51', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:38', '2016-11-19 19:05:49');
-INSERT INTO `bshop_product` VALUES ('50', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '2', '2016-11-19 18:46:09', '2016-11-19 19:05:56');
+INSERT INTO `bshop_product` VALUES ('55', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '3', '2016-11-19 18:50:04', '2016-11-22 15:46:42');
+INSERT INTO `bshop_product` VALUES ('54', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:50:04', '2016-11-22 15:43:52');
+INSERT INTO `bshop_product` VALUES ('53', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '20', '2016-11-19 18:48:44', '2016-11-22 15:46:19');
+INSERT INTO `bshop_product` VALUES ('52', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '0', '2016-11-19 18:48:44', '2016-11-22 15:46:08');
+INSERT INTO `bshop_product` VALUES ('51', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '1', '2016-11-19 18:48:38', '2016-11-22 15:46:27');
+INSERT INTO `bshop_product` VALUES ('50', 'noithatphongkhach', '', '', '', '', '', '', '', '1', '6', 'catalog/product/1.jpg', '0', '1', '0.0000', '0', '0', '2016-11-19', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '1', '1', '20', '2016-11-19 18:46:09', '2016-11-22 15:46:34');
 
 -- ----------------------------
 -- Table structure for `bshop_product_attribute`
@@ -2128,12 +2137,12 @@ CREATE TABLE `bshop_product_description` (
 -- ----------------------------
 -- Records of bshop_product_description
 -- ----------------------------
-INSERT INTO `bshop_product_description` VALUES ('50', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('51', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('52', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('53', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('54', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
-INSERT INTO `bshop_product_description` VALUES ('55', '2', 'Bàn ghế gỗ phòng khách BG36 1', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/ban-ghe-go-phong-khach-bg36-68644.html&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế gỗ phòng khách BG36&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/noi-that-phong-khach&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;nội thất phòng khách&lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt; hiện đại này. &lt;/span&gt;&lt;a href=&quot;http://noithatductinh.com/ban-ghe-phong-khach/&quot; style=&quot;font-family: \'times new roman\', times, serif; font-size: 18px; line-height: 1.6em;&quot;&gt;&lt;strong&gt;Bàn ghế phòng khách &lt;/strong&gt;&lt;/a&gt;&lt;span style=&quot;font-family:times new roman,times,serif; font-size:18px&quot;&gt;BG36&amp;nbsp;tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot; style=&quot;height:399px; width:800px&quot;&gt;&lt;/span&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('50', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('51', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('52', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('53', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('54', '2', 'Bàn ghế gỗ phòng khách BG36 ', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
+INSERT INTO `bshop_product_description` VALUES ('55', '2', 'Bàn ghế gỗ phòng khách BG36 1', '&lt;p style=&quot;text-align:justify&quot;&gt;&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;Bàn ghế gỗ phòng khách BG36 được làm hoàn toàn từ gỗ tự nhiên cao cấp đã qua xử lý chống ẩm, mối mọt vì vậy sản phẩm có độ bền cao. Đặc biệt, gia chủ sẽ có một không gian mới lạ, trẻ trung và sành điệu nhờ vào kiểu dáng sang trọng của bộ nội thất phòng khách hiện đại này. Bàn ghế phòng khách BG36 tiện nghi và phù hợp với mọi diện tích phòng khách.&lt;/span&gt;&lt;/font&gt;&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;br&gt;\r\n&lt;font face=&quot;times new roman, times, serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://noithatductinh.com/image/data/bg36-2.jpg&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ', 'Bàn ghế gỗ phòng khách BG36 ');
 
 -- ----------------------------
 -- Table structure for `bshop_product_discount`
@@ -2536,11 +2545,12 @@ CREATE TABLE `bshop_review` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`review_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_review
 -- ----------------------------
+INSERT INTO `bshop_review` VALUES ('1', '50', '0', 'Admin', 'Không có đánh giá cho sản phẩm này.', '3', '0', '2016-11-22 15:36:30', '0000-00-00 00:00:00');
 
 -- ----------------------------
 -- Table structure for `bshop_setting`
@@ -2554,7 +2564,7 @@ CREATE TABLE `bshop_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=699 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1017 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_setting
@@ -2588,136 +2598,136 @@ INSERT INTO `bshop_setting` VALUES ('54', '0', 'reward', 'reward_status', '1', '
 INSERT INTO `bshop_setting` VALUES ('146', '0', 'category', 'category_status', '1', '0');
 INSERT INTO `bshop_setting` VALUES ('158', '0', 'account', 'account_status', '1', '0');
 INSERT INTO `bshop_setting` VALUES ('159', '0', 'affiliate', 'affiliate_status', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('617', '0', 'config', 'config_error_filename', 'error.log', '0');
-INSERT INTO `bshop_setting` VALUES ('616', '0', 'config', 'config_error_log', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('614', '0', 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', '0');
-INSERT INTO `bshop_setting` VALUES ('615', '0', 'config', 'config_error_display', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('917', '0', 'config', 'config_zone_id', '3776', '0');
+INSERT INTO `bshop_setting` VALUES ('918', '0', 'config', 'config_language', 'vi-vn', '0');
+INSERT INTO `bshop_setting` VALUES ('919', '0', 'config', 'config_admin_language', 'vi-vn', '0');
+INSERT INTO `bshop_setting` VALUES ('920', '0', 'config', 'config_currency', 'VND', '0');
+INSERT INTO `bshop_setting` VALUES ('921', '0', 'config', 'config_currency_auto', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('922', '0', 'config', 'config_length_class_id', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('923', '0', 'config', 'config_weight_class_id', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('924', '0', 'config', 'config_product_count', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('925', '0', 'config', 'config_limit_admin', '20', '0');
+INSERT INTO `bshop_setting` VALUES ('926', '0', 'config', 'config_review_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('927', '0', 'config', 'config_review_guest', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('928', '0', 'config', 'config_review_mail', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('929', '0', 'config', 'config_voucher_min', '1', '0');
 INSERT INTO `bshop_setting` VALUES ('94', '0', 'voucher', 'voucher_sort_order', '8', '0');
 INSERT INTO `bshop_setting` VALUES ('95', '0', 'voucher', 'voucher_status', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('613', '0', 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', '0');
+INSERT INTO `bshop_setting` VALUES ('1014', '0', 'theme_default', 'theme_default_image_cart_height', '47', '0');
+INSERT INTO `bshop_setting` VALUES ('992', '0', 'config', 'config_error_filename', 'error.log', '0');
+INSERT INTO `bshop_setting` VALUES ('991', '0', 'config', 'config_error_log', '1', '0');
 INSERT INTO `bshop_setting` VALUES ('103', '0', 'free_checkout', 'free_checkout_status', '1', '0');
 INSERT INTO `bshop_setting` VALUES ('104', '0', 'free_checkout', 'free_checkout_order_status_id', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('612', '0', 'config', 'config_file_max_size', '300000', '0');
-INSERT INTO `bshop_setting` VALUES ('607', '0', 'config', 'config_compression', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('608', '0', 'config', 'config_secure', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('609', '0', 'config', 'config_password', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('610', '0', 'config', 'config_shared', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('611', '0', 'config', 'config_encryption', 'fLSIwt0IQJj9UZktRAfDBVW7gTc268oHM5jIBYDulmT1ZrrHYBHk5GgLt3YDzO7alpjWejPOxZ4zFSjra27jmk8ObI6qWc6soEXmgBcdIzG8ZoRjvk3VxwFxGeKQvnrrZQ2wwzwpGgz4JL2tkuKLiseRiEPzNJ03TxK6YHJ3k1nb9mHDFdiXDMJ0sZJdndwq258p3UZj38o8HkPSqNRh6k26NBrY3rYnofdsLGDsmoqWxgAlcBVGWnOj9PzOyxgQFIHu30KOre22FnzVxUcY2Pi4Jwn1pF5bfXGONbZXHztnO1W1Mzbdp8wcLlKEyocEK7rdmI07IoZeHYcGL6XwkqxrjeGV3hENM6uc00UZKruDlcXH8Zh8QLcSUmr3NDDlP26YyD62MhEQ1zpRAAVv7P5j6ITqZGz4pNghq9bMDqCUlV4WLgGXh5b8f3s44DMFJNivsS5J7k0GGgD4QKtEyd6F2VIcd5FXRBkl1XxwvrfoBqDPeHNyBwhrY82upWDYI8EOLHJ6oO2FSTVSUKXBOQt9jmO50yhYopbOwmbIbmRTYPQ6g2ZXhLVy1631RTUaVAAzlsQmlcXc0pOdA31ybDy1bOq99wty5MzjhTTK1b9naGCoVNur36AkCqB477QGJbPD1qeNzaa2CsdYTRqpQd7Tg9E0nihE4VXOUJm1mzqeYciTXVndczvxrGxGyfdTKTodymvyNb9P7Nsssq0pOmVjYUsHWxBwOikJIiG1fKCnlhQTJC8PdW9aVWKoPzCwdyc8fyx82Tc1LxZHA2sZgtKc4mdV6nDbvseTUx3Oc68j4jVDbKtvtetQmskbxfVu2CiCQWAz62VzIaaS1Jj4U4JsI8sU4eXorBoJj55kVi87a2DlT4FUCtdD6PKTZVHuoQGsHjGCMGz5iCfOvdINrrwk9PeaA55r11qAsp9VqNdTOHGTF2MKEXhw60N3RdrReX4HsS3xoPzTcsJ1FVHh18Uy8jnoo6cJtQCf1BWVryU59K6ZGrNQ4BPKct6qZx46', '0');
-INSERT INTO `bshop_setting` VALUES ('606', '0', 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', '0');
-INSERT INTO `bshop_setting` VALUES ('605', '0', 'config', 'config_seo_url', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('603', '0', 'config', 'config_mail_alert', '', '0');
-INSERT INTO `bshop_setting` VALUES ('604', '0', 'config', 'config_maintenance', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('571', '0', 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', '1');
-INSERT INTO `bshop_setting` VALUES ('572', '0', 'config', 'config_complete_status', '[\"5\",\"3\"]', '1');
-INSERT INTO `bshop_setting` VALUES ('602', '0', 'config', 'config_mail_smtp_timeout', '5', '0');
-INSERT INTO `bshop_setting` VALUES ('601', '0', 'config', 'config_mail_smtp_port', '25', '0');
-INSERT INTO `bshop_setting` VALUES ('600', '0', 'config', 'config_mail_smtp_password', '', '0');
-INSERT INTO `bshop_setting` VALUES ('587', '0', 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', '1');
-INSERT INTO `bshop_setting` VALUES ('599', '0', 'config', 'config_mail_smtp_username', '', '0');
-INSERT INTO `bshop_setting` VALUES ('598', '0', 'config', 'config_mail_smtp_hostname', '', '0');
-INSERT INTO `bshop_setting` VALUES ('597', '0', 'config', 'config_mail_parameter', '', '0');
-INSERT INTO `bshop_setting` VALUES ('596', '0', 'config', 'config_mail_protocol', 'mail', '0');
-INSERT INTO `bshop_setting` VALUES ('595', '0', 'config', 'config_ftp_status', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('594', '0', 'config', 'config_ftp_root', '', '0');
-INSERT INTO `bshop_setting` VALUES ('592', '0', 'config', 'config_ftp_username', '', '0');
-INSERT INTO `bshop_setting` VALUES ('593', '0', 'config', 'config_ftp_password', '', '0');
-INSERT INTO `bshop_setting` VALUES ('591', '0', 'config', 'config_ftp_port', '21', '0');
-INSERT INTO `bshop_setting` VALUES ('590', '0', 'config', 'config_ftp_hostname', 'demo.vn', '0');
-INSERT INTO `bshop_setting` VALUES ('589', '0', 'config', 'config_icon', 'catalog/logo/logo-fix.png', '0');
-INSERT INTO `bshop_setting` VALUES ('588', '0', 'config', 'config_logo', 'catalog/logo/logo-fix.png', '0');
-INSERT INTO `bshop_setting` VALUES ('584', '0', 'config', 'config_return_id', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('585', '0', 'config', 'config_return_status_id', '2', '0');
-INSERT INTO `bshop_setting` VALUES ('586', '0', 'config', 'config_captcha', '', '0');
-INSERT INTO `bshop_setting` VALUES ('583', '0', 'config', 'config_affiliate_mail', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('582', '0', 'config', 'config_affiliate_id', '4', '0');
-INSERT INTO `bshop_setting` VALUES ('581', '0', 'config', 'config_affiliate_commission', '5', '0');
-INSERT INTO `bshop_setting` VALUES ('580', '0', 'config', 'config_affiliate_auto', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('579', '0', 'config', 'config_affiliate_approval', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('577', '0', 'config', 'config_stock_warning', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('578', '0', 'config', 'config_stock_checkout', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('575', '0', 'config', 'config_api_id', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('576', '0', 'config', 'config_stock_display', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('574', '0', 'config', 'config_order_mail', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('638', '0', 'theme_default', 'theme_default_image_cart_width', '47', '0');
-INSERT INTO `bshop_setting` VALUES ('637', '0', 'theme_default', 'theme_default_image_wishlist_height', '47', '0');
-INSERT INTO `bshop_setting` VALUES ('636', '0', 'theme_default', 'theme_default_image_wishlist_width', '47', '0');
-INSERT INTO `bshop_setting` VALUES ('635', '0', 'theme_default', 'theme_default_image_compare_height', '90', '0');
-INSERT INTO `bshop_setting` VALUES ('634', '0', 'theme_default', 'theme_default_image_compare_width', '90', '0');
-INSERT INTO `bshop_setting` VALUES ('633', '0', 'theme_default', 'theme_default_image_related_height', '200', '0');
-INSERT INTO `bshop_setting` VALUES ('632', '0', 'theme_default', 'theme_default_image_related_width', '200', '0');
-INSERT INTO `bshop_setting` VALUES ('631', '0', 'theme_default', 'theme_default_image_additional_height', '74', '0');
-INSERT INTO `bshop_setting` VALUES ('630', '0', 'theme_default', 'theme_default_image_additional_width', '74', '0');
-INSERT INTO `bshop_setting` VALUES ('629', '0', 'theme_default', 'theme_default_image_product_height', '270', '0');
-INSERT INTO `bshop_setting` VALUES ('628', '0', 'theme_default', 'theme_default_image_product_width', '270', '0');
-INSERT INTO `bshop_setting` VALUES ('627', '0', 'theme_default', 'theme_default_image_popup_height', '500', '0');
-INSERT INTO `bshop_setting` VALUES ('626', '0', 'theme_default', 'theme_default_image_popup_width', '500', '0');
-INSERT INTO `bshop_setting` VALUES ('625', '0', 'theme_default', 'theme_default_image_thumb_height', '228', '0');
-INSERT INTO `bshop_setting` VALUES ('624', '0', 'theme_default', 'theme_default_image_thumb_width', '228', '0');
-INSERT INTO `bshop_setting` VALUES ('623', '0', 'theme_default', 'theme_default_image_category_height', '80', '0');
-INSERT INTO `bshop_setting` VALUES ('622', '0', 'theme_default', 'theme_default_image_category_width', '80', '0');
-INSERT INTO `bshop_setting` VALUES ('621', '0', 'theme_default', 'theme_default_product_description_length', '100', '0');
-INSERT INTO `bshop_setting` VALUES ('573', '0', 'config', 'config_fraud_status_id', '7', '0');
-INSERT INTO `bshop_setting` VALUES ('570', '0', 'config', 'config_order_status_id', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('569', '0', 'config', 'config_checkout_id', '5', '0');
-INSERT INTO `bshop_setting` VALUES ('568', '0', 'config', 'config_checkout_guest', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('567', '0', 'config', 'config_cart_weight', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('566', '0', 'config', 'config_invoice_prefix', 'INV-2013-00', '0');
-INSERT INTO `bshop_setting` VALUES ('565', '0', 'config', 'config_account_mail', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('564', '0', 'config', 'config_account_id', '3', '0');
-INSERT INTO `bshop_setting` VALUES ('562', '0', 'config', 'config_customer_price', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('563', '0', 'config', 'config_login_attempts', '5', '0');
-INSERT INTO `bshop_setting` VALUES ('561', '0', 'config', 'config_customer_group_display', '[\"1\"]', '1');
-INSERT INTO `bshop_setting` VALUES ('560', '0', 'config', 'config_customer_group_id', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('559', '0', 'config', 'config_customer_online', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('558', '0', 'config', 'config_tax_customer', 'shipping', '0');
-INSERT INTO `bshop_setting` VALUES ('557', '0', 'config', 'config_tax_default', 'shipping', '0');
-INSERT INTO `bshop_setting` VALUES ('556', '0', 'config', 'config_tax', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('555', '0', 'config', 'config_voucher_max', '1000', '0');
-INSERT INTO `bshop_setting` VALUES ('544', '0', 'config', 'config_admin_language', 'vi-vn', '0');
-INSERT INTO `bshop_setting` VALUES ('545', '0', 'config', 'config_currency', 'VND', '0');
-INSERT INTO `bshop_setting` VALUES ('546', '0', 'config', 'config_currency_auto', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('547', '0', 'config', 'config_length_class_id', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('548', '0', 'config', 'config_weight_class_id', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('549', '0', 'config', 'config_product_count', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('550', '0', 'config', 'config_limit_admin', '20', '0');
-INSERT INTO `bshop_setting` VALUES ('551', '0', 'config', 'config_review_status', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('552', '0', 'config', 'config_review_guest', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('553', '0', 'config', 'config_review_mail', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('554', '0', 'config', 'config_voucher_min', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('541', '0', 'config', 'config_country_id', '230', '0');
-INSERT INTO `bshop_setting` VALUES ('542', '0', 'config', 'config_zone_id', '3776', '0');
-INSERT INTO `bshop_setting` VALUES ('543', '0', 'config', 'config_language', 'vi-vn', '0');
-INSERT INTO `bshop_setting` VALUES ('540', '0', 'config', 'config_comment', '', '0');
-INSERT INTO `bshop_setting` VALUES ('539', '0', 'config', 'config_open', '', '0');
-INSERT INTO `bshop_setting` VALUES ('538', '0', 'config', 'config_image', '', '0');
-INSERT INTO `bshop_setting` VALUES ('537', '0', 'config', 'config_fax', '', '0');
-INSERT INTO `bshop_setting` VALUES ('536', '0', 'config', 'config_telephone', '123456789', '0');
-INSERT INTO `bshop_setting` VALUES ('535', '0', 'config', 'config_email', 'huonglm09@gmail.com', '0');
-INSERT INTO `bshop_setting` VALUES ('534', '0', 'config', 'config_geocode', '', '0');
-INSERT INTO `bshop_setting` VALUES ('533', '0', 'config', 'config_address', 'Address 1', '0');
-INSERT INTO `bshop_setting` VALUES ('532', '0', 'config', 'config_owner', 'Your Name', '0');
-INSERT INTO `bshop_setting` VALUES ('531', '0', 'config', 'config_name', 'Your Store', '0');
-INSERT INTO `bshop_setting` VALUES ('528', '0', 'config', 'config_meta_keyword', '', '0');
-INSERT INTO `bshop_setting` VALUES ('529', '0', 'config', 'config_theme', 'theme_default', '0');
-INSERT INTO `bshop_setting` VALUES ('530', '0', 'config', 'config_layout_id', '4', '0');
-INSERT INTO `bshop_setting` VALUES ('527', '0', 'config', 'config_meta_description', 'My Store', '0');
-INSERT INTO `bshop_setting` VALUES ('526', '0', 'config', 'config_meta_title', 'Your Store', '0');
-INSERT INTO `bshop_setting` VALUES ('620', '0', 'theme_default', 'theme_default_product_limit', '15', '0');
-INSERT INTO `bshop_setting` VALUES ('619', '0', 'theme_default', 'theme_default_status', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('618', '0', 'theme_default', 'theme_default_directory', 'default', '0');
-INSERT INTO `bshop_setting` VALUES ('639', '0', 'theme_default', 'theme_default_image_cart_height', '47', '0');
-INSERT INTO `bshop_setting` VALUES ('640', '0', 'theme_default', 'theme_default_image_location_width', '268', '0');
-INSERT INTO `bshop_setting` VALUES ('641', '0', 'theme_default', 'theme_default_image_location_height', '50', '0');
+INSERT INTO `bshop_setting` VALUES ('987', '0', 'config', 'config_file_max_size', '300000', '0');
+INSERT INTO `bshop_setting` VALUES ('988', '0', 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', '0');
+INSERT INTO `bshop_setting` VALUES ('989', '0', 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', '0');
+INSERT INTO `bshop_setting` VALUES ('990', '0', 'config', 'config_error_display', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('982', '0', 'config', 'config_compression', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('983', '0', 'config', 'config_secure', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('984', '0', 'config', 'config_password', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('985', '0', 'config', 'config_shared', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('986', '0', 'config', 'config_encryption', 'fLSIwt0IQJj9UZktRAfDBVW7gTc268oHM5jIBYDulmT1ZrrHYBHk5GgLt3YDzO7alpjWejPOxZ4zFSjra27jmk8ObI6qWc6soEXmgBcdIzG8ZoRjvk3VxwFxGeKQvnrrZQ2wwzwpGgz4JL2tkuKLiseRiEPzNJ03TxK6YHJ3k1nb9mHDFdiXDMJ0sZJdndwq258p3UZj38o8HkPSqNRh6k26NBrY3rYnofdsLGDsmoqWxgAlcBVGWnOj9PzOyxgQFIHu30KOre22FnzVxUcY2Pi4Jwn1pF5bfXGONbZXHztnO1W1Mzbdp8wcLlKEyocEK7rdmI07IoZeHYcGL6XwkqxrjeGV3hENM6uc00UZKruDlcXH8Zh8QLcSUmr3NDDlP26YyD62MhEQ1zpRAAVv7P5j6ITqZGz4pNghq9bMDqCUlV4WLgGXh5b8f3s44DMFJNivsS5J7k0GGgD4QKtEyd6F2VIcd5FXRBkl1XxwvrfoBqDPeHNyBwhrY82upWDYI8EOLHJ6oO2FSTVSUKXBOQt9jmO50yhYopbOwmbIbmRTYPQ6g2ZXhLVy1631RTUaVAAzlsQmlcXc0pOdA31ybDy1bOq99wty5MzjhTTK1b9naGCoVNur36AkCqB477QGJbPD1qeNzaa2CsdYTRqpQd7Tg9E0nihE4VXOUJm1mzqeYciTXVndczvxrGxGyfdTKTodymvyNb9P7Nsssq0pOmVjYUsHWxBwOikJIiG1fKCnlhQTJC8PdW9aVWKoPzCwdyc8fyx82Tc1LxZHA2sZgtKc4mdV6nDbvseTUx3Oc68j4jVDbKtvtetQmskbxfVu2CiCQWAz62VzIaaS1Jj4U4JsI8sU4eXorBoJj55kVi87a2DlT4FUCtdD6PKTZVHuoQGsHjGCMGz5iCfOvdINrrwk9PeaA55r11qAsp9VqNdTOHGTF2MKEXhw60N3RdrReX4HsS3xoPzTcsJ1FVHh18Uy8jnoo6cJtQCf1BWVryU59K6ZGrNQ4BPKct6qZx46', '0');
+INSERT INTO `bshop_setting` VALUES ('981', '0', 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', '0');
+INSERT INTO `bshop_setting` VALUES ('980', '0', 'config', 'config_seo_url', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('977', '0', 'config', 'config_mail_smtp_timeout', '5', '0');
+INSERT INTO `bshop_setting` VALUES ('978', '0', 'config', 'config_mail_alert', '', '0');
+INSERT INTO `bshop_setting` VALUES ('979', '0', 'config', 'config_maintenance', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('976', '0', 'config', 'config_mail_smtp_port', '25', '0');
+INSERT INTO `bshop_setting` VALUES ('974', '0', 'config', 'config_mail_smtp_username', '', '0');
+INSERT INTO `bshop_setting` VALUES ('975', '0', 'config', 'config_mail_smtp_password', '', '0');
+INSERT INTO `bshop_setting` VALUES ('972', '0', 'config', 'config_mail_parameter', '', '0');
+INSERT INTO `bshop_setting` VALUES ('973', '0', 'config', 'config_mail_smtp_hostname', '', '0');
+INSERT INTO `bshop_setting` VALUES ('971', '0', 'config', 'config_mail_protocol', 'mail', '0');
+INSERT INTO `bshop_setting` VALUES ('970', '0', 'config', 'config_ftp_status', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('1013', '0', 'theme_default', 'theme_default_image_cart_width', '47', '0');
+INSERT INTO `bshop_setting` VALUES ('1012', '0', 'theme_default', 'theme_default_image_wishlist_height', '47', '0');
+INSERT INTO `bshop_setting` VALUES ('1011', '0', 'theme_default', 'theme_default_image_wishlist_width', '47', '0');
+INSERT INTO `bshop_setting` VALUES ('1010', '0', 'theme_default', 'theme_default_image_compare_height', '90', '0');
+INSERT INTO `bshop_setting` VALUES ('1009', '0', 'theme_default', 'theme_default_image_compare_width', '90', '0');
+INSERT INTO `bshop_setting` VALUES ('1008', '0', 'theme_default', 'theme_default_image_related_height', '200', '0');
+INSERT INTO `bshop_setting` VALUES ('1007', '0', 'theme_default', 'theme_default_image_related_width', '200', '0');
+INSERT INTO `bshop_setting` VALUES ('1006', '0', 'theme_default', 'theme_default_image_additional_height', '74', '0');
+INSERT INTO `bshop_setting` VALUES ('1005', '0', 'theme_default', 'theme_default_image_additional_width', '74', '0');
+INSERT INTO `bshop_setting` VALUES ('1004', '0', 'theme_default', 'theme_default_image_product_height', '270', '0');
+INSERT INTO `bshop_setting` VALUES ('1003', '0', 'theme_default', 'theme_default_image_product_width', '270', '0');
+INSERT INTO `bshop_setting` VALUES ('1002', '0', 'theme_default', 'theme_default_image_popup_height', '500', '0');
+INSERT INTO `bshop_setting` VALUES ('1001', '0', 'theme_default', 'theme_default_image_popup_width', '500', '0');
+INSERT INTO `bshop_setting` VALUES ('1000', '0', 'theme_default', 'theme_default_image_thumb_height', '228', '0');
+INSERT INTO `bshop_setting` VALUES ('999', '0', 'theme_default', 'theme_default_image_thumb_width', '228', '0');
+INSERT INTO `bshop_setting` VALUES ('998', '0', 'theme_default', 'theme_default_image_category_height', '80', '0');
+INSERT INTO `bshop_setting` VALUES ('969', '0', 'config', 'config_ftp_root', '', '0');
+INSERT INTO `bshop_setting` VALUES ('968', '0', 'config', 'config_ftp_password', '', '0');
+INSERT INTO `bshop_setting` VALUES ('967', '0', 'config', 'config_ftp_username', '', '0');
+INSERT INTO `bshop_setting` VALUES ('966', '0', 'config', 'config_ftp_port', '21', '0');
+INSERT INTO `bshop_setting` VALUES ('965', '0', 'config', 'config_ftp_hostname', 'demo.vn', '0');
+INSERT INTO `bshop_setting` VALUES ('964', '0', 'config', 'config_icon', 'catalog/logo/logo-fix.png', '0');
+INSERT INTO `bshop_setting` VALUES ('963', '0', 'config', 'config_logo', 'catalog/logo/logo-fix.png', '0');
+INSERT INTO `bshop_setting` VALUES ('962', '0', 'config', 'config_captcha_page', '[\"review\",\"return\",\"contact\"]', '1');
+INSERT INTO `bshop_setting` VALUES ('961', '0', 'config', 'config_captcha', '', '0');
+INSERT INTO `bshop_setting` VALUES ('960', '0', 'config', 'config_return_status_id', '2', '0');
+INSERT INTO `bshop_setting` VALUES ('959', '0', 'config', 'config_return_id', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('958', '0', 'config', 'config_affiliate_mail', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('957', '0', 'config', 'config_affiliate_id', '4', '0');
+INSERT INTO `bshop_setting` VALUES ('955', '0', 'config', 'config_affiliate_auto', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('956', '0', 'config', 'config_affiliate_commission', '5', '0');
+INSERT INTO `bshop_setting` VALUES ('954', '0', 'config', 'config_affiliate_approval', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('953', '0', 'config', 'config_stock_checkout', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('952', '0', 'config', 'config_stock_warning', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('951', '0', 'config', 'config_stock_display', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('950', '0', 'config', 'config_api_id', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('949', '0', 'config', 'config_order_mail', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('948', '0', 'config', 'config_fraud_status_id', '7', '0');
+INSERT INTO `bshop_setting` VALUES ('947', '0', 'config', 'config_complete_status', '[\"5\",\"3\"]', '1');
+INSERT INTO `bshop_setting` VALUES ('945', '0', 'config', 'config_order_status_id', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('946', '0', 'config', 'config_processing_status', '[\"5\",\"1\",\"2\",\"12\",\"3\"]', '1');
+INSERT INTO `bshop_setting` VALUES ('944', '0', 'config', 'config_checkout_id', '5', '0');
+INSERT INTO `bshop_setting` VALUES ('943', '0', 'config', 'config_checkout_guest', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('939', '0', 'config', 'config_account_id', '3', '0');
+INSERT INTO `bshop_setting` VALUES ('940', '0', 'config', 'config_account_mail', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('941', '0', 'config', 'config_invoice_prefix', 'INV-2013-00', '0');
+INSERT INTO `bshop_setting` VALUES ('942', '0', 'config', 'config_cart_weight', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('997', '0', 'theme_default', 'theme_default_image_category_width', '80', '0');
+INSERT INTO `bshop_setting` VALUES ('996', '0', 'theme_default', 'theme_default_product_description_length', '100', '0');
+INSERT INTO `bshop_setting` VALUES ('995', '0', 'theme_default', 'theme_default_product_limit', '15', '0');
+INSERT INTO `bshop_setting` VALUES ('994', '0', 'theme_default', 'theme_default_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('993', '0', 'theme_default', 'theme_default_directory', 'default', '0');
 INSERT INTO `bshop_setting` VALUES ('642', '0', 'information', 'information_status', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('689', '0', 'tltblog', 'tltblog_path', 'blogs', '0');
-INSERT INTO `bshop_setting` VALUES ('696', '0', 'tltblog', 'tltblog_seo', '0', '0');
-INSERT INTO `bshop_setting` VALUES ('695', '0', 'tltblog', 'tltblog_height', '200', '0');
-INSERT INTO `bshop_setting` VALUES ('694', '0', 'tltblog', 'tltblog_width', '200', '0');
-INSERT INTO `bshop_setting` VALUES ('693', '0', 'tltblog', 'tltblog_show_image', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('692', '0', 'tltblog', 'tltblog_num_columns', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('691', '0', 'tltblog', 'tltblog_path_title', '{\"2\":{\"path_title\":\"Tin t\\u1ee9c\"}}', '1');
-INSERT INTO `bshop_setting` VALUES ('690', '0', 'tltblog', 'tltblog_show_path', '1', '0');
-INSERT INTO `bshop_setting` VALUES ('697', '0', 'tltblog', 'tltblog_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('716', '0', 'tltblog', 'tltblog_status', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('715', '0', 'tltblog', 'tltblog_seo', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('714', '0', 'tltblog', 'tltblog_height', '274', '0');
+INSERT INTO `bshop_setting` VALUES ('713', '0', 'tltblog', 'tltblog_width', '480', '0');
+INSERT INTO `bshop_setting` VALUES ('712', '0', 'tltblog', 'tltblog_show_image', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('711', '0', 'tltblog', 'tltblog_num_columns', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('710', '0', 'tltblog', 'tltblog_path_title', '{\"2\":{\"path_title\":\"Tin t\\u1ee9c\"}}', '1');
+INSERT INTO `bshop_setting` VALUES ('709', '0', 'tltblog', 'tltblog_show_path', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('708', '0', 'tltblog', 'tltblog_path', 'blogs', '0');
+INSERT INTO `bshop_setting` VALUES ('938', '0', 'config', 'config_login_attempts', '5', '0');
+INSERT INTO `bshop_setting` VALUES ('935', '0', 'config', 'config_customer_group_id', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('936', '0', 'config', 'config_customer_group_display', '[\"1\"]', '1');
+INSERT INTO `bshop_setting` VALUES ('937', '0', 'config', 'config_customer_price', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('930', '0', 'config', 'config_voucher_max', '1000', '0');
+INSERT INTO `bshop_setting` VALUES ('931', '0', 'config', 'config_tax', '1', '0');
+INSERT INTO `bshop_setting` VALUES ('932', '0', 'config', 'config_tax_default', 'shipping', '0');
+INSERT INTO `bshop_setting` VALUES ('933', '0', 'config', 'config_tax_customer', 'shipping', '0');
+INSERT INTO `bshop_setting` VALUES ('934', '0', 'config', 'config_customer_online', '0', '0');
+INSERT INTO `bshop_setting` VALUES ('916', '0', 'config', 'config_country_id', '230', '0');
+INSERT INTO `bshop_setting` VALUES ('907', '0', 'config', 'config_owner', 'Công ty TNHH Nội Thất Đức Tính', '0');
+INSERT INTO `bshop_setting` VALUES ('908', '0', 'config', 'config_address', ' Tầng 2 tòa nhà Bình Vượng Tower - Số 200 Quang Trung - Hà Đông', '0');
+INSERT INTO `bshop_setting` VALUES ('914', '0', 'config', 'config_open', '', '0');
+INSERT INTO `bshop_setting` VALUES ('915', '0', 'config', 'config_comment', '', '0');
+INSERT INTO `bshop_setting` VALUES ('912', '0', 'config', 'config_fax', '', '0');
+INSERT INTO `bshop_setting` VALUES ('913', '0', 'config', 'config_image', 'catalog/product/noi-that-phong-khach-go-re-dep-duc-tinh-700x500resize_and_crop.jpg', '0');
+INSERT INTO `bshop_setting` VALUES ('911', '0', 'config', 'config_telephone', '123456789', '0');
+INSERT INTO `bshop_setting` VALUES ('909', '0', 'config', 'config_geocode', 'Hà Nội', '0');
+INSERT INTO `bshop_setting` VALUES ('910', '0', 'config', 'config_email', 'huonglm09@gmail.com', '0');
+INSERT INTO `bshop_setting` VALUES ('902', '0', 'config', 'config_meta_description', 'Công ty TNHH Nội Thất Đức Tính', '0');
+INSERT INTO `bshop_setting` VALUES ('903', '0', 'config', 'config_meta_keyword', 'Công ty TNHH Nội Thất Đức Tính', '0');
+INSERT INTO `bshop_setting` VALUES ('904', '0', 'config', 'config_theme', 'theme_default', '0');
+INSERT INTO `bshop_setting` VALUES ('905', '0', 'config', 'config_layout_id', '4', '0');
+INSERT INTO `bshop_setting` VALUES ('906', '0', 'config', 'config_name', 'Công ty TNHH Nội Thất Đức Tính', '0');
+INSERT INTO `bshop_setting` VALUES ('901', '0', 'config', 'config_meta_title', 'Công ty TNHH Nội Thất Đức Tính', '0');
+INSERT INTO `bshop_setting` VALUES ('1015', '0', 'theme_default', 'theme_default_image_location_width', '700', '0');
+INSERT INTO `bshop_setting` VALUES ('1016', '0', 'theme_default', 'theme_default_image_location_height', '500', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_stock_status`
@@ -2849,8 +2859,8 @@ CREATE TABLE `bshop_tltblog` (
 -- ----------------------------
 -- Records of bshop_tltblog
 -- ----------------------------
-INSERT INTO `bshop_tltblog` VALUES ('3', 'catalog/product/ban-ghe-go-phong-khach1-bg36.jpg', '1', '0', '1', '1', '1');
-INSERT INTO `bshop_tltblog` VALUES ('4', 'catalog/product/ban-ghe-go-phong-khach1-bg36.jpg', '0', '0', '1', '1', '1');
+INSERT INTO `bshop_tltblog` VALUES ('3', 'catalog/product/giuong-ngu-dep-1(4).jpg', '1', '0', '1', '1', '1');
+INSERT INTO `bshop_tltblog` VALUES ('4', 'catalog/product/giuong-ngu-dep-1(4).jpg', '0', '0', '1', '1', '1');
 
 -- ----------------------------
 -- Table structure for `bshop_tltblog_description`
@@ -2871,8 +2881,8 @@ CREATE TABLE `bshop_tltblog_description` (
 -- ----------------------------
 -- Records of bshop_tltblog_description
 -- ----------------------------
-INSERT INTO `bshop_tltblog_description` VALUES ('3', '2', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
-INSERT INTO `bshop_tltblog_description` VALUES ('4', '2', 'Copy of Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_description` VALUES ('3', '2', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc &lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_description` VALUES ('4', '2', 'Copy of Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;&lt;span style=&quot;color: rgb(34, 34, 34); font-family: Consolas, &amp;quot;Lucida Console&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre-wrap;&quot;&gt;Nội thất phòng cưới hiểu đơn giản chính là nội thất phòng ngủ, chính vì thể để lựa chọn nội thất cho phòng ngủ thì chúng ta cần phải thật chú trọng tới vấn đề mẫu mã và chất lượng, bởi phòng ngủ chính là nơi bắt đầu cho bạn một cuộc sống mới, là nơi giữ lửa tình yêu, là nơi bạn sẽ phải lui tới từ 5 – 8 tiếng đồng hồ mỗi ngày, cũng chính là nơi mà những thiên thần bé nhỏ chào đời. Chính vì lẽ đó mà lựa chọn nội thất là công việc khá khó khăn, làm sao cho phù hợp với căn phòng, vừa thể hiện được n..&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
 
 -- ----------------------------
 -- Table structure for `bshop_tltblog_related`
@@ -2903,7 +2913,7 @@ CREATE TABLE `bshop_tltblog_to_layout` (
 -- Records of bshop_tltblog_to_layout
 -- ----------------------------
 INSERT INTO `bshop_tltblog_to_layout` VALUES ('3', '0', '0');
-INSERT INTO `bshop_tltblog_to_layout` VALUES ('4', '0', '15');
+INSERT INTO `bshop_tltblog_to_layout` VALUES ('4', '0', '0');
 
 -- ----------------------------
 -- Table structure for `bshop_tltblog_to_store`
@@ -2948,15 +2958,15 @@ CREATE TABLE `bshop_tltblog_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bshop_tltblog_url_alias
 -- ----------------------------
 INSERT INTO `bshop_tltblog_url_alias` VALUES ('19', 'tlttag_id=3', '');
 INSERT INTO `bshop_tltblog_url_alias` VALUES ('11', 'tlttag_id=2', 'Tin tức');
-INSERT INTO `bshop_tltblog_url_alias` VALUES ('12', 'tltblog_id=3', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
-INSERT INTO `bshop_tltblog_url_alias` VALUES ('18', 'tltpath=blogs', 'blogs');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('23', 'tltblog_id=3', 'Khởi động cuộc sống mới với những món đồ nội thất phòng cưới sang trọng');
+INSERT INTO `bshop_tltblog_url_alias` VALUES ('22', 'tltpath=blogs', 'blogs');
 
 -- ----------------------------
 -- Table structure for `bshop_tlttag`
@@ -3097,7 +3107,7 @@ CREATE TABLE `bshop_user_group` (
 -- ----------------------------
 -- Records of bshop_user_group
 -- ----------------------------
-INSERT INTO `bshop_user_group` VALUES ('1', 'Quản trị viên', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"event\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"feed\\/tltblog_sitemap\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/categoryproducts\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/laybuy_layout\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tltblog\",\"module\\/tltblog_settings\",\"module\\/tltblog_sitemap_module\",\"module\\/tlttag\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"openbay\\/fba\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cardinity\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/laybuy\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"theme\\/theme_default\",\"tltblog\\/tltblog\",\"tltblog\\/tlttag\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tltblog_settings\",\"module\\/tlttag\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"event\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"feed\\/tltblog_sitemap\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/categoryproducts\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/laybuy_layout\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tltblog\",\"module\\/tltblog_settings\",\"module\\/tltblog_sitemap_module\",\"module\\/tlttag\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"openbay\\/fba\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cardinity\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/laybuy\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"theme\\/theme_default\",\"tltblog\\/tltblog\",\"tltblog\\/tlttag\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tltblog_settings\",\"module\\/tlttag\"]}');
+INSERT INTO `bshop_user_group` VALUES ('1', 'Quản trị viên', '{\"access\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"event\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"feed\\/tltblog_sitemap\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/categoryproducts\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/laybuy_layout\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tltblog\",\"module\\/tltblog_settings\",\"module\\/tltblog_sitemap_module\",\"module\\/tlttag\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"openbay\\/fba\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cardinity\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/laybuy\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"theme\\/theme_default\",\"tltblog\\/tltblog\",\"tltblog\\/tlttag\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tltblog_settings\",\"module\\/tlttag\",\"module\\/html\"],\"modify\":[\"analytics\\/google_analytics\",\"captcha\\/basic_captcha\",\"captcha\\/google_captcha\",\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/recurring\",\"catalog\\/review\",\"common\\/column_left\",\"common\\/filemanager\",\"common\\/menu\",\"common\\/profile\",\"common\\/stats\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_group\",\"design\\/banner\",\"design\\/language\",\"design\\/layout\",\"design\\/theme\",\"event\\/theme\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/installer\",\"extension\\/modification\",\"extension\\/module\",\"extension\\/openbay\",\"extension\\/payment\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"feed\\/google_base\",\"feed\\/google_sitemap\",\"feed\\/openbaypro\",\"feed\\/tltblog_sitemap\",\"fraud\\/fraudlabspro\",\"fraud\\/ip\",\"fraud\\/maxmind\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"module\\/account\",\"module\\/affiliate\",\"module\\/amazon_login\",\"module\\/amazon_pay\",\"module\\/banner\",\"module\\/bestseller\",\"module\\/carousel\",\"module\\/category\",\"module\\/categoryproducts\",\"module\\/ebay_listing\",\"module\\/featured\",\"module\\/filter\",\"module\\/google_hangouts\",\"module\\/html\",\"module\\/information\",\"module\\/latest\",\"module\\/laybuy_layout\",\"module\\/pp_button\",\"module\\/pp_login\",\"module\\/sagepay_direct_cards\",\"module\\/sagepay_server_cards\",\"module\\/slideshow\",\"module\\/special\",\"module\\/store\",\"module\\/tltblog\",\"module\\/tltblog_settings\",\"module\\/tltblog_sitemap_module\",\"module\\/tlttag\",\"openbay\\/amazon\",\"openbay\\/amazon_listing\",\"openbay\\/amazon_product\",\"openbay\\/amazonus\",\"openbay\\/amazonus_listing\",\"openbay\\/amazonus_product\",\"openbay\\/ebay\",\"openbay\\/ebay_profile\",\"openbay\\/ebay_template\",\"openbay\\/etsy\",\"openbay\\/etsy_product\",\"openbay\\/etsy_shipping\",\"openbay\\/etsy_shop\",\"openbay\\/fba\",\"payment\\/amazon_login_pay\",\"payment\\/authorizenet_aim\",\"payment\\/authorizenet_sim\",\"payment\\/bank_transfer\",\"payment\\/bluepay_hosted\",\"payment\\/bluepay_redirect\",\"payment\\/cardinity\",\"payment\\/cheque\",\"payment\\/cod\",\"payment\\/eway\",\"payment\\/firstdata\",\"payment\\/firstdata_remote\",\"payment\\/free_checkout\",\"payment\\/g2apay\",\"payment\\/globalpay\",\"payment\\/globalpay_remote\",\"payment\\/klarna_account\",\"payment\\/klarna_invoice\",\"payment\\/laybuy\",\"payment\\/liqpay\",\"payment\\/nochex\",\"payment\\/paymate\",\"payment\\/paypoint\",\"payment\\/payza\",\"payment\\/perpetual_payments\",\"payment\\/pp_express\",\"payment\\/pp_payflow\",\"payment\\/pp_payflow_iframe\",\"payment\\/pp_pro\",\"payment\\/pp_pro_iframe\",\"payment\\/pp_standard\",\"payment\\/realex\",\"payment\\/realex_remote\",\"payment\\/sagepay_direct\",\"payment\\/sagepay_server\",\"payment\\/sagepay_us\",\"payment\\/securetrading_pp\",\"payment\\/securetrading_ws\",\"payment\\/skrill\",\"payment\\/twocheckout\",\"payment\\/web_payment_software\",\"payment\\/worldpay\",\"report\\/affiliate\",\"report\\/affiliate_activity\",\"report\\/affiliate_login\",\"report\\/customer_activity\",\"report\\/customer_credit\",\"report\\/customer_login\",\"report\\/customer_online\",\"report\\/customer_order\",\"report\\/customer_reward\",\"report\\/marketing\",\"report\\/product_purchased\",\"report\\/product_viewed\",\"report\\/sale_coupon\",\"report\\/sale_order\",\"report\\/sale_return\",\"report\\/sale_shipping\",\"report\\/sale_tax\",\"sale\\/order\",\"sale\\/recurring\",\"sale\\/return\",\"sale\\/voucher\",\"sale\\/voucher_theme\",\"setting\\/setting\",\"setting\\/store\",\"shipping\\/auspost\",\"shipping\\/citylink\",\"shipping\\/fedex\",\"shipping\\/flat\",\"shipping\\/free\",\"shipping\\/item\",\"shipping\\/parcelforce_48\",\"shipping\\/pickup\",\"shipping\\/royal_mail\",\"shipping\\/ups\",\"shipping\\/usps\",\"shipping\\/weight\",\"startup\\/error\",\"startup\\/event\",\"startup\\/login\",\"startup\\/permission\",\"startup\\/router\",\"startup\\/sass\",\"startup\\/startup\",\"theme\\/theme_default\",\"tltblog\\/tltblog\",\"tltblog\\/tlttag\",\"tool\\/backup\",\"tool\\/error_log\",\"tool\\/upload\",\"total\\/coupon\",\"total\\/credit\",\"total\\/handling\",\"total\\/klarna_fee\",\"total\\/low_order_fee\",\"total\\/reward\",\"total\\/shipping\",\"total\\/sub_total\",\"total\\/tax\",\"total\\/total\",\"total\\/voucher\",\"user\\/api\",\"user\\/user\",\"user\\/user_permission\",\"module\\/tltblog_settings\",\"module\\/tlttag\",\"module\\/html\"]}');
 INSERT INTO `bshop_user_group` VALUES ('10', 'Demonstration', '');
 
 -- ----------------------------
