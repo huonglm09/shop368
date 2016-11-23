@@ -736,8 +736,29 @@ export default StyleSheet.create({
         "color": "#ffffff",
         "backgroundColor": "#229ac8"
     },
-    "content": {
-        "minHeight": 600
+    "content": {},
+    "product-cats": {},
+    "product-cats-main": {
+        "background": "#ffffff",
+        "paddingTop": 15,
+        "paddingRight": 15,
+        "paddingBottom": 15,
+        "paddingLeft": 15,
+        "border": "1px solid #EBEBEB"
+    },
+    "fb-comments": {
+        "width": "100% !important",
+        "background": "#fff",
+        "paddingTop": 5,
+        "paddingRight": 5,
+        "paddingBottom": 5,
+        "paddingLeft": 5
+    },
+    "fb-comments span": {
+        "width": "100% !important"
+    },
+    "fb-comments iframe": {
+        "width": "100% !important"
     },
     "footer": {
         "marginTop": 30,
@@ -1471,9 +1492,10 @@ export default StyleSheet.create({
         "paddingBottom": 15,
         "paddingLeft": 15,
         "marginTop": 10,
-        "marginBottom": 30
+        "marginBottom": 30,
+        "overflow": "hidden"
     },
-    "common-home category-products": {
+    "category-products": {
         "background": "#ffffff",
         "paddingTop": 15,
         "paddingRight": 15,
@@ -1481,6 +1503,7 @@ export default StyleSheet.create({
         "paddingLeft": 15,
         "marginTop": 0,
         "marginBottom": 30,
+        "overflow": "hidden",
         "border": "1px solid #EBEBEB"
     },
     "feature-wrapper owl-wrapper-outer": {
@@ -1492,10 +1515,13 @@ export default StyleSheet.create({
     "common-home button-group": {
         "display": "none"
     },
+    "category-products button-group": {
+        "display": "none"
+    },
     "feature-wrapper button-group": {
         "display": "none"
     },
-    "common-home product-thumb": {
+    "category-products product-thumb": {
         "border": 0
     },
     "feature-wrapper product-thumb": {
@@ -1578,7 +1604,7 @@ export default StyleSheet.create({
         "paddingBottom": 0,
         "paddingLeft": 20
     },
-    "common-home category-products caption h4": {
+    "category-products caption h4": {
         "textAlign": "center",
         "overflow": "hidden",
         "height": 25,
@@ -1596,13 +1622,30 @@ export default StyleSheet.create({
     "feature-wrapper price-tax": {
         "display": "none"
     },
-    "common-home category-products feature-des": {
+    "category-products feature-des": {
         "display": "none"
     },
-    "common-home category-products price-tax": {
+    "category-products price-tax": {
         "display": "none"
     },
     "feature-wrapper price": {
+        "color": "#f26522",
+        "fontFamily": "'Roboto', sans-serif",
+        "fontSize": 15,
+        "fontWeight": "400",
+        "lineHeight": 26,
+        "marginTop": 0,
+        "marginRight": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "display": "block",
+        "textAlign": "center"
+    },
+    "category-products price": {
         "color": "#f26522",
         "fontFamily": "'Roboto', sans-serif",
         "fontSize": 15,
@@ -1639,7 +1682,7 @@ export default StyleSheet.create({
     "feature-wrapper product-thumb caption": {
         "minHeight": "auto"
     },
-    "common-home category-products product-thumb caption": {
+    "category-products product-thumb caption": {
         "minHeight": "auto"
     },
     "feature-wrapper caption h4 a": {
@@ -1659,7 +1702,7 @@ export default StyleSheet.create({
         "textAlign": "center",
         "textDecoration": "none !important"
     },
-    "common-home category-products caption h4 a": {
+    "category-products caption h4 a": {
         "color": "#333333",
         "fontFamily": "'Roboto', sans-serif",
         "fontSize": 16,
@@ -1679,7 +1722,7 @@ export default StyleSheet.create({
     "feature-wrapper caption h4:hover a": {
         "color": "#f26522"
     },
-    "common-home category-products caption h4:hover a": {
+    "category-products caption h4:hover a": {
         "color": "#f26522"
     },
     "title-head": {
