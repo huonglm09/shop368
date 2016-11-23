@@ -1595,10 +1595,8 @@ export default StyleSheet.create({
     "feature-wrapper caption h4": {
         "textAlign": "center",
         "overflow": "hidden",
-        "height": 25,
+        "height": 45,
         "textOverflow": "ellipsis",
-        "whiteSpace": "nowrap",
-        "wordBreak": "break-all",
         "paddingTop": 0,
         "paddingRight": 20,
         "paddingBottom": 0,
@@ -1607,10 +1605,8 @@ export default StyleSheet.create({
     "category-products caption h4": {
         "textAlign": "center",
         "overflow": "hidden",
-        "height": 25,
+        "height": 45,
         "textOverflow": "ellipsis",
-        "whiteSpace": "nowrap",
-        "wordBreak": "break-all",
         "paddingTop": 0,
         "paddingRight": 20,
         "paddingBottom": 0,

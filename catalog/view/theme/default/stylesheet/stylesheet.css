@@ -1535,10 +1535,10 @@ header {
 .feature-wrapper .caption h4, .category-products .caption h4 {
     text-align: center;
     overflow: hidden;
-    height: 25px;
+    height: 45px;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    word-break: break-all;
+    /*white-space: nowrap;*/
+    /*word-break: break-all;*/
     padding: 0px 20px;
 }
 
