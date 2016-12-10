@@ -64,7 +64,7 @@
     <script type="text/javascript"><!--
     $('#slider').owlCarousel({
     	items: 1,
-    	autoPlay: 30000,
+    	autoPlay: 3000,
     	navigation: true,
     	navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
     	pagination: false
