@@ -86,50 +86,19 @@
                 <h5>
                     <span>Thanh toán</span>
                 </h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="<?php echo $account; ?>">
-                            <?php echo $text_account; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $order; ?>">
-                            <?php echo $text_order; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $wishlist; ?>">
-                            <?php echo $text_wishlist; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $newsletter; ?>">
-                            <?php echo $text_newsletter; ?>
-                        </a>
-                    </li>
-                    <?php foreach ($informations as $information) { ?>
-                    <li>
-                        <a href="<?php echo $information['href']; ?>">
-                            <?php echo $information['title']; ?>
-                        </a>
-                    </li>
-                    <?php } ?>
-                    <li>
-                        <a href="<?php echo $contact; ?>">
-                            <?php echo $text_contact; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $return; ?>">
-                            <?php echo $text_return; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $sitemap; ?>">
-                            <?php echo $text_sitemap; ?>
-                        </a>
-                    </li>
-                </ul>
+                <p>Chủ tài khoản: <span style="color:#f26522">Phạm Văn Tính</span></p>
+                <div class="bank vietcombank">
+	                <img src="http://noithatductinh.com/image/logo-ngan-hang-1.png" alt=""> 0691.000.33.9621
+                </div>
+                <div class="bank vietinbank">
+					<img src="http://noithatductinh.com/image/logo-ngan-hang-2.png" alt=""> 711A.482.44.398
+                </div>
+                <div class="">
+					<img class="img-responsive" style="margin: 0 auto;margin-top: 20px;" src="http://noithatductinh.com/image/dathongbao.png" alt="">
+				</div>
+                <div class="text-center">
+					<a href="http://www.dmca.com/Protection/Status.aspx?ID=cb3efdf4-a2f8-4f2f-a447-d4aff5da94c6&amp;refurl=http://noithatductinh.com/" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/DMCA_logo-grn-btn120w.png?ID=cb3efdf4-a2f8-4f2f-a447-d4aff5da94c6" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+				</div>
             </div>
         </div>
     </div>
@@ -154,6 +123,51 @@
     </div>
     <div id="footer-abso" style="display: block;">
         <span id="gototop" class="fancybox.iframe" title="Về đầu trang"><i class="fa fa-chevron-up"></i></span>
+    </div>
+
+    <div id="social-abso">
+        <div class="social-icon sc-face">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=1009181549137512";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-share-button" data-href="http://noithatductinh.com/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnoithatductinh.com%2F&amp;src=sdkpreparse">Chia sẻ</a></div>
+        </div>
+
+        <div class="social-icon sc-gplus">
+            <!-- Đặt thẻ này vào nơi bạn muốn nút chia sẻ kết xuất. -->
+            <div class="g-plus" data-action="share" data-annotation="none"></div>
+
+            <!-- Đặt thẻ này sau thẻ chia sẻ cuối cùng. -->
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'vi'};
+
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+
+        <div class="social-icon sc-linkin">
+            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/Share" data-url="http://noithatductinh.com/"></script>
+        </div>
+
+        <div class="icon-real r-face">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+        <div class="icon-real r-google">
+            <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+        <div class="icon-real r-link">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </div>
     </div>
 </footer>
 <script>

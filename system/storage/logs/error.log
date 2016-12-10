@@ -1,0 +1,9 @@
+2016-12-06 15:27:05 - PHP Notice:  Undefined variable: show_title in C:\xampp\htdocs\shop368\admin\view\template\tltblog\tltblog_form.tpl on line 128
+2016-12-06 15:32:47 - PHP Notice:  Undefined variable: show_title in C:\xampp\htdocs\shop368\admin\view\template\tltblog\tltblog_form.tpl on line 128
+2016-12-06 16:58:03 - PHP Notice:  Undefined index: entry_show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-06 16:58:58 - PHP Notice:  Undefined index: entry_show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-06 17:00:27 - PHP Notice:  Undefined index: entry_show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-06 17:00:44 - PHP Notice:  Undefined index: entry_show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-06 17:01:52 - PHP Notice:  Undefined index: entry_show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-06 17:07:56 - PHP Notice:  Undefined index: show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-06 17:08:33 - PHP Notice:  Undefined index: show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
