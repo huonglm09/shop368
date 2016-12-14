@@ -1,18 +1,12 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=1009181549137512";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <footer>
     <div class="container">
         <div class="row">
             <?php if ($informations) { ?>
             <div class="col-sm-3">
                 <h5><span>Facebook</span></h5>
-                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="265" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+                <?php if($face) { ?>
+                    <?php echo $face; ?>
+                <?php } ?>
             </div>
             <?php } ?>
             <div class="col-sm-3">
@@ -48,57 +42,18 @@
             <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
                 <div class="footer-mid-menu">
                     <h5><span>Địa chỉ liên hệ</span></h5>
-                    <ul class="contact-footer">
-
-                        <li>
-                            <a>
-                                <i style="font-size: 17px; color: #fff" class="fa fa-map-marker"></i> &nbsp;
-                                <span style="color:rgb(242, 101, 34)"><strong>Showroom Nội Thất Đức Tính</strong></span>
-                                <br>
-                                <span style="color:#FFFFFF">
-                                    Tầng 2, Tòa nhà Bình Vượng Tower
-                                    <br>
-                                    Số&nbsp;200. Quang Trung - Hà Đông - Hà Nội
-                                </span>
-                                <br> Cách nhà thi đấu Hà Đông 50m<br>
-                            </a>
-                            <a href="http://noithatductinh.com/lien-he" style="line-height: 20.8px;">
-                                <span style="color:rgb(242, 101, 34)"><em>Click vào đây</em></span> &nbsp;
-                                <em>để được chỉ đường.</em>
-                            </a>
-                            <br>
-                            <span style="color:rgb(242, 101, 34)"><strong>Xưởng SX:</strong></span>&nbsp;Bình Phú - Thạch Thất<br> &nbsp;
-                            <br>
-                            <span style="color:rgb(242, 101, 34)"><strong>Liện hệ với chúng tôi:</strong></span></li>
-                        <li>
-                            <p><a><i style="font-size: 17px; color: #fff" class="fa fa-phone"></i> &nbsp;0913.655.165 / 0965.94.6161</a></p>
-                        </li>
-                        <li>
-                            <p><a><i style="font-size: 17px; color: #fff" class="fa fa-envelope"></i> &nbsp;info@noithatductinh.com</a></p>
-                        </li>
-                        <li>
-                            <p><a><i style="font-size: 17px; color: #fff" class="fa fa-fax"></i> &nbsp;046.656.6161</a></p>
-                        </li>
-                    </ul>
+                    <?php if($address) { ?>
+                        <?php echo $address; ?>
+                    <?php } ?>
                 </div>
             </div>
             <div class="col-sm-3">
                 <h5>
                     <span>Thanh toán</span>
                 </h5>
-                <p>Chủ tài khoản: <span style="color:#f26522">Phạm Văn Tính</span></p>
-                <div class="bank vietcombank">
-	                <img src="http://noithatductinh.com/image/logo-ngan-hang-1.png" alt=""> 0691.000.33.9621
-                </div>
-                <div class="bank vietinbank">
-					<img src="http://noithatductinh.com/image/logo-ngan-hang-2.png" alt=""> 711A.482.44.398
-                </div>
-                <div class="">
-					<img class="img-responsive" style="margin: 0 auto;margin-top: 20px;" src="http://noithatductinh.com/image/dathongbao.png" alt="">
-				</div>
-                <div class="text-center">
-					<a href="http://www.dmca.com/Protection/Status.aspx?ID=cb3efdf4-a2f8-4f2f-a447-d4aff5da94c6&amp;refurl=http://noithatductinh.com/" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/DMCA_logo-grn-btn120w.png?ID=cb3efdf4-a2f8-4f2f-a447-d4aff5da94c6" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-				</div>
+                <?php if($payment) { ?>
+                    <?php echo $payment; ?>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -106,7 +61,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6  text-left">
-                    Copyright © 2016 <a href="http://fb.me/ducnvhd">Nội Thất Đức Tính</a>
+                    <?php if($copyright) { ?>
+                        <?php echo $copyright; ?>
+                    <?php } ?>                    
                 </div>
                 <div class="col-xs-12 col-md-6  text-left">
                     Design by <a target="_blank" href="https://www.facebook.com/minh.huong.334">Lê Minh Hưởng</a> </div>
@@ -118,7 +75,9 @@
     </div>
     <div class="hotline-fix-bottom">
         <div class="hotline-inner">
-            <a href="tel:0965.94.6161"><span class="text">Hotline: </span><span class="phone">0965.94.6161</span></a>
+            <?php if($hotline) { ?>
+                <?php echo $hotline; ?>
+            <?php } ?>
         </div>
     </div>
     <div id="footer-abso" style="display: block;">
@@ -159,15 +118,9 @@
             <script type="IN/Share" data-url="http://noithatductinh.com/"></script>
         </div>
 
-        <div class="icon-real r-face">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-        </div>
-        <div class="icon-real r-google">
-            <i class="fa fa-google-plus" aria-hidden="true"></i>
-        </div>
-        <div class="icon-real r-link">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </div>
+        <?php if($social) { ?>
+            <?php echo $social; ?>
+        <?php } ?>
     </div>
 </footer>
 <script>

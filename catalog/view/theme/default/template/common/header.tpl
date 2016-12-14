@@ -51,7 +51,9 @@
         <div class="container">
             <div class="row header-top-bar">
                 <div class="col-sm-8">
-                    Nội Thất Đức Tính | Chuyên thiết kế phòng khách, phòng ngủ, phòng bếp
+                    <?php if($about) { ?>
+                        <?php echo $about; ?>
+                    <?php } ?>
                 </div>
                 <div class="col-sm-4 text-align-right">
                     <?php echo $search; ?>
@@ -96,7 +98,10 @@
                     </div>
                 </div>
                 <div class="col-sm-9">
-                    <div class="quick-link">
+                    <?php if($banner) { ?>
+                        <?php echo $banner; ?>
+                    <?php } ?>
+                    <!-- <div class="quick-link">
                         <ul class="row-fluid">
                             <li class="col-sm-4">
                                 <a target="_blank" href="http://noithatductinh.com/tin-tuc/nhung-uu-diem-tuyet-voi-trong-chinh-sach-van-chuyen-hang-cua-noi-that-duc-tinh-334084.html" class="a-tz-why-choose"><i class="fa fa fa-paper-plane"></i> Vận chuyển miễn phí</a>
@@ -110,9 +115,9 @@
                             <!-- <li class="last-child bshop-cart col-sm-3">
                                 <?php echo $cart; ?>
                             </li> -->
-                            <div class="clearfix"></div>
+                            <!-- <div class="clearfix"></div>
                         </ul>
-                    </div>
+                    </div>  -->
                 </div>
             </div>
         </div>

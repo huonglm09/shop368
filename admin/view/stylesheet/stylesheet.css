@@ -631,3 +631,6 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
     visibility: unset;
 }
 /* Menu Fix For System -> Layout -> Banner */
+.navbar-brand img {
+	max-height: 24px;
+}

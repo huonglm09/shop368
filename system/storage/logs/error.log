@@ -7,3 +7,6 @@
 2016-12-06 17:01:52 - PHP Notice:  Undefined index: entry_show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
 2016-12-06 17:07:56 - PHP Notice:  Undefined index: show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
 2016-12-06 17:08:33 - PHP Notice:  Undefined index: show_options in C:\xampp\htdocs\shop368\admin\controller\module\tltblog.php on line 210
+2016-12-14 15:38:19 - PHP Notice:  Error: Could not load template C:/xampp/htdocs/shop368/catalog/view/theme/default/template/common/slideshow.tpl! in C:\xampp\htdocs\shop368\system\storage\modification\system\library\template\basic.php on line 26
+2016-12-14 15:38:52 - PHP Notice:  Error: Could not load template C:/xampp/htdocs/shop368/catalog/view/theme/default/template/common/slideshow.tpl! in C:\xampp\htdocs\shop368\system\storage\modification\system\library\template\basic.php on line 26
+2016-12-14 15:46:00 - PHP Notice:  Undefined variable: about in C:\xampp\htdocs\shop368\catalog\view\theme\default\template\common\header.tpl on line 54

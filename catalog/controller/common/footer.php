@@ -45,6 +45,13 @@ class ControllerCommonFooter extends Controller {
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
 		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
 
+		$data['face'] = $this->load->controller('common/face');
+		$data['address'] = $this->load->controller('common/address');
+		$data['payment'] = $this->load->controller('common/payment');
+		$data['hotline'] = $this->load->controller('common/hotline');
+		$data['social'] = $this->load->controller('common/social');
+		$data['copyright'] = $this->load->controller('common/copyright');
+
 		$data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
 
 		// Whos Online

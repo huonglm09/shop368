@@ -104,6 +104,54 @@
                     <?php } ?>
                   </select></td>
                 <td class="text-left"><select name="layout_module[<?php echo $module_row; ?>][position]" class="form-control">
+                    <?php if ($layout_module['position'] == 'about') { ?>
+                    <option value="about" selected="selected"><?php echo $text_about_top; ?></option>
+                    <?php } else { ?>
+                    <option value="about"><?php echo $text_about_top; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'banner') { ?>
+                    <option value="banner" selected="selected"><?php echo $text_banner_home; ?></option>
+                    <?php } else { ?>
+                    <option value="banner"><?php echo $text_banner_home; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'face') { ?>
+                    <option value="face" selected="selected"><?php echo $text_footer_face; ?></option>
+                    <?php } else { ?>
+                    <option value="face"><?php echo $text_footer_face; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'address') { ?>
+                    <option value="address" selected="selected"><?php echo $text_footer_address; ?></option>
+                    <?php } else { ?>
+                    <option value="address"><?php echo $text_footer_address; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'payment') { ?>
+                    <option value="payment" selected="selected"><?php echo $text_footer_payment; ?></option>
+                    <?php } else { ?>
+                    <option value="payment"><?php echo $text_footer_payment; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'copyright') { ?>
+                    <option value="copyright" selected="selected"><?php echo $text_footer_copyright; ?></option>
+                    <?php } else { ?>
+                    <option value="copyright"><?php echo $text_footer_copyright; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'hotline') { ?>
+                    <option value="hotline" selected="selected"><?php echo $text_hotline; ?></option>
+                    <?php } else { ?>
+                    <option value="hotline"><?php echo $text_hotline; ?></option>
+                    <?php } ?>
+
+                    <?php if ($layout_module['position'] == 'social') { ?>
+                    <option value="social" selected="selected"><?php echo $text_social; ?></option>
+                    <?php } else { ?>
+                    <option value="social"><?php echo $text_social; ?></option>
+                    <?php } ?>
+
                     <?php if ($layout_module['position'] == 'slideshow') { ?>
                     <option value="slideshow" selected="selected"><?php echo $text_slideshow; ?></option>
                     <?php } else { ?>
@@ -185,6 +233,14 @@ function addModule() {
 	<?php } ?>
     html += '  </select></td>';
 	html += '  <td class="text-left"><select name="layout_module[' + module_row + '][position]" class="form-control">';
+    html += '    <option value="about"><?php echo $text_about_top; ?></option>';
+    html += '    <option value="banner"><?php echo $text_banner_home; ?></option>';
+    html += '    <option value="face"><?php echo $text_footer_face; ?></option>';
+    html += '    <option value="address"><?php echo $text_footer_address; ?></option>';
+    html += '    <option value="payment"><?php echo $text_footer_payment; ?></option>';
+    html += '    <option value="copyright"><?php echo $text_footer_copyright; ?></option>';
+    html += '    <option value="hotline"><?php echo $text_hotline; ?></option>';
+    html += '    <option value="social"><?php echo $text_social; ?></option>';
     html += '    <option value="slideshow"><?php echo $text_slideshow; ?></option>';
     html += '    <option value="content_top"><?php echo $text_content_top; ?></option>';
     html += '    <option value="content_bottom"><?php echo $text_content_bottom; ?></option>';

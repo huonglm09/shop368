@@ -130,6 +130,8 @@ class ControllerCommonHeader extends Controller {
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
 		$data['cart'] = $this->load->controller('common/cart');
+		$data['about'] = $this->load->controller('common/about');
+		$data['banner'] = $this->load->controller('common/banner');
 
 		// For page specific css
 		if (isset($this->request->get['route'])) {
