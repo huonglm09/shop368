@@ -2310,3 +2310,7 @@ footer ul li a {
 .blog-type-slider .owl-buttons {
     width: 95px;
 }
+
+.banner-home img {
+    max-width: 100%;
+}

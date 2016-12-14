@@ -49,13 +49,13 @@
 <body class="<?php echo $class; ?>">
     <nav id="top">
         <div class="container">
-            <div class="row header-top-bar">
-                <div class="col-sm-8">
+            <div class="row-fluid header-top-bar">
+                <div class="col-sm-8" style="padding-left: 0px;">
                     <?php if($about) { ?>
                         <?php echo $about; ?>
                     <?php } ?>
                 </div>
-                <div class="col-sm-4 text-align-right">
+                <div class="col-sm-4 text-align-right" style="padding-left: 0px; padding-right: 0px;">
                     <?php echo $search; ?>
                 </div>
             </div>
